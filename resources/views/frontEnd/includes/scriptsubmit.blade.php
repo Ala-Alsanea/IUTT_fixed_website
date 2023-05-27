@@ -1,5 +1,5 @@
-  
-   <script type="text/javascript" src="{{ asset('plugins/js/Functions.js') }}"></script>
+
+   <script type="text/javascript" src="{{secure_asset('plugins/js/Functions.js') }}"></script>
     <script type="text/javascript">
 
           function ReturnMessageAlert(Message,Type) {
@@ -121,8 +121,8 @@ jQuery(document).ready(function ($) {
             contentType: false,
             cache: false,
              dataType: 'json',
-            processData:false, 
-               success: function (data) { 
+            processData:false,
+               success: function (data) {
              Functions.removeLoadingImage(Form.attr('id'));
               $(window).scrollTop(Form.offset().top);
          var status=data['Status'];
@@ -164,7 +164,7 @@ jQuery(document).ready(function ($) {
               Form.prepend(ContentAlert);
                   }
          });
-    
+
                 //console.log(xhr);
                 return false;
             });
@@ -178,5 +178,5 @@ jQuery(document).ready(function ($) {
 
         });
 
-      
+
     </script>

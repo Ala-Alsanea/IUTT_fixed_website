@@ -26,8 +26,8 @@
 
 
 <link rel="stylesheet" href="{{ URL::to('plugins/backEnd/assets/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css"/>
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('plugins/backEnd/libs/jquery/summernote/dist/summernote-lite.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('plugins/backEnd/libs/jquery/summernote/dist/plugin/table/summernote-ext-table.css') }}"> --}}
+{{-- <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/backEnd/libs/jquery/summernote/dist/summernote-lite.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/backEnd/libs/jquery/summernote/dist/plugin/table/summernote-ext-table.css') }}"> --}}
 <link rel="stylesheet" href="{{ URL::to('plugins/backEnd/assets/styles/app.min.css') }}">
 
 <link rel="stylesheet" href="{{ URL::to('plugins/assets/global/plugins/fancybox/source/jquery.fancybox.css') }}"
@@ -35,7 +35,7 @@
 
       <link rel="stylesheet" href="{{ URL::to('plugins/assets/global/plugins/tables/datatable/css/datatables.min.css') }}" type="text/css"/>
 {{-- <link rel="stylesheet" href="{{ URL::to('plugins/assets/thame/dark.css') }}" type="text/css"/> --}}
- 
+
 <link rel="stylesheet" href="{{ URL::to('plugins/backEnd/assets/styles/font.css') }}" type="text/css"/>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 @if( trans('backLang.direction')=="rtl")

@@ -3,7 +3,7 @@
 <head>
 <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('backEnd.includes.head')
-   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/auto/auto.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/auto/auto.css') }}">
 </head>
 
  <style type="text/css">
@@ -12,7 +12,7 @@
 <body class="blank-page bg-full-screen-image">
 <div class="app" id="app">
 
-   
+
  <div class="app-content content p-a-md">
         <div class="content-overlay"></div>
         <div class="content-wrapper">
@@ -33,10 +33,10 @@
     </div>
     <div class="card-content">
         <div class="card-body">
-      
-           
+
+
            <div class="">
-            
+
             <form name="form" method="POST" action="{{ url('/login') }}">
                 {{ csrf_field() }}
                 @if ($errors->has('email'))
@@ -81,7 +81,7 @@
                       {{-- <a href="{{ url('/register') }}" class="text-primary _600">{{ trans('backLang.createNewAccount') }}</a> --}}
                                         </div>
                 </div>
-                   
+
                     <div class="p-v-lg btn-block text-left">
                     <div class="m-b"><a href="{{ url('/password/reset') }}"
                                         class="text-primary _600">{{ trans('backLang.forgotPassword') }}</a></div>
@@ -95,7 +95,7 @@
                 <!-- right section image -->
                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                     <div class="card-content">
-                        <img class="img-fluid" src="{{ URL::asset('plugins/auto/img/login.png') }}" alt="branding logo">
+                        <img class="img-fluid" src="{{ secure_asset('plugins/auto/img/login.png') }}" alt="branding logo">
                     </div>
                 </div>
             </div>
@@ -108,8 +108,8 @@
     </div>
  </div>
 
-   
- 
+
+
 </div>
 @include('backEnd.includes.foot')
 </body>

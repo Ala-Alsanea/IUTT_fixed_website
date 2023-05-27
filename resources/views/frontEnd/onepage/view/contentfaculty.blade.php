@@ -1,15 +1,15 @@
 @extends('frontEnd.onepage.layout')
 
 @section('content')
- 
+
 @section('styleInclude')
-    
-    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/new-custom.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/custm-people.css') }}">
-   <link href="{{ asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-   <link href="{{ asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/custm-people.css') }}">
+   <link href="{{secure_asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+   <link href="{{secure_asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
  @endsection
  <style>
 table tr td {
@@ -17,7 +17,7 @@ table tr td {
     border: 1px solid #ccc;
 }
 .validation{
-    display:none; 
+    display:none;
 }
 .grid figure figcaption h3 {
     background: #eee;
@@ -33,7 +33,7 @@ table tr td {
     border: 1px solid #ccc !important;
 }
 .validation{
-    display:none; 
+    display:none;
 }
 .main-detail table{
   margin:0 !important;
@@ -43,13 +43,13 @@ table tr td {
      border: 1px solid #ccc;
 }
 .contentsection{
- 
-  margin-bottom:30px; 
+
+  margin-bottom:30px;
 }
  </style>
  <?php
 
-  
+
 
      //dd($thisDetailMenu->parentMenus->);
     $backgroundImageTest="uploads/banar.jpg";
@@ -78,15 +78,15 @@ table tr td {
                             {{ trans('backLang.noData') }}
                             <br>
                             <br>
-                             
-                               
-                           
+
+
+
                         </div>
                     </div>
     </div>
 </section>
 @else
- 
+
   <div class="page-title head-1" style="background-image: url({{ Helper::FilterImage($backgroundImage) }});">
 
         <div class="container">
@@ -100,13 +100,13 @@ table tr td {
                             <ul class="bread-crumb clearfix">
                                 <li><a href="{{ route("Home") }}">{{ trans('frontLang.Home') }}</a></li>
                                    @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif
-                                         
+
                              <li class="">{{ $FacultyData->$title_var }} </li>
                              <li class="active">{{ trans('frontLang.about_us') }} </li>
                             </ul>
@@ -116,11 +116,11 @@ table tr td {
             </div>
         </div>
     </section>
-<section class="sec_pad">         
+<section class="sec_pad">
  <div class="container">
     <div class="wrapper clear">
         <div class="main-image-tab-2 clear">
-           <?php 
+           <?php
             $BannerOverView="uploads/banar.jpg";
              if (!empty($contentsoverview) && isset($contentsmestionvi[0])) {
                  $BannerOverView=$contentsoverview[0]->banner;
@@ -132,7 +132,7 @@ table tr td {
                     <span class="about">{{ trans('frontLang.Overview') }}</span>
                 </div>
             </a>
-             <?php 
+             <?php
             $BannerVisonM="uploads/banar.jpg";
              if (!empty($contentsmestionvi) && isset($contentsmestionvi[0])) {
                  $BannerVisonM=$contentsmestionvi[0]->banner;
@@ -145,7 +145,7 @@ table tr td {
                     <span class="about">{{ trans('frontLang.Vision_Mission') }}</span>
                 </div>
             </a>
-              <?php 
+              <?php
             $Bannerdeansmessage="uploads/banar.jpg";
              if (!empty($contentdeansmessage)) {
                  $BannerVisonM=$contentdeansmessage->banner;
@@ -163,7 +163,7 @@ table tr td {
                 </div>
             </a>
             @if(!empty($contentHighlights))
-            <?php 
+            <?php
             $BannercontentHighlights="uploads/banar.jpg";
              if (!empty($contentHighlights) && isset($contentHighlights[0])) {
                  $BannercontentHighlights=$contentHighlights[0]->banner;
@@ -177,7 +177,7 @@ table tr td {
             </a>
             @endif
              @if(!empty($coursedescriptions))
-             <?php 
+             <?php
             $Bannercoursedescriptions="uploads/banar.jpg";
              if (!empty($coursedescriptions) && isset($coursedescriptions[0])) {
                  $Bannercoursedescriptions=$coursedescriptions[0]->banner;
@@ -190,7 +190,7 @@ table tr td {
                 </div>
             </a>
              @endif
-              <?php 
+              <?php
             $BannercontentAcademicPlan="uploads/banar.jpg";
              if (!empty($contentAcademicPlan) && isset($contentAcademicPlan[0])) {
                  $BannercontentAcademicPlan=$contentAcademicPlan[0]->banner;
@@ -213,8 +213,8 @@ table tr td {
                 <div class="option option-9 " data-id="9" style="background:url({{ Helper::getBannerStatic('Banner_photos') }}) no-repeat center center; background-size:cover;">
                     <span class="scholarship">{{ trans('frontLang.mediafile') }}</span>
                 </div>
-            </a> 
-         
+            </a>
+
             <a href="javascript:void();">
                 <div class="option option-10" data-id="10" style="background:url({{ Helper::getBannerStatic('Banner_Contact_Us_center') }}) no-repeat center center; background-size:cover;">
                     <span class="departments">{{ trans('frontLang.Contact_Us') }}</span>
@@ -234,7 +234,7 @@ table tr td {
                 <h2 class="title title-7" style="display: none;">{{ trans('frontLang.AcademicPlan') }}</h2>
                 <h2 class="title title-8" style="display: none;">{{ trans('frontLang.departments') }}</h2>
                 <h2 class="title title-9 mediafile" style="display: none;">{{ trans('frontLang.mediafile') }}</h2>
-           
+
                 <h2 class="title title-10 Contact_Us" style="display: none;">{{ trans('frontLang.Contact_Us') }}</h2>
             </div>
 
@@ -244,9 +244,9 @@ table tr td {
             </div>
 
               <div class="main-detail main-detail-1 active" style="display: block;">
-               
- 
-                  @include('frontEnd.onepage.view.contentfaculties.Overview') 
+
+
+                  @include('frontEnd.onepage.view.contentfaculties.Overview')
 
             </div>
 
@@ -254,53 +254,53 @@ table tr td {
             <div class="mobile-option option-2 Vision_Mission" data-id="2">
                 <span>{{ trans('frontLang.Vision_Mission') }}</span>
             </div>
-             @include('frontEnd.onepage.view.contentfaculties.Vision_Mission') 
+             @include('frontEnd.onepage.view.contentfaculties.Vision_Mission')
 
    <div class="mobile-option option-3 deansmessage" data-id="3">
                 <span>{{ trans('frontLang.deansmessage') }}</span>
-              </div> 
-             @include('frontEnd.onepage.view.contentfaculties.deansmessage') 
+              </div>
+             @include('frontEnd.onepage.view.contentfaculties.deansmessage')
 
              <div class="mobile-option option-4 deanship" data-id="4">
                 <span>{{ trans('frontLang.deanship') }}</span>
-              </div> 
-             @include('frontEnd.onepage.view.contentfaculties.deanship') 
+              </div>
+             @include('frontEnd.onepage.view.contentfaculties.deanship')
 
    <div class="mobile-option option-5 highlights" data-id="5">
                 <span>{{ trans('frontLang.highlights') }}</span>
-                </div> 
-                @include('frontEnd.onepage.view.contentfaculties.highlights') 
+                </div>
+                @include('frontEnd.onepage.view.contentfaculties.highlights')
 
 
                <div class="mobile-option option-6 contentfaculties" data-id="6">
                 <span>{{ trans('frontLang.coursedescriptions') }}</span>
-                </div> 
-                @include('frontEnd.onepage.view.contentfaculties.coursedescriptions') 
+                </div>
+                @include('frontEnd.onepage.view.contentfaculties.coursedescriptions')
 
 
     <div class="mobile-option option-7 AcademicPlan" data-id="7">
                 <span>{{ trans('frontLang.AcademicPlan') }}</span>
-                </div> 
-                @include('frontEnd.onepage.view.contentfaculties.AcademicPlan') 
+                </div>
+                @include('frontEnd.onepage.view.contentfaculties.AcademicPlan')
 
 
 
-                
+
  <div class="mobile-option option-8 departments" data-id="8">
                 <span>{{ trans('frontLang.departments') }}</span>
-                </div> 
-                @include('frontEnd.onepage.view.contentfaculties.departments') 
+                </div>
+                @include('frontEnd.onepage.view.contentfaculties.departments')
 
 
               <div class="mobile-option option-9 research" data-id="9">
                 <span>{{ trans('frontLang.mediafile') }}</span>
-              </div> 
-             @include('frontEnd.onepage.view.contentfaculties.mediafile') 
+              </div>
+             @include('frontEnd.onepage.view.contentfaculties.mediafile')
 
                <div class="mobile-option option-10 apply" data-id="10">
                 <span>{{ trans('frontLang.Contact_Us') }}</span>
             </div>
-             @include('frontEnd.onepage.view.contentfaculties.Contact_Us') 
+             @include('frontEnd.onepage.view.contentfaculties.Contact_Us')
 
 
 
@@ -313,7 +313,7 @@ table tr td {
     </div>
 </div>
 
- 
+
 </section>
 
 
@@ -321,8 +321,8 @@ table tr td {
 
 @endsection
 @section('footerInclude')
- 
- @include('frontEnd.includes.scriptsubmit') 
+
+ @include('frontEnd.includes.scriptsubmit')
 <script>
     $(document).ready(function () {
 

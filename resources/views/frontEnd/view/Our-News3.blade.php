@@ -15,7 +15,7 @@
 
 @if(count((array)$HomeEvent)>0 || count((array)$HomeAnnounce)>0)
 
- 
+
 
 
 <section class="com-sp event_index">
@@ -56,9 +56,9 @@
 </div>
  @endforeach
 
- 
+
   <div class="com-sp  text-center">
-                <a href="{{ asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
+                <a href="{{secure_asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
             </div>
                 </div>
             </div>
@@ -79,12 +79,12 @@
  style="
     border-bottom: 0px solid #dcdcdc;
     padding-bottom: 22px;
- 
+
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 ">
                 <!--<div class="ho-ex-title"><h4>Upcoming Event</h4></div>-->
                 <div class="ho-ev-latest ho-ev-latest-bg-2" style="
-    background: url({{ asset('uploads/banners/events-banner.jpg') }}) no-repeat;
+    background: url({{secure_asset('uploads/banners/events-banner.jpg') }}) no-repeat;
     background-size: cover;
     padding: 51px;
 ">
@@ -142,12 +142,12 @@
                 </div>
             </div>
              @endforeach
-       
 
-            
+
+
         </div>
  <div class="com-sp  text-center">
-                <a href="{{ asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
+                <a href="{{secure_asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
             </div>
     </div>
 </div>

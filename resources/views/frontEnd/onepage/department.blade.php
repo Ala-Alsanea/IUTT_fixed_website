@@ -1,27 +1,27 @@
 @extends('frontEnd.onepage.layout')
 
 @section('content')
-   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/new-custom.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/custm-people.css') }}">
-   <link href="{{ asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-   <link href="{{ asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
- 
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/custm-people.css') }}">
+   <link href="{{secure_asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+   <link href="{{secure_asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
 
- 
 
- 
 
-    
- 
+
+
+
+
+
  <style>
 table tr td {
     padding: 10px 15px ;
     border: 1px solid #ccc !important;
 }
 .validation{
-    display:none; 
+    display:none;
 }
 .main-detail table{
   margin:0 !important;
@@ -31,15 +31,15 @@ table tr td {
      border: 1px solid #ccc;
 }
 .contentsection{
- 
-  margin-bottom:30px; 
+
+  margin-bottom:30px;
 }
  </style>
  <?php
 
-  
 
-    
+
+
      //dd($thisDetailMenu->parentMenus->);
     $backgroundImage="uploads/banar.jpg";
      if ($department->banner!='') {
@@ -62,15 +62,15 @@ table tr td {
                             {{ trans('backLang.noData') }}
                             <br>
                             <br>
-                             
-                               
-                           
+
+
+
                         </div>
                     </div>
     </div>
 </section>
 @else
- 
+
   <div class="page-title head-1" style="background-image: url({{ Helper::FilterImage($backgroundImage) }});">
 
         <div class="container">
@@ -84,13 +84,13 @@ table tr td {
                             <ul class="bread-crumb clearfix">
                                 <li><a href="{{ route('FacultyPage',$FacultyData->id) }}">{{ trans('frontLang.Home') }}</a></li>
                                    @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif
-                                       
+
                                <li><a href="{{ route('FacultyPage',$FacultyData->id) }}">{{ $FacultyData->$title_var }}</a></li>
                              <li class="active">{{ $department->$title_var }} </li>
                             </ul>
@@ -99,8 +99,8 @@ table tr td {
                 </div>
             </div>
         </div>
- 
-<section class="sec_pad">         
+
+<section class="sec_pad">
  <div class="container">
     <div class="wrapper clear">
         <div class="main-image-tab-2 clear">
@@ -126,7 +126,7 @@ table tr td {
                     <span class="scholarship">{{ trans('frontLang.coursedescriptions') }}</span>
                 </div>
             </a>
-           
+
             <a href="javascript:void();">
                 <div class="option option-5" data-id="5" style="background:url({{ Helper::getBannerStatic('Banner_AcademicPlan_departments') }}) no-repeat center center; background-size:cover;">
                     <span class="apply">{{ trans('frontLang.AcademicPlan') }}</span>
@@ -145,7 +145,7 @@ table tr td {
                      <h2 class="title title-2  about" style="display: none;">{{ trans('frontLang.Vision_Mission') }}</h2>
                 <h2 class="title title-3 departments" style="display: none;">{{ trans('frontLang.People') }}</h2>
                 <h2 class="title title-4 scholarship" style="display: none;">{{ trans('frontLang.coursedescriptions') }}</h2>
-           
+
                 <h2 class="title title-5 apply" style="display: none;">{{ trans('frontLang.AcademicPlan') }}</h2>
 
                 <h2 class="title title-6 apply" style="display: none;">{{ trans('frontLang.Contact_Us') }}</h2>
@@ -165,21 +165,21 @@ table tr td {
                     <div class="img" style="background:url({{ Helper::FilterImage($admitionImage) }}) no-repeat center center; background-size:cover;"></div>
                     <div class="btn btn-1 closed"><span></span></div>
                 </div>
-            
+
                 <br class="px-50">
-               @include('frontEnd.onepage.view.departments.Overview') 
+               @include('frontEnd.onepage.view.departments.Overview')
                 <div class="quick-links clear">
                      <p>
                         @if(count((array)$quicklinks)>0)
                         @foreach($quicklinks as $quicklink)
 
                                 <a class="link" href="{!!  $quicklink->link !!}" title="{!!  $quicklink->$title_var !!}"><i style="background-image: url({{ Helper::FilterImage($quicklink->photo_file) }});background-repeat: no-repeat;    background-position: center;"></i><span>{!!  $quicklink->$title_var !!}</span></a>
-                       
-                         @endforeach 
+
+                         @endforeach
                           @endif
-                      
+
                     </p>
-          
+
 
                    </div>
             </div>
@@ -187,27 +187,27 @@ table tr td {
             <div class="mobile-option option-2 Vision_Mission" data-id="2">
                 <span>{{ trans('frontLang.Vision_Mission') }}</span>
             </div>
-             @include('frontEnd.onepage.view.departments.Vision_Mission') 
+             @include('frontEnd.onepage.view.departments.Vision_Mission')
 
 
-            
+
                <div class="mobile-option option-3 programs" data-id="3">
                 <span>{{ trans('frontLang.People') }}</span>
                 </div>
-                @include('frontEnd.onepage.view.departments.People') 
+                @include('frontEnd.onepage.view.departments.People')
 
               <div class="mobile-option option-4 research" data-id="4">
                 <span>{{ trans('frontLang.coursedescriptions') }}</span>
               </div>
-               @include('frontEnd.onepage.view.departments.CourseDescriptions') 
+               @include('frontEnd.onepage.view.departments.CourseDescriptions')
                  <div class="mobile-option option-5 apply" data-id="5">
                 <span>{{ trans('frontLang.AcademicPlan') }}</span>
             </div>
-             @include('frontEnd.onepage.view.departments.AcademicPlan') 
+             @include('frontEnd.onepage.view.departments.AcademicPlan')
                <div class="mobile-option option-6 apply" data-id="6">
                 <span>{{ trans('frontLang.Contact_Us') }}</span>
             </div>
-             @include('frontEnd.onepage.view.departments.Contact_Us') 
+             @include('frontEnd.onepage.view.departments.Contact_Us')
 
 
 
@@ -220,7 +220,7 @@ table tr td {
     </div>
 </div>
 
- 
+
 </section>
 
 
@@ -229,7 +229,7 @@ table tr td {
 @endsection
 
 @section('footerInclude')
-   @include('frontEnd.includes.scriptsubmit') 
+   @include('frontEnd.includes.scriptsubmit')
  <script>
     $(document).ready(function () {
 
@@ -276,6 +276,6 @@ table tr td {
         });
     });
 </script>
-   
+
 
    @endsection

@@ -1,15 +1,15 @@
 @extends('frontEnd.layout')
 
 @section('content')
- 
+
 @section('styleInclude')
-    
-    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/new-custom.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/custm-people.css') }}">
-   <link href="{{ asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-   <link href="{{ asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/custm-people.css') }}">
+   <link href="{{secure_asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+   <link href="{{secure_asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
  @endsection
  <style>
 table tr td {
@@ -17,12 +17,12 @@ table tr td {
     border: 1px solid #ccc;
 }
 .validation{
-    display:none; 
+    display:none;
 }
  </style>
  <?php
 
-  
+
     $backgroundImage="uploads/banar.jpg";
      if (isset($program->banner) && $program->banner!='' && $program->banner!='#') {
          $backgroundImage=$program->banner;
@@ -45,15 +45,15 @@ table tr td {
                             {{ trans('backLang.noData') }}
                             <br>
                             <br>
-                             
-                               
-                           
+
+
+
                         </div>
                     </div>
     </div>
 </section>
 @else
- 
+
   <div class="page-title head-1" style="background-image: url({{ Helper::FilterImage($backgroundImage) }});">
 
         <div class="container">
@@ -67,10 +67,10 @@ table tr td {
                             <ul class="bread-crumb clearfix">
                                 <li><a href="{{ route("Home") }}">{{ trans('frontLang.Home') }}</a></li>
                                    @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif
                                          <li><a>{{ trans('frontLang.Programs') }}</a></li>
@@ -82,7 +82,7 @@ table tr td {
             </div>
         </div>
     </section>
-<section class="sec_pad">         
+<section class="sec_pad">
  <div class="container">
     <div class="wrapper clear">
         <div class="main-image-tab-2 clear">
@@ -100,8 +100,8 @@ table tr td {
                 <div class="option option-3 " data-id="3" style="background:url({{ Helper::getBannerStatic('Banner_scholarships_Programs') }}) no-repeat center center; background-size:cover;">
                     <span class="scholarship">{{ trans('frontLang.scholarships') }}</span>
                 </div>
-            </a> 
-         
+            </a>
+
             <a href="javascript:void();">
                 <div class="option option-2" data-id="5" style="background:url({{ Helper::getBannerStatic('Banner_Contact_Us_departments') }}) no-repeat center center; background-size:cover;">
                     <span class="departments">{{ trans('frontLang.Contact_Us') }}</span>
@@ -114,7 +114,7 @@ table tr td {
                 <h2 class="title title-1 active about" style="display: block;">{{ trans('frontLang.Overview') }}</h2>
                 <h2 class="title title-2 departments" style="display: none;">{{ trans('frontLang.Programs') }}</h2>
                 <h2 class="title title-3 scholarship" style="display: none;">{{ trans('frontLang.scholarships') }}</h2>
-           
+
                 <h2 class="title title-4 apply" style="display: none;">{{ trans('frontLang.Contact_Us') }}</h2>
             </div>
 
@@ -124,9 +124,9 @@ table tr td {
             </div>
 
               <div class="main-detail main-detail-1 active" style="display: block;">
-               
 
-               
+
+
 
                 <div class="btn-img-text-blk by-2 clear">
                     <div class="img" style="background:url({{ Helper::FilterImage($program->photo_file) }}) no-repeat center center; background-size:cover;"></div>
@@ -135,24 +135,24 @@ table tr td {
 
                  <br class="px-50">
                   {!! $program->$details_var !!}
-              
+
             </div>
 
                <div class="mobile-option option-2 programs" data-id="2">
                 <span>{{ trans('frontLang.Programs') }}</span>
                 </div>
-                @include('frontEnd.view.programs.Programs') 
+                @include('frontEnd.view.programs.Programs')
 
               <div class="mobile-option option-3 research" data-id="3">
                 <span>{{ trans('frontLang.scholarships') }}</span>
               </div>
-               
-             @include('frontEnd.view.programs.scholarships') 
+
+             @include('frontEnd.view.programs.scholarships')
 
                <div class="mobile-option option-5 apply" data-id="5">
                 <span>{{ trans('frontLang.Contact_Us') }}</span>
             </div>
-             @include('frontEnd.view.programs.Contact_Us') 
+             @include('frontEnd.view.programs.Contact_Us')
 
 
 
@@ -165,7 +165,7 @@ table tr td {
     </div>
 </div>
 
- 
+
 </section>
 
 
@@ -173,8 +173,8 @@ table tr td {
 
 @endsection
 @section('footerInclude')
- 
- @include('frontEnd.includes.scriptsubmit') 
+
+ @include('frontEnd.includes.scriptsubmit')
 <script>
     $(document).ready(function () {
 

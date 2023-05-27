@@ -1,15 +1,15 @@
 @extends('frontEnd.layout')
 
 @section('content')
- 
+
 @section('styleInclude')
-    
-    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/new-custom.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/custm-people.css') }}">
-   <link href="{{ asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-   <link href="{{ asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/custm-people.css') }}">
+   <link href="{{secure_asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+   <link href="{{secure_asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
  @endsection
  <style>
 table tr td {
@@ -17,7 +17,7 @@ table tr td {
     border: 1px solid #ccc;
 }
 .validation{
-    display:none; 
+    display:none;
 }
 
  </style>
@@ -27,7 +27,7 @@ table tr td {
     border: 1px solid #ccc !important;
 }
 .validation{
-    display:none; 
+    display:none;
 }
 .main-detail table{
   margin:0 !important;
@@ -37,13 +37,13 @@ table tr td {
      border: 1px solid #ccc;
 }
 .contentsection{
- 
-  margin-bottom:30px; 
+
+  margin-bottom:30px;
 }
  </style>
  <?php
 
-  
+
 
      //dd($thisDetailMenu->parentMenus->);
     $backgroundImage="uploads/banar.jpg";
@@ -68,15 +68,15 @@ table tr td {
                             {{ trans('backLang.noData') }}
                             <br>
                             <br>
-                             
-                               
-                           
+
+
+
                         </div>
                     </div>
     </div>
 </section>
 @else
- 
+
   <div class="page-title head-1" style="background-image: url({{ Helper::FilterImage($backgroundImage) }});">
 
         <div class="container">
@@ -90,13 +90,13 @@ table tr td {
                             <ul class="bread-crumb clearfix">
                                 <li><a href="{{ route("Home") }}">{{ trans('frontLang.Home') }}</a></li>
                                    @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif
-                                         
+
                              <li class="active">{{ $universitycenter->$title_var }} </li>
                             </ul>
                         </div>
@@ -105,7 +105,7 @@ table tr td {
             </div>
         </div>
     </section>
-<section class="sec_pad">         
+<section class="sec_pad">
  <div class="container">
     <div class="wrapper clear">
         <div class="main-image-tab-2 clear">
@@ -135,7 +135,7 @@ table tr td {
                     <span class="scholarship">{{ trans('frontLang.AcademicPlan') }}</span>
                 </div>
             </a>  -->
-         
+
             <a href="javascript:void();">
                 <div class="option option-6" data-id="6" style="background:url({{ Helper::getBannerStatic('Banner_Contact_Us_center') }}) no-repeat center center; background-size:cover;">
                     <span class="departments">{{ trans('frontLang.Contact_Us') }}</span>
@@ -150,7 +150,7 @@ table tr td {
                   <h2 class="title title-3 People" style="display: none;">{{ trans('frontLang.People') }}</h2>
                 <h2 class="title title-4 departments" style="display: none;">{{ trans('frontLang.moreinfo') }}</h2>
                <!--  <h2 class="title title-5 scholarship" style="display: none;">{{ trans('frontLang.AcademicPlan') }}</h2> -->
-           
+
                 <h2 class="title title-6 apply" style="display: none;">{{ trans('frontLang.Contact_Us') }}</h2>
             </div>
 
@@ -167,10 +167,10 @@ table tr td {
                 <div class="btn-img-text-blk by-2 clear">
                     <div class="img" style="background:url({{ Helper::FilterImage($universitycenter->photo_file) }}) no-repeat center center; background-size:cover;"></div>
                     <div class="btn btn-1 closed"><span><a href="{{ Helper::FilterImage($universitycenter->attach_file) }}"> </a></span></div>
-                </div> 
+                </div>
                 @endif
 
-                  @include('frontEnd.view.universitycenter.Overview') 
+                  @include('frontEnd.view.universitycenter.Overview')
 
             </div>
 
@@ -178,26 +178,26 @@ table tr td {
             <div class="mobile-option option-2 Vision_Mission" data-id="2">
                 <span>{{ trans('frontLang.Vision_Mission') }}</span>
             </div>
-             @include('frontEnd.view.universitycenter.Vision_Mission') 
+             @include('frontEnd.view.universitycenter.Vision_Mission')
 
              <div class="mobile-option option-3 research" data-id="3">
                 <span>{{ trans('frontLang.People') }}</span>
-              </div> 
-             @include('frontEnd.view.universitycenter.People') 
+              </div>
+             @include('frontEnd.view.universitycenter.People')
 
 
                <div class="mobile-option option-4 universitycenter" data-id="4">
                 <span>{{ trans('frontLang.moreinfo') }}</span>
-                </div> 
-                @include('frontEnd.view.universitycenter.coursedescriptions') 
+                </div>
+                @include('frontEnd.view.universitycenter.coursedescriptions')
 
 
-             
+
 
                <div class="mobile-option option-6 apply" data-id="6">
                 <span>{{ trans('frontLang.Contact_Us') }}</span>
             </div>
-             @include('frontEnd.view.universitycenter.Contact_Us') 
+             @include('frontEnd.view.universitycenter.Contact_Us')
 
 
 
@@ -210,7 +210,7 @@ table tr td {
     </div>
 </div>
 
- 
+
 </section>
 
 
@@ -218,8 +218,8 @@ table tr td {
 
 @endsection
 @section('footerInclude')
- 
- @include('frontEnd.includes.scriptsubmit') 
+
+ @include('frontEnd.includes.scriptsubmit')
 <script>
     $(document).ready(function () {
 

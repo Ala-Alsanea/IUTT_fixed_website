@@ -2,12 +2,12 @@
 @extends('frontEnd.layout')
 
 @section('content')
- 
- <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/new-custom.css') }}">
- <link href="{{ asset('plugins/css/graduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/graduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/about.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/about-responsive.css') }}" type="text/css" rel="stylesheet"/>
+
+ <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+ <link href="{{secure_asset('plugins/css/graduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/graduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/about.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/about-responsive.css') }}" type="text/css" rel="stylesheet"/>
 
   <style>
  .highlighted-box {
@@ -25,7 +25,7 @@
     padding-right: 30px;
 }
 .common-btn span {color: currentcolor;
-}    
+}
   </style>
 @if(count((array)$Topics)==0)
 <section class="process_area bg_color sec_pad about">
@@ -36,9 +36,9 @@
                             {{ trans('backLang.noData') }}
                             <br>
                             <br>
-                             
-                               
-                           
+
+
+
                         </div>
                     </div>
     </div>
@@ -47,8 +47,8 @@
 
 
 
- 
-  
+
+
  <section>
   <div class="page-title head-1" style="background-image: url({{ Helper::getBannerStatic('Banner_Academic_page_staff') }});">
 
@@ -63,13 +63,13 @@
                             <ul class="bread-crumb clearfix">
                                 <li><a href="{{ route("Home") }}">{{ trans('frontLang.Home') }}</a></li>
                                   {{--   @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif --}}
-                                 
+
                                   <li class="active">{{ $name_section }}
                                 </li>
                             </ul>
@@ -79,8 +79,8 @@
             </div>
         </div>
     </section>
- 
-<?php 
+
+<?php
 $listLevel=array(1,2,3,4);
   $Facultylist= App\Models\Faculty::where('status', 1)->get();
    $backgroundImage="uploads/banar.jpg";
@@ -95,7 +95,7 @@ $listLevel=array(1,2,3,4);
 
              @foreach($Facultylist as $key=> $Faculty)
 
-              <?php 
+              <?php
                $bannersidef="uploads/banar.jpg";
                if (isset($Faculty->fields) && isset($Faculty->fields[6])) {
                    $bannersidef=$Faculty->fields[6]->field_value;
@@ -110,10 +110,10 @@ $listLevel=array(1,2,3,4);
             </a>
 
 
-            @endforeach 
-           @endif   
-        
-           
+            @endforeach
+           @endif
+
+
         </div>
 
     <div class="main-image-tab-2-details" id="main-page-details-2">
@@ -122,9 +122,9 @@ $listLevel=array(1,2,3,4);
 
              @foreach($Facultylist as $key=> $Faculty)
                 <h2 class="title about title-{{ $key+1 }} facult-{{ $key+1 }} {{ ($key==0)?'active':'' }} " style="display:{{ ($key==0)?'block':'' }} ">{!!  $Faculty->$title_var !!}</h2>
-               
-                  @endforeach 
-           @endif 
+
+                  @endforeach
+           @endif
             </div>
 
           @if(count((array)$Facultylist)>0)
@@ -137,26 +137,26 @@ $listLevel=array(1,2,3,4);
               <div class="row">
                   <div class="col-md-12">
 
-                    
-                 
-  
 
-      
-         
- 
-      
+
+
+
+
+
+
+
             <?php  $indexer=0; ?>
-           @foreach($Topics as $Item) 
+           @foreach($Topics as $Item)
 
          @if($Faculty->id==$Item->faculty_id)
-            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='' && $Item->fields[0]->field_value==1) 
+            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='' && $Item->fields[0]->field_value==1)
 
-                
+
                @if($indexer==0)
                 <h4 class="title " >{{ trans('frontLang.Level_1') }}</h4>
                  @endif
                  <?php   ++$indexer; ?>
-               
+
               <div class="highlighted-box apply-now download-box ">
                 <div class="content">
                     <p>{!!  $Item->$title_var !!}</p>
@@ -170,24 +170,24 @@ $listLevel=array(1,2,3,4);
 
 
              @endif
-           @endif   
+           @endif
 
-            @endforeach 
-           
-  
+            @endforeach
+
+
             <?php  $indexer=0; ?>
-           @foreach($Topics as $Item) 
+           @foreach($Topics as $Item)
 
-            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='' && $Item->fields[0]->field_value==2 && $Faculty->id==$Item->faculty_id) 
+            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='' && $Item->fields[0]->field_value==2 && $Faculty->id==$Item->faculty_id)
 
-             
- 
-                  
+
+
+
                @if($indexer==0)
                 <h4 class="title " >{{ trans('frontLang.Level_2') }}</h4>
                  @endif
                  <?php   ++$indexer; ?>
-               
+
               <div class="highlighted-box apply-now download-box ">
                 <div class="content">
                     <p>{!!  $Item->$title_var !!}</p>
@@ -198,21 +198,21 @@ $listLevel=array(1,2,3,4);
             </div>
              @endif
 
-            @endforeach 
-             
+            @endforeach
+
               <?php  $indexer=0; ?>
            @foreach($Topics as $Item)
- 
-            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='') 
+
+            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='')
 
             @if($Item->fields[0]->field_value==3 && $Faculty->id==$Item->faculty_id)
- 
-                
+
+
                @if($indexer==0)
                 <h4 class="title " >{{ trans('frontLang.Level_3') }}</h4>
                  @endif
                  <?php   ++$indexer; ?>
-               
+
               <div class="highlighted-box apply-now download-box ">
                 <div class="content">
                     <p>{!!  $Item->$title_var !!}</p>
@@ -224,21 +224,21 @@ $listLevel=array(1,2,3,4);
                @endif
              @endif
 
-            @endforeach 
-             
+            @endforeach
+
              <?php  $indexer=0; ?>
            @foreach($Topics as $Item)
 
-            
-            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='') 
+
+            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='')
 
             @if($Item->fields[0]->field_value==4 && $Faculty->id==$Item->faculty_id)
-           
+
                @if($indexer==0)
                 <h4 class="title " >{{ trans('frontLang.Level_4') }}</h4>
                  @endif
                  <?php   ++$indexer; ?>
-               
+
               <div class="highlighted-box apply-now download-box ">
                 <div class="content">
                     <p>{!!  $Item->$title_var !!}</p>
@@ -250,27 +250,27 @@ $listLevel=array(1,2,3,4);
                @endif
              @endif
 
-            @endforeach 
-          
+            @endforeach
+
 
           </div>
               </div>
            </div>
-           
-            @endforeach 
 
-       @endif        
-            
-   
-      
-    
-      
+            @endforeach
+
+       @endif
+
+
+
+
+
 </div>
       </div>
-    
+
   </div>
 
- 
+
 
 
      @endif
@@ -328,6 +328,6 @@ $listLevel=array(1,2,3,4);
 </script>
 
    @endsection
- 
 
-   
+
+

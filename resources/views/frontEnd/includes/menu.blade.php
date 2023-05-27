@@ -20,7 +20,7 @@ $BannerMenu="Banner_menu_about";
 <!-- LOGO AND MENU SECTION -->
 <style type="text/css">
   .wed-logo1 img{
-    margin-top:10px; 
+    margin-top:10px;
   }
 </style>
 <div class="top-logo" data-spy="affix" data-offset-top="250">
@@ -30,7 +30,7 @@ $BannerMenu="Banner_menu_about";
       <div class="wed-logo1" dir="{{ trans('backLang.direction') }}">
            <a class="logo" href="{{ route("Home") }}">
       @if(Helper::GeneralSiteSettings("style_logo_".trans('backLang.boxCode')) !="" )
-     {{--  <img src="{{ asset('uploads/logo11.png') }}"> --}}
+     {{--  <img src="{{secure_asset('uploads/logo11.png') }}"> --}}
       <img alt=""
            src="{{ Helper::FilterImage(Helper::GeneralSiteSettings("style_logo_" . trans('backLang.boxCode'))) }}" srcset="{{ Helper::FilterImage(Helper::GeneralSiteSettings("style_logo_" . trans('backLang.boxCode'))) }}" class="wed-logo-section">
 
@@ -39,7 +39,7 @@ $BannerMenu="Banner_menu_about";
       <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}" srcset="{{ URL::to('uploads/settings/nologo.png') }}" class="wed-logo-section">
       @endif
     </a>
-          
+
       </div>
     </div>
     <div class="col-md-9 no-padding">
@@ -48,17 +48,17 @@ $BannerMenu="Banner_menu_about";
 
      @foreach($HeaderMenuLinks as $key=> $HeaderMenuLink)
         @if($HeaderMenuLink->father_id ==1)
-          <?php 
+          <?php
 $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
           ?>
          <li class="{!! $HeaderMenuLink->link !!}-menu">
             <a href="#" class="mm-arr"><i class="fa  {!! ($key==0)?'fa-th':'' !!}" style='padding: 3px;'></i>{{ $HeaderMenuLink->$link_title_var }} </a>
-             
-             
+
+
             <div class="mm-pos">
               <div class="{!! $HeaderMenuLink->link !!}-mm m-menu">
                    <div class="m-menu-inn row">
-                      <?php 
+                      <?php
                         $count=$HeaderMenuLink->subMenus->count();
                         $col=3;
                         if ($count<=2) {
@@ -71,7 +71,7 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                             <div class="ed-course-in">
                                 <a class="course-overlay menu-{!! $HeaderMenuLink->link !!}" href="#">
                                     <img src="{{ Helper::getBannerStatic($BannerMenu) }}" style="box-shadow: 0px 7px 12px -4px rgba(0, 0, 0, 0.45);">
-                             
+
                                 </a>
                             </div>
                         </div>
@@ -79,14 +79,14 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                          @if($subMenus->status==1)
                         <div class="mm1-com mm1-s{{ $col }} col-xl-{{ $col }} col-lg-{{ $col }} col-md-{{ $col }} col-sm-6 col-xs-12">
 
-                          
-                        
+
+
                           <h4 class="m-header">{{ $subMenus->$link_title_var }}</h4>
-                           
+
                            <ul>
                        @if($subMenus->type==1)
-             
-                         <?php 
+
+                         <?php
                          $namesection='faculties';
                          $endlenk='/home';
 
@@ -96,9 +96,9 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                            }else{
                          $MenuSectionCustoms = App\Models\Faculty::where('status', 1)->get();
                            }
-                        
+
                           $namesection=$subMenus->link;
- 
+
 
 
                              ?>
@@ -115,28 +115,28 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                     }else{
                     $MenuSectionCustom_link_url = url($MenuSectionCustom->$slug_var);
                     }
-             } 
+             }
                     ?>
 
 
-                              
+
                                       <li><a  href="{{ url(trans('backLang.code').'/'.$namesection.'/'.$MenuSectionCustom->id).$endlenk }}">{{ $MenuSectionCustom->$title_var }}</a></li>
 
-                                
+
                                       @endforeach
 
 
                         @endif
 
-                        
+
                   @elseif($subMenus->type==3)
 
-            
+
                      @if(count($subMenus->webmasterSection->sections) >0)
 
                         @foreach($subMenus->webmasterSection->sections as $SubMnuCategory)
             @if($SubMnuCategory->father_id ==0 && $SubMnuCategory->status ==1)
-            
+
                     <?php
 
                     $Category_link_url1 =url(($SubMnuCategory->section_url=='')?'#':trans('backLang.code').'/'.$SubMnuCategory->section_url);
@@ -149,15 +149,15 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                     }
                     ?>
                     <li><a  href="{{ $Category_link_url1 }}"> {{$SubMnuCategory->$title_var}}</a></li>
-                  
-               
+
+
             @endif
-            
+
         @endforeach
 
 
 
- 
+
 
 
 
@@ -166,9 +166,9 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                     @endif
 
 
-              
 
-                          
+
+
 
                   @else
 
@@ -182,7 +182,7 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                                      @endif
                               @endif
                            @endforeach
-                           
+
 
 
 
@@ -192,7 +192,7 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
                          </ul>
                         </div>
                      @endif
-                    
+
                       @endforeach
 
                   </div>
@@ -201,14 +201,14 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
 
         @endif
      @endforeach
- 
-  
-    
+
+
+
     </li>
 
      <li>
                                       @if($WebmasterSettings->languages_count ==2)
-                        
+
                         <strong>
                             @if(trans('backLang.code')=="ar")
                                 <a href="{{ url(Helper::ChangeUrl('en')) }}" class="language"><i
@@ -222,15 +222,15 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
 
                         </strong>
                     @endif
-                   
+
                              </li>
-   
+
 {{--    <li><span class="navbar-text"><i id='morex' class="more fa fal fa-th " aria-hidden="true" title="Quick Menu" style="color: #000;"></i><span class="sr-only">Quick Menu</span></span>
 
     </li> --}}
-    
-           
-              
+
+
+
         </ul>
 
       </div>
@@ -238,7 +238,7 @@ $BannerMenu="Banner_menu_".$HeaderMenuLink->link;
     </div>
 
 {{-- <div class="all-drop-down-menu">
-          
+
         <div class="mega-menu2" style="display:none;">
 
         @include('frontEnd.includes.Quick-Menu')

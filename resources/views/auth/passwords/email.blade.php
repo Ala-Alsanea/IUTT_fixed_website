@@ -3,13 +3,13 @@
 <head>
     @include('backEnd.includes.head')
 
-       <link rel="stylesheet" type="text/css" href="{{ asset('plugins/auto/auto.css') }}">
+       <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/auto/auto.css') }}">
 </head>
 
 <body class="blank-page bg-full-screen-image">
 <div class="app" id="app">
 
-   
+
  <div class="app-content content p-a-md">
         <div class="content-overlay"></div>
         <div class="content-wrapper">
@@ -32,13 +32,13 @@
     </div>
     <div class="card-content">
         <div class="card-body">
-         
+
             <div class="divider">
                 <div class="divider-text text-uppercase text-muted"><small>{{ trans('backLang.forgotPassword') }}</small>
                 </div>
             </div>
            <div class="">
-            
+
               @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
@@ -62,10 +62,10 @@
         </div>
                 <hr>
                 <div class="d-flex">
-                      
+
                         <div class="p-v-lg text-center">{{ trans('backLang.returnTo') }} <a href="{{ url('/login') }}" class="text-primary _600">{{ trans('backLang.signIn') }}</a></div>
-                   
-                     
+
+
 
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 <!-- right section image -->
                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                     <div class="card-content">
-                        <img class="img-fluid" src="{{ URL::asset('plugins/auto/img/forgot-password.png') }}" alt="branding logo">
+                        <img class="img-fluid" src="{{ secure_asset('plugins/auto/img/forgot-password.png') }}" alt="branding logo">
                     </div>
                 </div>
             </div>
@@ -88,9 +88,9 @@
     </div>
  </div>
 
-   
- 
+
+
 </div>
 @include('backEnd.includes.foot')
-</body>   
+</body>
 </html>

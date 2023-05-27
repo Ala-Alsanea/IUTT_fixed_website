@@ -18,7 +18,7 @@ textarea#files {
                     <a href="">Editor</a>
                 </small>
             </div>
-  
+
          <div class="box-body">
                   <div class="row p-a">
                     <div class="col-sm-12">
@@ -27,17 +27,17 @@ textarea#files {
 
              </div>
            </div>
-          
+
     </div>
-        
-        
+
+
     </div>
 </div>
 
 @endsection
 
 @section('footerInclude')
-<script type="text/javascript" src="{{ asset('plugins/vendors/tinymce/js/tinymce/tinymce.min.js') }}"></script>
+<script type="text/javascript" src="{{secure_asset('plugins/vendors/tinymce/js/tinymce/tinymce.min.js') }}"></script>
 
 <script type="text/javascript">
     $(document).ready(function(e) {
@@ -47,8 +47,8 @@ textarea#files {
 
 
          paste_data_images: true,
- 
- 
+
+
     plugins: [
       "advlist autolink lists link image charmap print preview hr anchor pagebreak  filemanager ",
       "searchreplace wordcount visualblocks visualchars code  fullscreen",
@@ -57,8 +57,8 @@ textarea#files {
     ],
     toolbar1: "insertfile undo redo  localautosave| styleselect formatselect fontselect fontsizeselect | cut copy paste | bold italic underline removeformat | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink image quickupload searchreplace contextmenu template directionality",
     toolbar2: "print preview media visualblocks fullscreen  code| forecolor backcolor emoticons",
-     
-  
+
+
     style_formats:[
 
 {title: 'Inline', items: [
@@ -77,7 +77,7 @@ textarea#files {
     {title: 'Inserted Text',    inline: 'ins'},
     {title: 'Cited Work',       inline: 'cite'},
     {title: 'Inline Quotation', inline: 'q'},
- 
+
 ]},
 {title: 'Containers', items: [
     {title: 'section', block: 'section', wrapper: true, merge_siblings: false},
@@ -103,13 +103,13 @@ textarea#files {
 ]}    ],
     image_advtab: true,
     subfolder:"",
-    image_advtab: true, 
+    image_advtab: true,
        file_browser_callback: "openmanager",
         open_manager_upload_path: 'uploads/',
         external_image_list_url : "list.php",
-      moxiemanager_filelist_context_menu: 'cut copy paste | view edit rename download addfavorite | zip unzip | remove', 
-      
- 
+      moxiemanager_filelist_context_menu: 'cut copy paste | view edit rename download addfavorite | zip unzip | remove',
+
+
 
      file_picker_callback: function(callback, value, meta) {
       if (meta.filetype == 'image') {
@@ -127,8 +127,8 @@ textarea#files {
         });
       }
     },
- 
-  
+
+
  templates: [{
       title: 'Test template 1',
       content: 'Test 1'

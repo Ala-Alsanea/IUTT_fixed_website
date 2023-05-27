@@ -2,12 +2,12 @@
 @extends('frontEnd.layout')
 
 @section('content')
- 
- <link rel="stylesheet" type="text/css" href="{{ asset('plugins/css/new-custom.css') }}">
- <link href="{{ asset('plugins/css/graduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/graduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/about.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{ asset('plugins/css/about-responsive.css') }}" type="text/css" rel="stylesheet"/>
+
+ <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+ <link href="{{secure_asset('plugins/css/graduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/graduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/about.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/about-responsive.css') }}" type="text/css" rel="stylesheet"/>
 
   <style>
  .highlighted-box {
@@ -25,7 +25,7 @@
     padding-right: 30px;
 }
 .common-btn span {color: currentcolor;
-}    
+}
   </style>
 @if(count((array)$Topics)==0)
 <section class="process_area bg_color sec_pad about">
@@ -36,9 +36,9 @@
                             {{ trans('backLang.noData') }}
                             <br>
                             <br>
-                             
-                               
-                           
+
+
+
                         </div>
                     </div>
     </div>
@@ -47,8 +47,8 @@
 
 
 
- 
-  
+
+
  <section>
   <div class="page-title head-1" style="background-image: url({{ Helper::getBannerStatic('Banner_Academic_page_staff') }});">
 
@@ -63,13 +63,13 @@
                             <ul class="bread-crumb clearfix">
                                 <li><a href="{{ route("Home") }}">{{ trans('frontLang.Home') }}</a></li>
                                   {{--   @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif --}}
-                                 
+
                                   <li class="active">{{ $name_section }}
                                 </li>
                             </ul>
@@ -79,44 +79,44 @@
             </div>
         </div>
     </section>
- 
-<?php 
 
- 
+<?php
+
+
 $listLevel=array(0=>trans('frontLang.Firstterm'),1=>trans('frontLang.Secondterm'),2=>trans('frontLang.Summerterm'));
 
 ?>
 
 
 
-    
+
 
 <div class="container com-sp pad-bot-70">
-           
-      
+
+
             <div class="ed-about-tit">
                 <div class="con-title">
                     <h2>{{ $name_section }}</h2>
-                  
+
                 </div>
             </div>
-          
-<div class="path-academic-calendar ">
-   @foreach($listLevel as $level=> $value) 
- 
-    <div class="view-content accordion ui-accordion" role="tablist"  id="accordion-{{ $level }}">
-       
 
-        <?php 
+<div class="path-academic-calendar ">
+   @foreach($listLevel as $level=> $value)
+
+    <div class="view-content accordion ui-accordion" role="tablist"  id="accordion-{{ $level }}">
+
+
+        <?php
         $indexer=0;
 
         ?>
-        @foreach($Topics as $Item) 
-        
-               
-               
-          
-         @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='' && $Item->fields[0]->field_value==$level) 
+        @foreach($Topics as $Item)
+
+
+
+
+         @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='' && $Item->fields[0]->field_value==$level)
            @if($indexer==0)
                    <h2>{{ $value }}</h2>
                    <br>
@@ -139,26 +139,26 @@ $listLevel=array(0=>trans('frontLang.Firstterm'),1=>trans('frontLang.Secondterm'
                         <h3 class="title-collapse-aca">
                             <div class="aca-title">
                               <a href="#ui-id-{{ $Item->id }}-level-{{ $level  }}" title="{!!  $Item->$title_var !!}" >{!!  $Item->$title_var !!} </a></div>
-                            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='') 
+                            @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='')
                             <div class="aca-day">{{ $Item->fields[0]->field_value }}</div>
-                              @endif 
-                            
+                              @endif
+
 
                             <div class="aca-date">{!!  $Item->date !!}</div>
-                             
+
                         </h3>
                     </span>
                 </div>
             </div>
 
             <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content collapse" role="tabpanel" id="ui-id-{{ $Item->id }}-level-{{ $level  }}" aria-labelledby="ui-ui-id-{{ $Item->id }}-level-{{ $level  }}" data-parent=".accordion-{{ $level }}" aria-expanded="false">
-                @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='') 
+                @if (isset($Item->fields) && isset($Item->fields[0]) && $Item->fields[0]->field_value!='')
                 <div class="views-field views-field-field-academic-event-date">
-                
+
                     <span class="views-label views-label-field-academic-event-date">{{ trans('frontLang.Day') }}</span>
                     <div class="field-content">{{ $Item->fields[0]->field_value }}</div>
                 </div>
-                   @endif 
+                   @endif
                 <div class="views-field views-field-field-academic-event-date-1">
                     <span class="views-label views-label-field-academic-event-date-1">{{ trans('frontLang.Date') }}</span>
                     <div class="field-content">{!!  $Item->date !!}</div>
@@ -170,32 +170,32 @@ $listLevel=array(0=>trans('frontLang.Firstterm'),1=>trans('frontLang.Secondterm'
                 </div>
             </div>
         </div>
-             @endif 
-         @endforeach 
- 
+             @endif
+         @endforeach
 
-      
+
+
     </div>
- @endforeach 
+ @endforeach
   </div>
 
 </div>
 
 
- 
 
- 
- 
+
+
+
 
 
 @endif
 @endsection
 @section('footerInclude')
 
-  
+
 
    @endsection
- 
+
 
 
 

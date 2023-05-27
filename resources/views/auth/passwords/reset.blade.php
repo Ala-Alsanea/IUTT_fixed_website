@@ -2,13 +2,13 @@
 <html lang="{{ trans('backLang.code') }}" dir="{{ trans('backLang.direction') }}">
 <head>
     @include('backEnd.includes.head')
-        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/auto/auto.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/auto/auto.css') }}">
 </head>
 
 <body class="blank-page bg-full-screen-image">
 <div class="app" id="app">
 
-   
+
  <div class="app-content content p-a-md">
         <div class="content-overlay"></div>
         <div class="content-wrapper">
@@ -25,18 +25,18 @@
     <div class="card-header">
         <div class="card-title">
             <h4 class="text-center "> {{ trans('backLang.control') }}</h4>
- 
+
         </div>
     </div>
     <div class="card-content">
         <div class="card-body">
-         
+
             <div class="divider">
                 <div class="divider-text text-uppercase text-muted"><small>{{ trans('backLang.resetPassword') }}</small>
                 </div>
             </div>
            <div class="">
-            
+
              <div class="m-b">
                 {{ trans('backLang.resetPassword') }}
             </div>
@@ -76,8 +76,8 @@
                 <button type="submit" class="btn primary btn-block p-x-md">{{ trans('backLang.resetPassword') }}</button>
             </form>
         </div>
-                
-                
+
+
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
                 <!-- right section image -->
                 <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
                     <div class="card-content">
-                        <img class="img-fluid" src="{{ URL::asset('plugins/auto/img/reset-password.png') }}" alt="branding logo">
+                        <img class="img-fluid" src="{{ secure_asset('plugins/auto/img/reset-password.png') }}" alt="branding logo">
                     </div>
                 </div>
             </div>
@@ -98,11 +98,10 @@
     </div>
  </div>
 
-   
- 
+
+
 </div>
 @include('backEnd.includes.foot')
-</body>   
+</body>
 </html>
 
-  

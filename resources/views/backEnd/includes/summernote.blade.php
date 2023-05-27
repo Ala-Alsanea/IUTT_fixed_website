@@ -1,8 +1,8 @@
 
-<script type="text/javascript" src="{{ asset('plugins/backEnd/libs/jquery/summernote/dist/summernote-lite.min.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('plugins/backEnd/libs/jquery/summernote/dist/plugin/table/summernote-ext-table.js') }}"></script>
- 
- 
+<script type="text/javascript" src="{{secure_asset('plugins/backEnd/libs/jquery/summernote/dist/summernote-lite.min.js') }}"></script>
+<script type="text/javascript" src="{{secure_asset('plugins/backEnd/libs/jquery/summernote/dist/plugin/table/summernote-ext-table.js') }}"></script>
+
+
 
 <script type="text/javascript">
          $(document).ready(function () {
@@ -25,9 +25,8 @@
                         ['delete', ['jWidthHeightReset', 'deleteTable']],
                     ]
                 },
-                
-                 
+
+
             });
         });
     </script>
- 

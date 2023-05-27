@@ -1,7 +1,7 @@
 
 @extends('frontEnd.onepage.layout')
 @section('styleInclude')
-    <link href="{{ asset('plugins/css/materialize.css') }}" rel="stylesheet">
+    <link href="{{secure_asset('plugins/css/materialize.css') }}" rel="stylesheet">
    <style type="text/css">
      nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
     display: unset;
@@ -22,7 +22,7 @@
    </style>
  @endsection
 @section('content')
-   
+
   @if(count((array)$Topic)==0)
 
 
@@ -35,14 +35,14 @@
                                     {{ trans('backLang.noData') }}
                                     <br>
                                     <br>
-                                     
-                                       
-                                   
+
+
+
                                 </div>
                             </div>
             </div>
         </section>
- 
+
     @else
 
 
@@ -55,8 +55,8 @@
 $title='';
 $details='';
  $backgroundImage="uploads/banar.jpg";
- 
-          
+
+
            if ($Topic->$title_var != "") {
                     $title = $Topic->$title_var;
                 } else {
@@ -69,8 +69,8 @@ $details='';
                 }
      if (isset($Topic->fields) && isset($Topic->fields[0])) {
          $backgroundImage=$Topic->fields[0]->field_value;
-     } 
-   
+     }
+
     ?>
 
 
@@ -87,13 +87,13 @@ $details='';
                         <div class="breadcrumb-column">
                             <ul class="bread-crumb clearfix">
                    <li><a href="{{ route('FacultyPage',$FacultyData->id) }}">{{ trans('frontLang.Home') }}</a></li>
-              
-                       
+
+
                          @if(isset($thisDetailMenu->parentMenus) && isset($thisDetailMenu->parentMenus->$title_var))
-                                       
+
                                        <li><a>{{ $thisDetailMenu->parentMenus->$title_var }}</a></li>
 
-                                       
+
 
                                       @endif
                          <li class=""><a href="{{  url(trans('backLang.code').'/'.$FacultyData->id.'/ourGallery/')  }}">{{ trans('frontLang.ourGallery') }}</a>
@@ -106,33 +106,33 @@ $details='';
             </div>
         </div>
     </section>
- 
 
 
- 
- 
+
+
+
    <section>
          <div class="ed-res-bg">
         <div class="container clearfix com-sp eventpage">
-               
-              
+
+
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="ed-about-tit">
                         <div class="con-title">
                             <h2> {{ $title }}</h2>
-                             
+
                         </div>
                         <div>
      </div>
-           
- 
+
+
  <div class="cor about-sp">
                     <div class="ed-about-tit">
                    <div>
                <div class="cor about-sp h-gal ed-pho-gal">
                     <ul>
 
-                 
+
 
                        @if(count((array)$Topic->photos)>0)
                            @foreach($Topic->photos as  $photo)
@@ -142,13 +142,13 @@ $details='';
 
                          @endif
 
-             
-                 
-                 
-           
-                              
-                             
-                               
+
+
+
+
+
+
+
                    </ul>
            </div>
 
@@ -156,65 +156,64 @@ $details='';
    </div>
 </div>
 
-        
+
 
         <hr>
-          
-        
-           
-           
+
+
+
+
             <div class="post_share">
                 <div class="post-nam">Share:</div>
                 <div class="flex">
                      <a href="{{ Helper::SocialShare("facebook", $PageTitle)}}" class="facebook"
                            data-placement="top"
-                           title="Facebook" target="_blank"><i class="fa fa-facebook"></i>Facebook</a> 
+                           title="Facebook" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
                 <a href="{{ Helper::SocialShare("twitter", $PageTitle)}}" class="twitter"
                            data-placement="top" title="Twitter"
                            target="_blank"><i
-                                    class="fa fa-twitter"></i>Twitter</a> 
+                                    class="fa fa-twitter"></i>Twitter</a>
                  <a href="{{ Helper::SocialShare("google", $PageTitle)}}" class="google"
                            data-placement="top"
                            title="Google+"
                            target="_blank"><i
-                                    class="fa fa-google-plus"></i>Google+</a> 
+                                    class="fa fa-google-plus"></i>Google+</a>
             <a href="{{ Helper::SocialShare("linkedin", $PageTitle)}}" class="linkedin"
                            data-placement="top" title="linkedin"
                            target="_blank"><i
-                                    class="fa fa-linkedin"></i>linkedin</a> 
+                                    class="fa fa-linkedin"></i>linkedin</a>
              <a href="{{ Helper::SocialShare("tumblr", $PageTitle)}}" class="pintrest"
                            data-placement="top" title="Pinterest"
                            target="_blank"><i
-                                    class="fa fa-pinterest"></i>Pinterest</a> 
+                                    class="fa fa-pinterest"></i>Pinterest</a>
 
-                   
+
                 </div>
             </div>
-          
-          
+
+
         </div>
     </div>
- 
- 
-    
-                
-     
- 
+
+
+
+
+
+
     </section>
- 
+
 
 
       @endif
 
- 
+
 @endsection
 @section('footerInclude')
- <script src="{{ asset('plugins/js/materialize.min.js') }}"></script>
-   
+ <script src="{{secure_asset('plugins/js/materialize.min.js') }}"></script>
+
 
    @endsection
- 
 
-   
-  
- 
+
+
+
