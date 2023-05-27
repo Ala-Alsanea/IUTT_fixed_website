@@ -53,7 +53,7 @@
                         <img alt=""
                              src="{{ Helper::FilterImage(Helper::GeneralSiteSettings("style_logo_" . trans('backLang.boxCode'))) }}">
                     @else
-                        <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}">
+                        <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}">
                     @endif
 
                 </a>

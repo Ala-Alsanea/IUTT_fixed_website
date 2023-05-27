@@ -7,7 +7,7 @@ $envAdminCharCount = strlen(env('BACKEND_PATH')) + 1;
 $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH')) + $envAdminCharCount);
 $UserPermission_id=@Auth::user()->permissions_id;
 $Permission_id=@Auth::user()->permissions_id;
- 
+
 $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
 
 ?>
@@ -17,12 +17,12 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand" href="{{ route('adminHome') }}">
-                <img src="{{ URL::to('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
+                <img src="{{ secure_asset('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
                 <span class="hidden-folded inline">{{ trans('backLang.control') }}</span>
             </a>
             <!-- / brand -->
         </div>
-        <?php  
+        <?php
 //print_r($PagesList);
         ?>
         <div flex class="hide-scroll">
@@ -232,15 +232,15 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
                                     <span class="nav-text">{{ trans('backLang.FileManager') }}</span>
                                 </a>
                             </li>
-                            
-                    
+
+
 
                     <?php
                     $data_sections_arr = explode(",", Auth::user()->permissionsGroup->data_sections);
                     ?>
-                        
-                <?php 
-               
+
+                <?php
+
 
                      $PermissionsPage=0;
                         $SelectedPage=0;
@@ -251,83 +251,83 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
                     ?>
                  @if(count((array)$MenutTitles)>0)
                      @foreach($MenutTitles as $MenutTitle)
-                        
 
-                       <?php 
 
-                      
-             
+                       <?php
+
+
+
            $Page_id=0;
                   $Father_id=$MenutTitle->Cat_id;
-             
+
                    $MainMenus=Helper::MenuSectionSite($Father_id);
-            
+
               //571775002564288
 
             if(count($MainMenus)>0){
 
-        
-       
+
+
                    ?>
-                  
+
                     <li class="nav-header hidden-folded">
                         <small class="text-muted">{{  $MenutTitle->$CatTitle }}</small>
                        </li>
 
                    <?php
-                   
+
                   foreach($MainMenus as $MainMenu){
                           $CatType=$MainMenu->CatType;
                             $Page_id=$MainMenu->Cat_id;
-                           $currentFolder =$MainMenu->Catlink;  
-                            $PathCurrentFolder = substr($urlAfterRoot, 0, strlen($currentFolder)); 
+                           $currentFolder =$MainMenu->Catlink;
+                            $PathCurrentFolder = substr($urlAfterRoot, 0, strlen($currentFolder));
                             $ClassActive="";
                             if ($PathCurrentFolder==$MainMenu->Catlink) {
                                     $ClassActive="active";
-                               }  
+                               }
                         $Father_idSub=$MainMenu->Cat_id;
 
                        $SubMenus=Helper::MenuSectionSite($Father_idSub);
                    $CheckIsPage=Helper::GetPageInPrimion($Permission_id,$Father_idSub);
-                 
+
                        ?>
 
                        @if(count($SubMenus)==0 && $MainMenu->CatType==1)
 
 
-                      @if(in_array($MainMenu->Cat_id,$PagesList)) 
-                          
+                      @if(in_array($MainMenu->Cat_id,$PagesList))
+
                           <li id="{{ $MainMenu->Catlink }}" class="{{ $ClassActive }}">
-                          
-                           <a href="{{ route($MainMenu->Catlink) }}"> 
+
+                           <a href="{{ route($MainMenu->Catlink) }}">
                                    <span class="nav-icon">
-                                     
+
                                      <i class="material-icons fa {{ $MainMenu->CatIcon }}"></i>
-                                   
+
                                    </span>
                                     <span class="nav-text">{{  $MainMenu->$CatTitle }}</span>
                                 </a>
                             </li>
-                           
+
                             @endif
 
-                          @elseif($MainMenu->CatType==2) 
-                           <?php 
+                          @elseif($MainMenu->CatType==2)
+                           <?php
                            $Section_idM=$MainMenu->Subcat_id;
 
-                          $SectionMain=Helper::SectionSiteInMenu($Section_idM); 
+                          $SectionMain=Helper::SectionSiteInMenu($Section_idM);
 
 
                            ?>
-                        @if(in_array($MainMenu->Cat_id,$PagesList)) 
+                        @if(in_array($MainMenu->Cat_id,$PagesList))
                           @if($SectionMain->status>0)
                           <li id="{{ $MainMenu->Catlink }}" class="{{ $ClassActive }}">
-                          
-                           <a href="{{ route($MainMenu->Catlink,$MainMenu->Subcat_id) }}"> 
+
+                           <a href="{{ route($MainMenu->Catlink,$MainMenu->Subcat_id) }}">
                                    <span class="nav-icon">
-                                     
+
                                      <i class="material-icons fa {{ $MainMenu->CatIcon }}"></i>
-                                   
+
                                    </span>
                                     <span class="nav-text">{{  $MainMenu->$CatTitle }}</span>
                                 </a>
@@ -335,8 +335,8 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
                             @endif
                         @endif
 
-                          @elseif(count($SubMenus)>0 && $MainMenu->CatType==0 && count($CheckIsPage)>0) 
-                        
+                          @elseif(count($SubMenus)>0 && $MainMenu->CatType==0 && count($CheckIsPage)>0)
+
                                 <li>
                                     <a>
                                 <span class="nav-caret">
@@ -350,38 +350,38 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
                                 <ul class="nav-sub">
                                    @foreach($SubMenus as $SubMenu)
 
-                                    <?php 
+                                    <?php
                                     $Page_idsub=$SubMenu->Cat_id;
                                 //if(in_array($Page_idsub,$PagesList)) {
                                      $currentFolder1=$MainMenu->Catlink.'/'.$SubMenu->Catlink;
-                                    
+
                                        $currentFolder1=$SubMenu->Catlink;
                                     $ClassActive1=Helper::GetMenuActiveId($urlAfterRoot,$currentFolder1);
                                         $RouteContent=$SubMenu->Catlink;
                                         if ($MainMenu->Catlink!='') {
                                             $RouteContent=$MainMenu->Catlink.','.$SubMenu->Catlink;
-                                        } 
-                                  // Route::exists()     
+                                        }
+                                  // Route::exists()
                        //if(Route::has($MainMenu->Catlink,$SubMenu->Catlink))
                                     // $RouteContent=Helper::FilterRoutMenu($SubMenu->Catlink);
 
-                                     
-                                      
+
+
 
                                     ?>
-                             @if(in_array($SubMenu->Cat_id,$PagesList)) 
+                             @if(in_array($SubMenu->Cat_id,$PagesList))
                                   @if($SubMenu->CatType==2)
-                                  <?php  
-                                    $Section_id=$SubMenu->Subcat_id; 
-                                    
+                                  <?php
+                                    $Section_id=$SubMenu->Subcat_id;
+
                                    $Sections=Helper::SectionSiteInMenu($Section_id);
 
 
                                   ?>
                                   @if($SubMenu->Catlink=='sections')
                                     @if($Sections->sections_status>0)
-                                        <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">  
-                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}"> 
+                                        <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">
+                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}">
                                                 <span class="nav-text"> {{  $SubMenu->$CatTitle }}</span>
                                             </a>
                                         </li>
@@ -389,21 +389,21 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
 
                                       @elseif($SubMenu->Catlink=='topics')
                                         @if($Sections->status>0)
-                                         <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">  
-                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}"> 
+                                         <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">
+                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}">
                                                 <span class="nav-text"> {{  $SubMenu->$CatTitle }}</span>
                                             </a>
-                                        </li> 
+                                        </li>
                                        @endif
 
-                                       
+
                                    @endif
-                                   
+
 
 
                                     @else
 
-                                <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}"> 
+                                <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">
                                       @if($MainMenu->Catlink!="")
                                       <a href="{{ route($MainMenu->Catlink,$SubMenu->Catlink) }}">
                                         @elseif(strpos($SubMenu->Catlink,'/') !== false)
@@ -413,45 +413,45 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
                                          @endif
                                             <span class="nav-text"> {{  $SubMenu->$CatTitle }}</span>
                                         </a>
-                                    </li> 
+                                    </li>
                                     @endif
                                     @endif
-                                    
-                                    
+
+
                                      @endforeach
 
 
                                 </ul>
-                            </li> 
+                            </li>
 
 
-                            
-
-                         @endif   
 
 
-                     
-                            
+                         @endif
 
-                      <?php 
 
-  
+
+
+
+                      <?php
+
+
 
             }
-             
-             
-              }
-                                  
-                                
-                                  
 
-                           
-                      
+
+              }
+
+
+
+
+
+
 
 
                       ?>
 
-                   
+
 
 
 
@@ -459,7 +459,7 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
                       @endif
 
 
-                  
+
 
                    <li class="nav-header hidden-folded">
                         <small class="text-muted">{{ trans('backLang.DeveloperSection') }}</small>

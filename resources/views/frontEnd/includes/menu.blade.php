@@ -36,7 +36,7 @@ $BannerMenu="Banner_menu_about";
 
 
       @else
-      <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}" srcset="{{ URL::to('uploads/settings/nologo.png') }}" class="wed-logo-section">
+      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
       @endif
     </a>
 

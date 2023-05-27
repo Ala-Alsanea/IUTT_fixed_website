@@ -4,7 +4,7 @@
     var public_folder_path = "{{ URL::to('') }}"; // this is a public var used in app.html.js to define path to js files
 </script>
 
-<script src="{{ URL::to('plugins/backEnd/scripts/app.html.js') }}"></script>
+<script src="{{ secure_asset('plugins/backEnd/scripts/app.html.js') }}"></script>
 <script type="text/javascript" src="{{secure_asset('plugins/backEnd/libs/jquery/summernote/dist/summernote-lite.min.js') }}"></script>
 <script type="text/javascript" src="{{secure_asset('plugins/backEnd/libs/jquery/summernote/dist/plugin/table/summernote-ext-table.js') }}"></script>
 <script src="{{ secure_asset('plugins/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js') }}"></script>
@@ -26,9 +26,9 @@
     <script src="{{asset('plugins/assets/global/plugins/fonts/LivIconsEvo/js/LivIconsEvo.min.js')}}"></script>
 
 
-<script src="{{ URL::to('plugins/js/custome.js') }}"></script>
-<script src="{{ URL::to('plugins/assets/global/js/App.js') }}"></script>
-{{-- <script src="{{ URL::to('plugins/backEnd/libs/jquery/summernote/dist/lang/summernote-ar-AR.js') }}"></script> --}}
+<script src="{{ secure_asset('plugins/js/custome.js') }}"></script>
+<script src="{{ secure_asset('plugins/assets/global/js/App.js') }}"></script>
+{{-- <script src="{{ secure_asset('plugins/backEnd/libs/jquery/summernote/dist/lang/summernote-ar-AR.js') }}"></script> --}}
 {!! Helper::SaveVisitorInfo("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") !!}
 
 

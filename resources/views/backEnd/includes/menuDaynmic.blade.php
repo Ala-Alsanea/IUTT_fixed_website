@@ -8,7 +8,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
 $LangCode=trans('backLang.boxCode');
  $CatTitle = "CatTitle_" . trans('backLang.boxCode');
 
- 
+
 ?>
 
 
@@ -17,7 +17,7 @@ $LangCode=trans('backLang.boxCode');
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand" href="{{ route('adminHome') }}">
-                <img src="{{ URL::to('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
+                <img src="{{ secure_asset('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
                 <span class="hidden-folded inline">{{ trans('backLang.control') }}</span>
             </a>
             <!-- / brand -->
@@ -26,9 +26,9 @@ $LangCode=trans('backLang.boxCode');
             <nav flex class="nav-stacked nav-border scroll nav-active-primary">
  <?php   // echo $urlAfterRoot;      ?>
                 <ul class="nav" ui-nav>
-              
 
-                    <?php 
+
+                    <?php
 
                   $MenutTitles=Helper::ParentMenuBackend(0,0);
 
@@ -40,34 +40,34 @@ $LangCode=trans('backLang.boxCode');
                         <small class="text-muted">{{  $MenutTitle->$CatTitle }}</small>
                        </li>
 
-                       <?php 
+                       <?php
 
                        $Father_id=$MenutTitle->Cat_id;
 
            $MainMenus=Helper::MenuSectionSite($Father_id);
-              
+
 
             if(count($MainMenus)>0){
 
                   foreach($MainMenus as $MainMenu){
                           $CatType=$MainMenu->CatType;
 
-                           $currentFolder =$MainMenu->Catlink;  
-                            $PathCurrentFolder = substr($urlAfterRoot, 0, strlen($currentFolder)); 
+                           $currentFolder =$MainMenu->Catlink;
+                            $PathCurrentFolder = substr($urlAfterRoot, 0, strlen($currentFolder));
                             $ClassActive="";
                             if ($PathCurrentFolder==$MainMenu->Catlink) {
                                     $ClassActive="active";
-                               }   
+                               }
                         if ($MainMenu->CatType==1) {
                               ?>
-                          @if(Route::has($MainMenu->Catlink))  
+                          @if(Route::has($MainMenu->Catlink))
                           <li id="{{ $MainMenu->Catlink }}" class="{{ $ClassActive }}">
-                          
-                           <a href="{{ route($MainMenu->Catlink) }}"> 
+
+                           <a href="{{ route($MainMenu->Catlink) }}">
                                    <span class="nav-icon">
-                                     
+
                                      <i class="material-icons fa {{ $MainMenu->CatIcon }}"></i>
-                                   
+
                                    </span>
                                     <span class="nav-text">{{  $MainMenu->$CatTitle }}</span>
                                 </a>
@@ -78,7 +78,7 @@ $LangCode=trans('backLang.boxCode');
 
 
 
-                      <?php 
+                      <?php
                            }elseif ($MainMenu->CatType==0) {
 
 
@@ -86,7 +86,7 @@ $LangCode=trans('backLang.boxCode');
 
                               $SubMenus=Helper::MenuSectionSite($Father_idSub);
 
-                          
+
 
                             ?>
 
@@ -104,36 +104,36 @@ $LangCode=trans('backLang.boxCode');
                                 <ul class="nav-sub">
                                    @foreach($SubMenus as $SubMenu)
 
-                                    <?php 
+                                    <?php
                                      $currentFolder1=$MainMenu->Catlink.'/'.$SubMenu->Catlink;
-                                    
+
                                        $currentFolder1=$SubMenu->Catlink;
                                     $ClassActive1=Helper::GetMenuActiveId($urlAfterRoot,$currentFolder1);
                                         $RouteContent=$SubMenu->Catlink;
                                         if ($MainMenu->Catlink!='') {
                                             $RouteContent=$MainMenu->Catlink.','.$SubMenu->Catlink;
-                                        } 
-                                  // Route::exists()     
+                                        }
+                                  // Route::exists()
                        //if(Route::has($MainMenu->Catlink,$SubMenu->Catlink))
                                     // $RouteContent=Helper::FilterRoutMenu($SubMenu->Catlink);
 
-                                     
-                                      
+
+
 
                                     ?>
-                                 
+
                                   @if($SubMenu->CatType==2)
-                                  <?php  
-                                    $Section_id=$SubMenu->Subcat_id; 
-                                    
+                                  <?php
+                                    $Section_id=$SubMenu->Subcat_id;
+
                                    $Sections=Helper::SectionSiteInMenu($Section_id);
 
 
                                   ?>
                                   @if($SubMenu->Catlink=='sections')
                                     @if($Sections->sections_status>0)
-                                        <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">  
-                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}"> 
+                                        <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">
+                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}">
                                                 <span class="nav-text"> {{  $SubMenu->$CatTitle }}</span>
                                             </a>
                                         </li>
@@ -141,19 +141,19 @@ $LangCode=trans('backLang.boxCode');
 
                                       @elseif($SubMenu->Catlink=='topics')
                                         @if($Sections->status>0)
-                                         <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">  
-                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}"> 
+                                         <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">
+                                          <a href="{{ route($SubMenu->Catlink,$SubMenu->Subcat_id) }}">
                                                 <span class="nav-text"> {{  $SubMenu->$CatTitle }}</span>
                                             </a>
-                                        </li> 
+                                        </li>
                                        @endif
                                    @endif
-                                   
+
 
 
                                     @else
 
-                                <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}"> 
+                                <li class="{{ $ClassActive1 }} {{ $currentFolder1 }}">
                                       @if($MainMenu->Catlink!="")
                                       <a href="{{ route($MainMenu->Catlink,$SubMenu->Catlink) }}">
                                         @elseif(strpos($SubMenu->Catlink,'/') !== false)
@@ -163,74 +163,74 @@ $LangCode=trans('backLang.boxCode');
                                          @endif
                                             <span class="nav-text"> {{  $SubMenu->$CatTitle }}</span>
                                         </a>
-                                    </li> 
+                                    </li>
                                     @endif
-                                    
-                                     
+
+
                                      @endforeach
 
 
                                 </ul>
-                            </li> 
+                            </li>
                         @else
 
-                          @if(Route::has($MainMenu->Catlink))   
+                          @if(Route::has($MainMenu->Catlink))
                               <li id="{{ $MainMenu->Catlink }}" class="{{ $ClassActive }}">
                                <a href="{{ route($MainMenu->Catlink) }}">
                                        <span class="nav-icon">
-                                         
+
                                          <i class="material-icons fa {{ $MainMenu->CatIcon }}"></i>
-                                       
+
                                        </span>
                                         <span class="nav-text">{{  $MainMenu->$CatTitle }}</span>
                                     </a>
                                 </li>
 
-                               @endif 
-                             @endif 
+                               @endif
+                             @endif
 
 
 
-                            <?php 
+                            <?php
 
 
                     }elseif ($MainMenu->CatType==2) {
 
                           $Section_idM=$MainMenu->Subcat_id;
 
-                          $SectionMain=Helper::SectionSiteInMenu($Section_idM); 
-                              
+                          $SectionMain=Helper::SectionSiteInMenu($Section_idM);
+
                            ?>
                        @if($SectionMain->status>0)
                           <li id="{{ $MainMenu->Catlink }}" class="{{ $ClassActive }}">
-                          
-                           <a href="{{ route($MainMenu->Catlink,$MainMenu->Subcat_id) }}"> 
+
+                           <a href="{{ route($MainMenu->Catlink,$MainMenu->Subcat_id) }}">
                                    <span class="nav-icon">
-                                     
+
                                      <i class="material-icons fa {{ $MainMenu->CatIcon }}"></i>
-                                   
+
                                    </span>
                                     <span class="nav-text">{{  $MainMenu->$CatTitle }}</span>
                                 </a>
                             </li>
                             @endif
-                            
-
-                      <?php 
 
 
-                           
-                         }  
+                      <?php
+
+
+
+                         }
 
             }
-          
-          }
-                                  
-                                
-                                  
 
-                           
-                      
+          }
+
+
+
+
+
+
 
 
                       ?>
@@ -242,10 +242,10 @@ $LangCode=trans('backLang.boxCode');
                          @endforeach
                       @endif
 
-                  
 
 
-                  
+
+
                 </ul>
             </nav>
         </div>

@@ -6,13 +6,13 @@
                     <h4>{{ trans('frontLang.contactDetails') }}</h4>
                      @if(Helper::GeneralSiteSettings("contact_t1_" . trans('backLang.boxCode')) !="")
                           <address>
-                             <p> 
+                             <p>
                                 <i class="fa fa-map-marker"></i>
                                 &nbsp;<strong>{{ trans('frontLang.address') }} :</strong> &nbsp;
                                 {{ Helper::GeneralSiteSettings("contact_t1_" . trans('backLang.boxCode')) }}
                             </p>
                             </address>
-                        
+
                         @endif
                         @if(Helper::GeneralSiteSettings("contact_t3") !="")
                             <p>
@@ -29,7 +29,7 @@
                             </p>
                         @endif
 
-                    
+
                 </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
 
@@ -40,14 +40,14 @@
                         <img alt=""
                              src="{{ Helper::FilterImage(Helper::GeneralSiteSettings("style_logo_w_" . trans('backLang.boxCode'))) }}">
                     @else
-                        <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}">
+                        <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}">
                     @endif
 
                 </a>
-                        
+
                         </div>
 
-                           
+
 
         </div>
 <div class="col-xl-5 col-lg-4 col-md-4 col-sm-5 col-xs-12">
@@ -99,17 +99,17 @@
                             @endforeach
                         </ul>
                     <ul>
-                         
-                      
- 
+
+
+
                 </div>
-        
+
 
     </div>
 <div class="row">
-                
+
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mtop15" style="text-align: center;">
-                    
+
                     <span class="copy-right" style="
     color: #f1f1f1;
     font-size: 14px;
@@ -126,6 +126,6 @@
                 <div class="clearfix"></div>
             </div>
 
-            
+
         </div>
     </section>

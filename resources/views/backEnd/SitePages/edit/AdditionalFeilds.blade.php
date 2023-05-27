@@ -98,12 +98,12 @@
                             ?>
                             <div id="{{$file_name_id}}" class="col-sm-4 box p-a-xs">
                                 <video width="380" height="230" controls>
-                                    <source src="{{ URL::to('uploads/topics/'.$cf_saved_val) }}"
+                                    <source src="{{ secure_asset('uploads/topics/'.$cf_saved_val) }}"
                                             type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <a target="_blank"
-                                   href="{{ URL::to('uploads/topics/'.$cf_saved_val) }}">
+                                   href="{{ secure_asset('uploads/topics/'.$cf_saved_val) }}">
                                     {{ $cf_saved_val }}
                                 </a>
                                 <br>
@@ -139,7 +139,7 @@
                             ?>
                             <div id="{{$file_name_id}}" class="col-sm-4 box p-a-xs">
                                 <a target="_blank"
-                                   href="{{ URL::to('uploads/topics/'.$cf_saved_val) }}">
+                                   href="{{ secure_asset('uploads/topics/'.$cf_saved_val) }}">
                                     {{ $cf_saved_val }}
                                 </a>
                                 <br>
@@ -200,8 +200,8 @@
                             {!! Form::hidden($file_del_id,'0', array('id'=>$file_del_id)) !!}
                             {!! Form::hidden($file_old_id,$cf_saved_val, array('id'=>$file_old_id)) !!}
                        {{--  @endif --}}
-                          
-                         
+
+
                     </div>
                 </div>
             @elseif($customField->type ==7)

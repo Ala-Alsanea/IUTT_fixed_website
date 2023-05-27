@@ -1,8 +1,8 @@
 @extends('backEnd.layout')
 
 @section('content')
- <?php  
-$DetailPage=(object)config('Page.DetailPage'); 
+ <?php
+$DetailPage=(object)config('Page.DetailPage');
 ?>
     <div class="padding">
         <div class="box">
@@ -88,7 +88,7 @@ $DetailPage=(object)config('Page.DetailPage');
                                                  style="height: 40px" alt="{{ $title }}">
                                         </div>
                                     @endif
-                                    
+
                                     {!! Form::text('row_no_'.$Section->id,$Section->row_no, array('class' => 'form-control row_no','id'=>'row_no')) !!}
                                     @if($Section->icon !="")
                                         <i class="fa {!! $Section->icon !!} "></i>
@@ -167,7 +167,7 @@ $DetailPage=(object)config('Page.DetailPage');
                                     <td>
                                         @if($subSection->photo !="")
                                             <div class="pull-right">
-                                                <img src="{{ URL::to('uploads/sections/'.$subSection->photo) }}"
+                                                <img src="{{ secure_asset('uploads/sections/'.$subSection->photo) }}"
                                                      style="height: 30px" alt="{{ $title }}">
                                             </div>
                                         @endif

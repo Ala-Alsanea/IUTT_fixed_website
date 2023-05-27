@@ -2,8 +2,8 @@
 
 @section('content')
 
- <?php  
-$DetailPage=(object)config('Page.DetailPage'); 
+ <?php
+$DetailPage=(object)config('Page.DetailPage');
 ?>
     <div class="padding">
         <div class="app-body-inner">
@@ -37,7 +37,7 @@ $DetailPage=(object)config('Page.DetailPage');
                         <li class="marginBottom5"
                             onmouseover="document.getElementById('grpRow{{ $ContactsGroup->id }}').style.display='block'"
                             onmouseout="document.getElementById('grpRow{{ $ContactsGroup->id }}').style.display='none'">
-                            <a href="{{ route("contacts",["group_id"=>$ContactsGroup->id]) }}" {!!   ($ContactsGroup->id == $group_id) ? " style='font-weight: bold;color:#0cc2aa'":""  !!} > 
+                            <a href="{{ route("contacts",["group_id"=>$ContactsGroup->id]) }}" {!!   ($ContactsGroup->id == $group_id) ? " style='font-weight: bold;color:#0cc2aa'":""  !!} >
                 {!! $ContactsGroup->name !!}
 
                 <small>({{ count($ContactsGroup->contacts) }})</small>
@@ -191,9 +191,9 @@ $DetailPage=(object)config('Page.DetailPage');
 <span class="w-40 avatar">
 <a href="{{ route("contactsEdit",["id"=>$Contact->id]) }}">
 @if($Contact->photo!="")
-    <img src="{{ URL::to('uploads/contacts/'.$Contact->photo) }}" class="img-circle">
+    <img src="{{ secure_asset('uploads/contacts/'.$Contact->photo) }}" class="img-circle">
 @else
-    <img src="{{ URL::to('uploads/contacts/profile.jpg') }}" class="img-circle"
+    <img src="{{ secure_asset('uploads/contacts/profile.jpg') }}" class="img-circle"
          style="opacity: 0.5">
 @endif
 </a>
@@ -270,10 +270,10 @@ $DetailPage=(object)config('Page.DetailPage');
                     <div class="avatar w-64 inline">
                         @if(Session::get('ContactToEdit')->photo !="")
                             <img id="photo_preview"
-                                 src="{{ URL::to('uploads/contacts/'.Session::get('ContactToEdit')->photo) }}">
+                                 src="{{ secure_asset('uploads/contacts/'.Session::get('ContactToEdit')->photo) }}">
                         @else
                             <img id="photo_preview"
-                                 src="{{ URL::to('uploads/contacts/profile.jpg') }}"
+                                 src="{{ secure_asset('uploads/contacts/profile.jpg') }}"
                                  style="opacity: 0.2">
                         @endif
                     </div>
@@ -483,7 +483,7 @@ $DetailPage=(object)config('Page.DetailPage');
                 <div class="col-sm-3">
                     <div class="avatar w-64 inline">
                         <img id="photo_preview"
-                             src="{{ URL::to('uploads/contacts/profile.jpg') }}"
+                             src="{{ secure_asset('uploads/contacts/profile.jpg') }}"
                              style="opacity: 0.2">
                     </div>
                     <div class="form-file">

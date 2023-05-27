@@ -1,23 +1,23 @@
 @extends('frontEnd.onepage.layout')
 
 @section('content')
- 
+
 <!-- start Home Slider -->
-@include('frontEnd.onepage.view.slider') 
-@include('frontEnd.onepage.view.about_area')  
-@include('frontEnd.onepage.view.divisions') 
-@include('frontEnd.onepage.view.blog-new') 
-@include('frontEnd.onepage.view.students') 
-@include('frontEnd.onepage.view.conatct-us') 
+@include('frontEnd.onepage.view.slider')
+@include('frontEnd.onepage.view.about_area')
+@include('frontEnd.onepage.view.divisions')
+@include('frontEnd.onepage.view.blog-new')
+@include('frontEnd.onepage.view.students')
+@include('frontEnd.onepage.view.conatct-us')
 <!-- end Home Slider -->
- 
+
 
 
 
 
 @endsection
 @section('footerInclude')
- 
+
     @if(count((array)$ContactUsData->maps)>0)
         @foreach($ContactUsData->maps->slice(0,1) as $map)
             <?php
@@ -33,7 +33,7 @@
 
         <script type="text/javascript">
             // var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
-            var iconURLPrefix = "{{ URL::to('plugins/backEnd/assets/images/')."/" }}";
+            var iconURLPrefix = "{{ secure_asset('plugins/backEnd/assets/images/')."/" }}";
             var icons = [
                 iconURLPrefix + 'marker_0.png',
                 iconURLPrefix + 'marker_1.png',
@@ -78,6 +78,6 @@
             }
         </script>
     @endif
-   
+
 
    @endsection

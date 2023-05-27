@@ -26,7 +26,7 @@
         <div class="col-sm-12">
             <div class="col-sm-12 box p-a-xs text-center">
                 <img
-                        src="{{ URL::to('uploads/settings/nologo.png') }}"
+                        src="{{ secure_asset('uploads/settings/nologo.png') }}"
                         class="img-responsive logo groupMediaPhoto" id="logo_prv"
                         style="width: auto;max-width: 260px;max-height: 60px">
                 <br>
@@ -38,7 +38,7 @@
 @endif
 
 
- 
+
 <small>
     <i class="material-icons">&#xe8fd;</i>( 260x60 px ) -
     {!!  trans('backLang.imagesTypes') !!}
@@ -71,7 +71,7 @@
             <div class="col-sm-12">
                 <div class="col-sm-12 box p-a-xs text-center">
                     <img
-                            src="{{ URL::to('uploads/settings/nologo.png') }}"
+                            src="{{ secure_asset('uploads/settings/nologo.png') }}"
                             class="img-responsive logo2 groupMediaPhoto" id="logo2_prv"
                             style="width: auto;max-width: 260px;max-height: 60px">
                     <br>
@@ -82,8 +82,8 @@
         </div>
     @endif
 
-    
-  
+
+
     <small>
         <i class="material-icons">&#xe8fd;</i>( 260x60 px ) -
         {!!  trans('backLang.imagesTypes') !!}
@@ -92,7 +92,7 @@
 @endif
 
 </div>
-<hr>  
+<hr>
 @if(Helper::GeneralWebmasterSettings("ar_box_status"))
         <div class="form-group row">
             <label for="title_ar"
@@ -164,14 +164,14 @@
                 <div class="col-sm-12">
                     <div id="topic_photo" class="col-sm-4 box p-a-xs">
 
-                        
+
                         <a target="_blank"
                            href="{{Helper::FilterImage($Facultys->photo_file) }}"><img
                                     src="{{Helper::FilterImage($Facultys->photo_file) }}"
                                     class="img-responsive photo_file groupMediaPhoto">
                             {{-- $Facultys->photo_file --}}
                         </a>
-                       
+
                         <a onclick="document.getElementById('topic_photo').style.display='none';document.getElementById('photo_delete').value='1';document.getElementById('undo').style.display='block';"
                            class="btn btn-sm btn-default">{!!  trans('backLang.delete') !!}</a>
                     </div>
@@ -187,8 +187,8 @@
             </div>
         @endif
 
-        
- 
+
+
 
     </div>
 </div>
@@ -201,7 +201,7 @@
 
          <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='banner' type=0 multi=0> {!!  trans('backLang.iframebtn') !!}</a>
                {!! Form::text('banner',$Facultys->banner, array('placeholder' => '','class' => 'form-control','id'=>'banner','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
-                
+
      <div class="row">
     <div class="col-sm-12">
         <div class="col-sm-12 box p-a-xs text-center">
@@ -236,7 +236,7 @@
 
          <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='banner1' type=0 multi=0> {!!  trans('backLang.iframebtn') !!}</a>
                {!! Form::text('banner1',$Facultys->banner1, array('placeholder' => '','class' => 'form-control','id'=>'banner1','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
-                
+
      <div class="row">
     <div class="col-sm-12">
         <div class="col-sm-12 box p-a-xs text-center">
@@ -263,7 +263,7 @@
 
          <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='banner2' type=0 multi=0> {!!  trans('backLang.iframebtn') !!}</a>
                {!! Form::text('banner2',$Facultys->banner2, array('placeholder' => '','class' => 'form-control','id'=>'banner2','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
-                
+
      <div class="row">
     <div class="col-sm-12">
         <div class="col-sm-12 box p-a-xs text-center">
@@ -290,7 +290,7 @@
 
          <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='banner3' type=0 multi=0> {!!  trans('backLang.iframebtn') !!}</a>
                {!! Form::text('banner3',$Facultys->banner3, array('placeholder' => '','class' => 'form-control','id'=>'banner3','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
-                
+
      <div class="row">
     <div class="col-sm-12">
         <div class="col-sm-12 box p-a-xs text-center">
@@ -321,8 +321,8 @@
                                     class="img-responsive">
                             {{-- $Facultys->attach_file --}}
                         </a>
-                   
-                
+
+
                 </div>
                 <div id="undo2" class="col-sm-4 p-a-xs" style="display: none">
                     <a onclick="document.getElementById('topic_attach').style.display='block';document.getElementById('attach_delete').value='0';document.getElementById('undo2').style.display='none';">
@@ -336,7 +336,7 @@
              {!! Form::text('attach_file',$Facultys->attach_file, array('placeholder' => '','class' => 'form-control','id'=>'attach_file')) !!}
 
          </div>
-            
+
         </div>
     </div>
     <div class="form-group row m-t-md" style="margin-top: 0 !important;">
@@ -398,6 +398,5 @@
                                   <div class="col-sm-10">
                                     {!! Form::text('email',$Facultys->email, array('placeholder' => '','class' => 'form-control','id'=>'email','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
                                 </div>
-                            </div>        
+                            </div>
 
-    

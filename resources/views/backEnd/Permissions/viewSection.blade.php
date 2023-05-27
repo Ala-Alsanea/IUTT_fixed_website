@@ -42,7 +42,7 @@
                 {{Form::open(['route'=>'PrimationUpdateAll','id'=>'PrimationUpdateAll','method'=>'post'])}}
                     {!! Form::hidden('id',0) !!}
                     <div class="table-responsive">
-                
+
                     <div class="table-responsive">
                         <table class="table table-striped  zero-configuration b-t">
                             <thead>
@@ -64,7 +64,7 @@
                          $title_var2 = "CatTitle_" . trans('backLang.boxCodeOther');
                             ?>
                              @foreach($Permissions as $Permission)
-                              
+
                                 <tr>
                                     <td><label class="ui-check m-a-0">
                                             <input type="checkbox" name="ids[]" value="{{ $Permission->id }}"><i
@@ -73,11 +73,11 @@
                                         </label>
                                  </td>
                                  <td>
-                                         
+
                                         {!! $Permission->name  !!}</td>
 
                                         <td></td>
-                                     
+
                                       <td class="text-center">
                                         <i class="fa {{ ($Permission->status=='1') ? "fa-check text-success":"fa-times text-danger" }} inline"></i>
                                     </td>
@@ -92,11 +92,11 @@
 
                                     </td>
 
-                                   
+
                                 </tr>
-                                <?php 
+                                <?php
                                  $Permission_id=$Permission->id;
-                              
+
                                    $PagesSections = App\Models\PermissionsPage::where('Permission_id',$Permission_id)->where('PermissionStatus','Active')->orderby('Id', 'asc')->get();
 
                                 ?>
@@ -116,11 +116,11 @@
                                         </label>
                                         </td>
                                           <td>
-                                            <img src="{{ URL::to('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
-                                             
+                                            <img src="{{ secure_asset('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
+
                                             {!! $Sections->$CatTitle  !!}</td>
 
-                                         
+
                                         <td class="text-center">
                                              <small>
                                     <small>
@@ -149,7 +149,7 @@
                                             <i class="fa {{ ($Page->PermissionStatus=='Active') ? "fa-check text-success":"fa-times text-danger" }} inline"></i>
                                         </td>
                                         <td class="text-center">
-                                           
+
 
                                         </td>
                                     </tr>
@@ -195,9 +195,9 @@
                             </div>
                         </div>
                     </footer>
-                   
+
                          {{Form::close()}}
-                  
+
                 @endif
             </div>
         </div>

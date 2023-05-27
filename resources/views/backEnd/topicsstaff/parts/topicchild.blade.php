@@ -7,7 +7,7 @@
           $title_var = "title_" . trans('backLang.boxCode');
 
                         ?>
-                      @if(count((array)$Childtopics)>0)  
+                      @if(count((array)$Childtopics)>0)
    @foreach($Childtopics as $subTopic)
                             <?php
                             if ($subTopic->$title_var != "") {
@@ -41,21 +41,21 @@
                             }
                           $refrencetopiccontent="";
                              if ($subTopic->refrence_id != 0) {
-                                
+
                                  $refrencetopiccontent = "<span style='color:blue'>".$subTopic->refrencetopic->$title_var ."</span>";
 
                                 }
                                   $facultyopiccontent = "";
-                                  
+
                              if ($subTopic->father_id != 0) {
                                    $facultyopiccontent = "<span style='color: green'><i>" . trans('backLang.faculty') . "</i>:".$subTopic->father->$title_var."</span>";
-                              
+
 
                                 }
 
-                             
-                               
-                            
+
+
+
 
 
                             ?>
@@ -66,8 +66,8 @@
                                         {!! Form::hidden('row_ids[]',$subTopic->id, array('class' => 'form-control row_no')) !!}
                                     </label>
                                 </td>
-                              
-                        
+
+
                                 <td>
                                     @if($subTopic->photo_file !="" && $subTopic->photo_file !="#")
                                         <div class="pull-right">
@@ -76,7 +76,7 @@
                                         </div>
                                     @endif
 
-                                    <img src="{{ URL::to('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
+                                    <img src="{{ secure_asset('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
                                     {!! Form::text('row_no_'.$subTopic->id,$subTopic->row_no, array('class' => 'pull-left form-control row_no','id'=>'row_no')) !!}
 
                                     @if($subTopic->icon !="")
@@ -87,12 +87,12 @@
                                           <small>
                                              {!! $facultyopiccontent !!}
                                         </small>
-                                       
+
                                         <small>
                                             {{ $section }} {!! $sectionSt !!} {!! $refrencetopiccontent !!}
                                         </small>
-                                         
-                                        
+
+
                                     </div>
                                 </td>
                                 @if($WebmasterSection->date_status)
@@ -105,12 +105,12 @@
                                         <small {!! ($subTopic->expire_date < date("Y-m-d"))? "style='color:red'":"" !!}>{!! $subTopic->expire_date  !!}</small>
                                     </td>
                                 @endif
-                                
+
                                 <td class="text-center">
                                     {!! $subTopic->visits !!}
-                                     
+
                                 </td>
-                            
+
                                 <td class="text-center">
                                     <i class="fa {{ ($subTopic->status==1) ? "fa-check text-success":"fa-times text-danger" }} inline"></i>
                                 </td>
@@ -159,4 +159,4 @@
                             <!-- / .modal -->
 
                         @endforeach
-                      @endif   
+                      @endif

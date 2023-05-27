@@ -99,7 +99,7 @@
                             <div class="col-sm-10">
                                 <div class="col-sm-4 box p-a-xs">
                                     <a target="_blank"
-                                       href="{{ URL::to('uploads/topics/'.Session::get('AttachFile')->file) }}"> {!! Helper::GetIcon(URL::to('uploads/topics/'),Session::get('AttachFile')->file) !!} {{ Session::get('AttachFile')->file }} </a>
+                                       href="{{ secure_asset('uploads/topics/'.Session::get('AttachFile')->file) }}"> {!! Helper::GetIcon(secure_asset('uploads/topics/'),Session::get('AttachFile')->file) !!} {{ Session::get('AttachFile')->file }} </a>
                                 </div>
                                 {!! Form::file('file', array('class' => 'form-control','id'=>'files_file')) !!}
                             </div>
@@ -197,9 +197,9 @@
                                     </td>
                                     <td>
                                         {!! Form::text('row_no_'.$file->id,$file->row_no, array('class' => 'pull-left form-control row_no')) !!}
-                                        <a href="{{ URL::to('uploads/topics/'.$file->file) }}"
+                                        <a href="{{ secure_asset('uploads/topics/'.$file->file) }}"
                                            target="_blank">
-                                            {!! Helper::GetIcon(URL::to('uploads/topics/'),$file->file) !!}
+                                            {!! Helper::GetIcon(secure_asset('uploads/topics/'),$file->file) !!}
                                             {{$file->file}}</a>
                                     </td>
                                     <td>

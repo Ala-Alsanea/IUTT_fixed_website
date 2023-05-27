@@ -6,7 +6,7 @@ $envAdminCharCount = strlen(env('BACKEND_PATH')) + 1;
 // URL after Root Path EX: admin/home
 $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH')) + $envAdminCharCount);
 
- 
+
 ?>
 <?php
 $category_title_var = "title_" . trans('backbackLang.boxCode');
@@ -21,42 +21,42 @@ $BannerMenu="Banner_menu_about";
 ?>
 <style type="text/css">
   .menu > .nav-item.submenu .dropdown-menu .nav-item:last-child {
-     padding-bottom:20px; 
+     padding-bottom:20px;
     margin-bottom: -8px;
 }
 
 .menu > .nav-item.submenu .dropdown-menu .nav-item:first-child {
-     padding-top:20px; 
+     padding-top:20px;
 }
 .rtl .menu > .nav-item.submenu .dropdown-menu{
-  text-align:right; 
+  text-align:right;
 }
 #landing_page .w_menu .nav-item .nav-link.active, #landing_page .w_menu .nav-item .nav-link:hover {
     color: #000;
 }
 .rtl .menu > .nav-item.submenu .dropdown-menu{
 left:unset;
-right:0;  
+right:0;
 }
  .menu > .nav-item.submenu .dropdown-menu {
-  
+
     top: 77%;
 }
 .menu > .nav-item.submenu .dropdown-menu .nav-item {
-    
+
     padding: 0px 15px;
-    
+
 }
 
 @media (max-width:500px) {
   .menu_four .btn_get a{
     color: #000;
   }
-  
+
 }
 @media (max-width: 991px){
  .menu_four .navbar-collapse.in{
-   
+
     display: block;
 }
 }
@@ -66,8 +66,8 @@ right:0;
                 <nav class="navbar navbar-expand-lg menu_one menu_four" id="landing_page">
                     <div class="container-fluid">
                        <a href="{{ route("FacultyPage",$FacultyData->id) }}" class="wed-logo-section navbar-brand sticky_logo">
-           @if($FacultyData->logo2!='#')  
-                     
+           @if($FacultyData->logo2!='#')
+
                  <img alt="{{ $FacultyData->$title_var }}"
             src="{{ Helper::FilterImage($FacultyData->logo2) }}" >
            @else
@@ -78,14 +78,14 @@ right:0;
 
 
       @else
-      <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}" srcset="{{ URL::to('uploads/settings/nologo.png') }}" class="wed-logo-section">
+      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
       @endif
 
         @endif
 
-     
 
- @if($FacultyData->logo!='#')  
+
+ @if($FacultyData->logo!='#')
              <img alt="{{ $FacultyData->$title_var }}"
             src="{{ Helper::FilterImage($FacultyData->logo) }}" >
 
@@ -96,16 +96,16 @@ right:0;
 
 
       @else
-      <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}" srcset="{{ URL::to('uploads/settings/nologo.png') }}" >
+      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" >
       @endif
 
        @endif
 
 
-                   
-                               
+
+
                             </a>
-                       
+
                       {{--   <a class="btn_get btn_hover mobile_btn ml-auto" href="{{ url(trans('backLang.code').'/view/admission') }}">{{ trans('frontLang.Admission') }}</a> --}}
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="menu_toggle">
@@ -124,7 +124,7 @@ right:0;
                             <ul class="nav navbar-nav mr-auto ml-auto menu w_menu">
                    {{--       @foreach($HeaderMenuOnePageLinks as $key=> $HeaderMenuLink) --}}
                           <li class="nav-item"><a href="{{ url(trans('backLang.boxCode').'/'.$FacultyData->id.'/faculty/about') }}" class="nav-link">{{ trans('frontLang.about_us') }}</a></li>
-                
+
                               <li class="nav-item dropdown submenu">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                    {{ trans('frontLang.departments') }}
@@ -136,7 +136,7 @@ right:0;
                                           <li class="nav-item"><a href="{{ url(trans('backLang.boxCode').'/'.$FacultyData->id.'/departments/'.$Item->id) }}" class="nav-link">{{ $Item->$title_var }}</a></li>
                                      @endforeach
                                      @endif
-                                   
+
                                 </ul>
                             </li>
                       <li class="nav-item dropdown submenu">
@@ -150,7 +150,7 @@ right:0;
                                           <li class="nav-item"><a href="{{ url(trans('backLang.boxCode').'/faculty/programs/'.$Item->id) }}" class="nav-link">{{ $Item->$title_var }}</a></li>
                                      @endforeach
                                      @endif
-                                   
+
                                 </ul>
                             </li>
                              <li class="nav-item"><a href="#" class="nav-link">{{ trans('frontLang.Research') }}</a></li>
@@ -160,33 +160,33 @@ right:0;
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="blog-grid.html" class="nav-link">{{ trans('frontLang.Research') }}</a></li>
-                                   
+
                                 </ul>
                             </li> --}}
-                         
+
 
                          <li class="nav-item dropdown submenu">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                    {{ trans('frontLang.more') }}
                                 </a>
                                 <ul class="dropdown-menu">
-                                  
+
                                     <li class="nav-item"><a href="{{ url(trans('backLang.code').'/'.$FacultyData->id.'/news/faculty/') }}" class="nav-link">{{ trans('frontLang.News') }}</a></li>
                                     <li class="nav-item"><a href="{{ url(trans('backLang.code').'/'.$FacultyData->id.'/events/') }}" class="nav-link">{{ trans('frontLang.Events_Activities') }}</a></li>
                                     <li class="nav-item"><a href="{{ url(trans('backLang.code').'/'.$FacultyData->id.'/announcements/') }}" class="nav-link">{{ trans('frontLang.announcements') }}</a></li>
                                      <li class="nav-item"><a href="{{ url(trans('backLang.code').'/'.$FacultyData->id.'/lecturertable/') }}" class="nav-link">{{ trans('frontLang.lecturertable') }}</a></li>
-                                   
+
                                 </ul>
                             </li>
 
-                          
-                              
+
+
                          {{--  @endforeach --}}
 
 
-                               
+
                             </ul>
-                              <div class="btn_hover btn_get"> 
+                              <div class="btn_hover btn_get">
                             @if(trans('backLang.code')=="ar")
                                 <a href="{{  url(Helper::ChangeUrl('en'))   }}" class="language "><i
                                             class="fa fa-language "></i> {{-- {{ str_replace("[ ","",str_replace(" ]","",strip_tags(trans('backLang.englishBox')))) }} --}}
@@ -198,15 +198,15 @@ right:0;
                             @endif
                             &nbsp;| &nbsp;
                             <a href="{{ route('Home') }}" class="service_item1">
-                           
+
                                         <i class="icon fa fa-home"></i>
-                                     
-                                       
-                                    
+
+
+
                             </a>
                           </div>
 
-                      
+
                           {{--   <a class="btn_get btn_hover" href="{{ url(trans('backLang.code').'/view/admission') }}">{{ trans('frontLang.Admission') }}</a> --}}
                         </div>
                     </div>

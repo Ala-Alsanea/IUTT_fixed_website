@@ -97,7 +97,7 @@
         ?>
         <div class="box nav-active-border b-info">
             <ul class="nav nav-md">
-              
+
 
 
                  @include('backEnd.topics.edit.WebmastersNavTab')
@@ -106,21 +106,21 @@
 
 
             <div class="tab-content clear b-t">
-          
-      
+
+
        @include('backEnd.topics.edit.WebmasterstopicsUpdate')
        @include('backEnd.topics.edit.WebmastersMultiImage')
        @include('backEnd.topics.edit.WebmastersComments')
        @include('backEnd.topics.edit.WebmastersAdditionalFiles')
        @include('backEnd.topics.edit.WebmastersRelated')
-       
+
        @include('backEnd.topics.edit.WebmastersSeo')
-        
-
-              
 
 
-             
+
+
+
+
 
 
             </div>
@@ -130,7 +130,7 @@
 @section('footerInclude')
     <script type="text/javascript">
 
-     
+
 
         $("#checkAll").click(function () {
             $('input:checkbox').not(this).prop('checked', this.checked);
@@ -196,7 +196,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 // var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
-                var iconURLPrefix = "{{ URL::to('plugins/backEnd/assets/images/')."/" }}";
+                var iconURLPrefix = "{{ secure_asset('plugins/backEnd/assets/images/')."/" }}";
                 var icons = [
                     iconURLPrefix + 'marker_0.png',
                     iconURLPrefix + 'marker_1.png',

@@ -12,14 +12,14 @@
             <div class="col-sm-12 col-md-5 col-lg-4">
                 <div class="row">
 
-  
+
                     <?php
-                  
-               
+
+
                     $data_sections_arr = explode(",", @Auth::user()->permissionsGroup->data_sections);
                     $clr_ary = array("info", "danger", "success", "accent",);
                     $ik = 0;
-                
+
                     ?>
                     @foreach($GeneralWebmasterSections as $headerWebmasterSection)
                         @if(in_array($headerWebmasterSection->id,$data_sections_arr))
@@ -586,10 +586,10 @@
                                                class="list-left">
 	                	<span class="w-40 avatar">
                             @if($Contact->photo!="")
-                                <img src="{{ URL::to('uploads/contacts/'.$Contact->photo) }}"
+                                <img src="{{ secure_asset('uploads/contacts/'.$Contact->photo) }}"
                                      alt="{{ $Contact->first_name }} {{ $Contact->last_name }}">
                             @else
-                                <img src="{{ URL::to('uploads/contacts/profile.jpg') }}"
+                                <img src="{{ secure_asset('uploads/contacts/profile.jpg') }}"
                                      alt="{{ $Contact->first_name }} {{ $Contact->last_name }}" style="opacity: 0.5">
                             @endif
 	                    </span>

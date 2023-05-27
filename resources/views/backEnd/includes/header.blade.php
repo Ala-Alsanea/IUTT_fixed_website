@@ -39,15 +39,15 @@ if (Auth::user()->connect_email != "" && Auth::user()->connect_password) {
             <?php
             $alerts = count(Helper::webmailsAlerts()) + count(Helper::eventsAlerts());
             ?>
-           
+
             <li class="nav-item dropdown">
                 <a class="nav-link clear" href data-toggle="dropdown">
                   <span class="avatar w-32">
                       @if(Auth::user()->photo !="")
-                          <img src="{{ URL::to('uploads/users/'.Auth::user()->photo) }}" alt="{{ Auth::user()->name }}"
+                          <img src="{{ secure_asset('uploads/users/'.Auth::user()->photo) }}" alt="{{ Auth::user()->name }}"
                                title="{{ Auth::user()->name }}">
                       @else
-                          <img src="{{ URL::to('plugins/backEnd/assets/images/profile.jpg') }}" alt="{{ Auth::user()->name }}"
+                          <img src="{{ secure_asset('plugins/backEnd/assets/images/profile.jpg') }}" alt="{{ Auth::user()->name }}"
                                title="{{ Auth::user()->name }}">
                       @endif
                       <i class="on b-white bottom"></i>
@@ -120,7 +120,7 @@ if (Auth::user()->connect_email != "" && Auth::user()->connect_password) {
                         $ik = 0;
                         ?>
                         @if(@Auth::user()->permissionsGroup->add_status)
-                       
+
 
                             @if(@Auth::user()->permissionsGroup->banners_status)
                                 <a class="dropdown-item" href="{{route("Banners")}}"><i class="material-icons">

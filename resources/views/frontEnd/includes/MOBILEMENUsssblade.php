@@ -19,10 +19,10 @@ $BannerMenu="Banner_menu_about";
 
 
       @else
-      <img alt="" src="{{ URL::to('uploads/settings/nologo.png') }}" srcset="{{ URL::to('uploads/settings/nologo.png') }}" >
+      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" >
       @endif
-                                
-                               
+
+
                             </a>
                     </div>
                 </div>
@@ -32,8 +32,8 @@ $BannerMenu="Banner_menu_about";
 
                          <a href="#!" class=""><i class="fa fa-bars"></i></a>
                             @if($WebmasterSettings->languages_count ==2)
-                        
-                   
+
+
                             @if(trans('backLang.code')=="ar")
                                 <a href="{{ url(Helper::ChangeUrl('en')) }}" class="" style="color: #0d6ab0;border: 1px solid #0a2444;padding: 0px 5px;font-size: 17px;">  {{ str_replace("[ ","",str_replace(" ]","",strip_tags(trans('backLang.boxCodeOther')))) }}
                                 </a>
@@ -42,13 +42,13 @@ $BannerMenu="Banner_menu_about";
                                 </a>
                             @endif
 
-                      
+
                     @endif
                         <div class="ed-mm-inn">
                           <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
                      @foreach($HeaderMenuLinks as $key=> $HeaderMenuLink)
                          @if($HeaderMenuLink->father_id ==1)
-                            
+
                             <h4>{{ $HeaderMenuLink->$link_title_var }}</h4>
                             <ul>
                      @foreach($HeaderMenuLink->subMenus as $subMenus)
@@ -58,7 +58,7 @@ $BannerMenu="Banner_menu_about";
 
                              @if($subMenus->type==1)
 
-                         <?php 
+                         <?php
                            $namesection='faculties';
 
                        if ($subMenus->link=='programs') {
@@ -66,12 +66,12 @@ $BannerMenu="Banner_menu_about";
                            }else{
                          $MenuSectionCustoms = App\Models\Faculty::where('status', 1)->get();
                            }
-                        
+
                           $namesection=$subMenus->link;
- 
 
 
-                            
+
+
 //$MenuSectionCustoms =App\Models\Topic::where('webmaster_id',$subMenus->cat_id)->where('status',
       //      1)->orderby('row_no',
            // 'asc')->get();
@@ -91,28 +91,28 @@ $BannerMenu="Banner_menu_about";
                     }else{
                     $MenuSectionCustom_link_url = url($MenuSectionCustom->$slug_var);
                     }
-             } 
+             }
                     ?>
 
 
-                              
+
                                       <li><a  href="{{ $MenuSectionCustom_link_url }}">{{ $MenuSectionCustom->$title_var }}</a></li>
 
-                                
+
                                       @endforeach
 
 
                         @endif
 
-                        
+
                   @elseif($subMenus->type==3)
 
-            
+
                      @if(count($subMenus->webmasterSection->sections) >0)
 
                         @foreach($subMenus->webmasterSection->sections as $SubMnuCategory)
             @if($SubMnuCategory->father_id ==0 && $SubMnuCategory->status ==1)
-            
+
                     <?php
 
                     $Category_link_url1 =url(($SubMnuCategory->section_url=='')?'#':trans('backLang.code').'/'.$SubMnuCategory->section_url);
@@ -125,15 +125,15 @@ $BannerMenu="Banner_menu_about";
                     }
                     ?>
                     <li><a  href="{{ $Category_link_url1 }}"> {{$SubMnuCategory->$title_var}}</a></li>
-                  
-               
+
+
             @endif
-            
+
         @endforeach
 
 
 
- 
+
 
 
 
@@ -142,9 +142,9 @@ $BannerMenu="Banner_menu_about";
                     @endif
 
 
-              
 
-                          
+
+
 
                   @else
 
@@ -158,29 +158,29 @@ $BannerMenu="Banner_menu_about";
                                      @endif
                               @endif
                            @endforeach
-                           
+
 
 
 
 
                          @endif
 
-                         
-                                                
+
+
                            @endif
-                      @endforeach                       
+                      @endforeach
                             </ul>
                            @endif
-                      @endforeach  
+                      @endforeach
                             <h4>User Account</h4>
                             <ul>
                                 <li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></li>
                                 <li><a href="#!" data-toggle="modal" data-target="#modal2">Register</a></li>
                             </ul>
-                            
-            
 
-                             
+
+
+
                         </div>
                     </div>
                 </div>

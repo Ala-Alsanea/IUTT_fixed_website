@@ -22,7 +22,7 @@
    <div class="tab-content clear b-t">
       <div class="tab-pane  active" id="dropzone">
 
-           
+
        <div>
         {{Form::open(['route'=>['topicsPhotosEdit',"webmasterId"=>$WebmasterSection->id,"id"=>$Topics->id],'method'=>'POST','class'=>'dropzone white', 'files' => true])}}
         <div class="dz-message" ui-jp="dropzone"
@@ -30,7 +30,7 @@
             <h4 class="m-t-lg m-b-md">{{ trans('backLang.topicDropFiles') }}</h4>
             <span class="text-muted block m-b-lg">( {{ trans('backLang.topicDropFiles2') }}
                 )</span>
-        </div> 
+        </div>
         {{Form::close()}}
         <br>
     </div>
@@ -44,7 +44,7 @@
 
 
                <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='video_file' type=0 multiple=0> {!!  trans('backLang.iframebtn') !!}</a>
-   
+
              {!! Form::textarea('textareaphotos','', array('placeholder' => '','class' => 'form-control','id'=>'textareaphotos')) !!}
 
               {{Form::close()}} --}}
@@ -66,7 +66,7 @@
                                     class="dark-white"></i>
                             {!! Form::hidden('row_ids[]',$photo->id, array('class' => 'form-control row_no')) !!}
                         </label>
-                        <img src="{{ URL::to('uploads/topics/'.$photo->file) }}"
+                        <img src="{{ secure_asset('uploads/topics/'.$photo->file) }}"
                              alt="{{ $photo->title  }}" title="{{ $photo->title  }}"
                              style="height: 150px"
                              class="img-responsive">
@@ -84,7 +84,7 @@
                                     </button>
                                 @endif
                                 <a style="display: block;overflow: hidden;"
-                                   href="{{ URL::to('uploads/topics/'.$photo->file) }}"
+                                   href="{{ secure_asset('uploads/topics/'.$photo->file) }}"
                                    target="_blank">
                                     <small>{{ ($photo->title !="") ? $photo->title:$photo->file  }}</small>
                                 </a>
