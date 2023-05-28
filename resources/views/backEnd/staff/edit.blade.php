@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -43,11 +43,11 @@
         $tab_5 = "";
         $tab_6 = "";
         $tab_7 = "";
-      
+
         ?>
         <div class="box nav-active-border b-info">
             <ul class="nav nav-md">
-              
+
 
 
                  @include('backEnd.staff.edit.WebmastersNavTab')
@@ -56,16 +56,16 @@
 
 
             <div class="tab-content clear b-t">
-          
-      
+
+
        @include('backEnd.staff.edit.WebmasterstopicsUpdate')
- 
-        
-
-              
 
 
-             
+
+
+
+
+
 
 
             </div>
@@ -75,7 +75,7 @@
 @section('footerInclude')
     <script type="text/javascript">
 
-     
+
 
         $("#checkAll").click(function () {
             $('input:checkbox').not(this).prop('checked', this.checked);
@@ -135,8 +135,8 @@
         });
 
     </script>
-    
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});
@@ -174,7 +174,7 @@
             if ($(this).val() != "") {
                 $("#url_in_engines_ar").text("<?php echo url(''); ?>/" + slugify($(this).val()));
             } else {
-                
+
             }
         });
         @endif
@@ -197,10 +197,10 @@
             if ($(this).val() != "") {
                 $("#url_in_engines_en").text("<?php echo url(''); ?>/" + slugify($(this).val()));
             } else {
-                
+
             }
         });
         @endif
     </script>
- 
+
 @endsection

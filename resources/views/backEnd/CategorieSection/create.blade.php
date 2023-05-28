@@ -1,7 +1,7 @@
 @extends('backEnd.layout')
 
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -89,8 +89,8 @@
                         </div>
                     </div>
                 </div>
-                
- 
+
+
                 <div class="form-group row">
                     <label for="link_status"
                            class="col-sm-2 form-control-label">{!!  trans('backLang.linkType') !!}</label>
@@ -165,7 +165,7 @@
 @endsection
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

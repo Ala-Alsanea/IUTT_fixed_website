@@ -1,11 +1,11 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/jquery/bootstrap-daterangepicker/daterangepicker-bs3.css") }}" rel="stylesheet"
+    <link href="{{ asset("/backEnd/libs/jquery/bootstrap-daterangepicker/daterangepicker-bs3.css") }}" rel="stylesheet"
           type="text/css"/>
 @endsection
 @section('content')
- <?php  
-$DetailPage=(object)config('Page.DetailPage'); 
+ <?php
+$DetailPage=(object)config('Page.DetailPage');
 ?>
     <div class="padding">
         <div class="row m-b">
@@ -203,9 +203,9 @@ $DetailPage=(object)config('Page.DetailPage');
 
 @endsection
 @section('footerInclude')
-    <script src="{{ URL::to("plugins/backEnd/libs/jquery/bootstrap-daterangepicker/moment.min.js") }}"
+    <script src="{{ asset("/backEnd/libs/jquery/bootstrap-daterangepicker/moment.min.js") }}"
             type="text/javascript"></script>
-    <script src="{{ URL::to("plugins/backEnd/libs/jquery/bootstrap-daterangepicker/daterangepicker.js") }}"
+    <script src="{{ asset("/backEnd/libs/jquery/bootstrap-daterangepicker/daterangepicker.js") }}"
             type="text/javascript"></script>
     <script type="text/javascript">
         var Index = function () {

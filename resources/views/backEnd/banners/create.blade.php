@@ -1,7 +1,7 @@
 @extends('backEnd.layout')
 
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -124,7 +124,7 @@
                                 <div class="col-sm-10">
                                      <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='file_ar' type=0 multi=0> {!!  trans('backLang.iframebtn') !!}</a>
                                      {!! Form::text('file_ar','', array('placeholder' => '','class' => 'form-control','id'=>'file_ar','required'=>'')) !!}
-                                   
+
                                 </div>
                             </div>
                         @endif
@@ -137,7 +137,7 @@
                                 <div class="col-sm-10">
                                      <a href="javascript:void(0)"    class="btn  iframe-btn" onclick="App.OpenFileManager(this)" field_id='file_en' type=0 multi=0> {!!  trans('backLang.iframebtn') !!}</a>
                                      {!! Form::text('file_en','', array('placeholder' => '','class' => 'form-control','id'=>'file_en','required'=>'')) !!}
-                                   
+
                                 </div>
                             </div>
                         @endif
@@ -243,7 +243,7 @@
 
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

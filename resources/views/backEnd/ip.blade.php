@@ -1,10 +1,10 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link rel="stylesheet" type="text/css" href="{{ URL::to("plugins/backEnd/assets/styles/flags.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("/backEnd/assets/styles/flags.css") }}"/>
 @endsection
 @section('content')
- <?php  
-$DetailPage=(object)config('Page.DetailPage'); 
+ <?php
+$DetailPage=(object)config('Page.DetailPage');
 ?>
     <?php
     $visitor_loc_0 = "";

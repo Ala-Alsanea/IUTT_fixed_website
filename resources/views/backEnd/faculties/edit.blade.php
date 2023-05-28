@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -57,7 +57,7 @@
                 $tab_6 = "";
                 $tab_7 = "";
             }
-            
+
             if (Session::get('activeTab') == "maps") {
                 $tab_1 = "";
                 $tab_2 = "";
@@ -67,12 +67,12 @@
                 $tab_6 = "";
                 $tab_7 = "";
             }
-            
+
         }
         ?>
         <div class="box nav-active-border b-info">
             <ul class="nav nav-md">
-              
+
 
 
                  @include('backEnd.faculties.edit.WebmastersNavTab')
@@ -81,8 +81,8 @@
 
 
             <div class="tab-content clear b-t">
-          
-      
+
+
        <div class="tab-pane  {{ $tab_1 }}" id="tab_details">
                     <div class="box-body">
                         {{Form::open(['route'=>['facultiesUpdate',"id"=>$Facultys->id],'method'=>'POST', 'files' => true])}}
@@ -91,10 +91,10 @@
 
            {{--      @include('backEnd.faculties.edit.WebmasterDate') --}}
                 @include('backEnd.faculties.edit.WebmasterContent')
-               
- 
 
-                  
+
+
+
 
 
 
@@ -131,12 +131,12 @@
                     </div>
                 </div>
        @include('backEnd.faculties.edit.WebmastersSeo')
-        
-
-              
 
 
-             
+
+
+
+
 
 
             </div>
@@ -146,7 +146,7 @@
 @section('footerInclude')
     <script type="text/javascript">
 
-     
+
 
         $("#checkAll").click(function () {
             $('input:checkbox').not(this).prop('checked', this.checked);
@@ -206,8 +206,8 @@
         });
 
     </script>
- 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});
@@ -245,7 +245,7 @@
             if ($(this).val() != "") {
                 $("#url_in_engines_ar").text("<?php echo url(''); ?>/" + slugify($(this).val()));
             } else {
-               
+
             }
         });
         @endif
@@ -268,7 +268,7 @@
             if ($(this).val() != "") {
                 $("#url_in_engines_en").text("<?php echo url(''); ?>/" + slugify($(this).val()));
             } else {
-                
+
             }
         });
         @endif

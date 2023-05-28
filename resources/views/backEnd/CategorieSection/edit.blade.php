@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <div class="box-body">
-              
+
                 {{Form::open(['route'=>['SubCatmenusUpdate',$CatMenus->Cat_id],'method'=>'POST', 'files' => true])}}
                 {!! Form::hidden('ParentMenuId',$ParentMenuId) !!}
 
@@ -185,7 +185,7 @@
 @endsection
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

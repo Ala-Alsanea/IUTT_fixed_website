@@ -1,7 +1,7 @@
 @extends('backEnd.layout')
 
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,17 +35,17 @@
             <div class="box-body">
                 {{Form::open(['route'=>['topicsstaffStore',$WebmasterSection->id,$section_id],'method'=>'POST', 'files' => true ])}}
 
-             
+
                 @include('backEnd.topicsstaff.create.WebmasterDate')
                 @include('backEnd.topicsstaff.create.Webmasterfacultie_status')
                 @include('backEnd.topicsstaff.create.Webmastersections_status')
                 @include('backEnd.topicsstaff.create.WebmasterContent')
                 @include('backEnd.topicsstaff.create.WebmasterType')
                 @include('backEnd.topicsstaff.create.AdditionalFeilds')
-           
 
-                
- 
+
+
+
                 <div class="form-group row m-t-md">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary m-t"><i class="material-icons">
@@ -66,7 +66,7 @@
 
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

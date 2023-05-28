@@ -12,7 +12,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand" href="{{ route('adminHome') }}">
-                <img src="{{ URL::to('backEnd/assets/images/logo.png') }}" alt="Control">
+                <img src="{{ asset('backEnd/assets/images/logo.png') }}" alt="Control">
                 <span class="hidden-folded inline">{{ trans('backLang.control') }}</span>
             </a>
             <!-- / brand -->
@@ -224,7 +224,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                                     <span class="nav-text">{{ trans('backLang.FileManager') }}</span>
                                 </a>
                             </li>
-                            
+
                     <li class="nav-header hidden-folded">
                         <small class="text-muted">{{ trans('backLang.siteData') }}</small>
                     </li>

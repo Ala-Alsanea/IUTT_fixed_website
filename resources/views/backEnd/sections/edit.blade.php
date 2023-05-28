@@ -1,7 +1,7 @@
 @extends('backEnd.layout')
 
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -100,7 +100,7 @@
                                     {!! Form::text('title_ar',$Sections->title_ar, array('placeholder' => '','class' => 'form-control','id'=>'title_ar','required'=>'', 'dir'=>trans('backLang.rtl'))) !!}
                                 </div>
                             </div>
-                 
+
                         @endif
                         @if(Helper::GeneralWebmasterSettings("en_box_status"))
                             <div class="form-group row">
@@ -112,7 +112,7 @@
                                     {!! Form::text('title_en',$Sections->title_en, array('placeholder' => '','class' => 'form-control','id'=>'title_en','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
                                 </div>
                             </div>
-               
+
                         @endif
        @if(Helper::GeneralWebmasterSettings("ar_box_status"))
                 <div class="form-group row">
@@ -122,11 +122,11 @@
                     </label>
                     <div class="col-sm-10">
                          {!! Form::textarea('details_ar',$Sections->details_ar, array('ui-jp'=>'summernote','placeholder' => '','class' => 'form-control', 'dir'=>trans('backLang.ltr'),'ui-options'=>'{height: 300}')) !!}
-                       
+
                     </div>
                 </div>
             @endif
-                          
+
             @if(Helper::GeneralWebmasterSettings("en_box_status"))
                 <div class="form-group row">
                     <label for="details_en"
@@ -173,8 +173,8 @@
 
                                 @endif
 
-                               
-                              
+
+
                             </div>
                         </div>
 
@@ -218,8 +218,8 @@
 
                                 @endif
 
-                               
-                              
+
+
                             </div>
                         </div>
                         <div class="form-group row">
@@ -496,7 +496,7 @@
 
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

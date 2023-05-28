@@ -1,7 +1,7 @@
 @extends('backEnd.layout')
 
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -69,7 +69,7 @@
                             {!! Form::text('title_ar','', array('placeholder' => '','class' => 'form-control','id'=>'title_ar','required'=>'', 'dir'=>trans('backLang.rtl'))) !!}
                         </div>
                     </div>
-                      
+
                 @endif
                 @if(Helper::GeneralWebmasterSettings("en_box_status"))
                     <div class="form-group row">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
 
-                 
+
                 @endif
    @if(Helper::GeneralWebmasterSettings("ar_box_status"))
                 <div class="form-group row">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
             @endif
-                          
+
             @if(Helper::GeneralWebmasterSettings("en_box_status"))
                 <div class="form-group row">
                     <label for="details_en"
@@ -118,7 +118,7 @@
                        {!! Form::text('photo','', array('placeholder' => '','class' => 'form-control','id'=>'photo')) !!}
 
 
-                       
+
                     </div>
                 </div>
       <div class="form-group row">
@@ -130,7 +130,7 @@
                        {!! Form::text('banner','#', array('placeholder' => '','class' => 'form-control','id'=>'banner')) !!}
 
 
-                       
+
                     </div>
                 </div>
                 <div class="form-group row m-t-md" style="margin-top: 0 !important;">
@@ -155,7 +155,7 @@
                     </div>
                 @endif
 
-       
+
 
             <div class="form-group row">
                     <label for="section_url"
@@ -184,7 +184,7 @@
 
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

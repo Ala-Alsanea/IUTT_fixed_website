@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -48,14 +48,14 @@
                 $tab_6 = "";
                 $tab_7 = "";
             }
-         
-         
-            
+
+
+
         }
         ?>
         <div class="box nav-active-border b-info">
             <ul class="nav nav-md">
-              
+
 
 
                  @include('backEnd.sliderfaculties.edit.WebmastersNavTab')
@@ -64,8 +64,8 @@
 
 
             <div class="tab-content clear b-t">
-          
-      
+
+
        <div class="tab-pane  {{ $tab_1 }}" id="tab_details">
                     <div class="box-body">
                         {{Form::open(['route'=>['sliderfacultiesUpdate',"id"=>$sliderfaculties->id],'method'=>'POST', 'files' => true])}}
@@ -74,10 +74,10 @@
 
            {{--      @include('backEnd.sliderfaculties.edit.WebmasterDate') --}}
                 @include('backEnd.sliderfaculties.edit.WebmasterContent')
-               
- 
 
-                  
+
+
+
 
 
 
@@ -113,13 +113,13 @@
                         {{Form::close()}}
                     </div>
                 </div>
-       
-        
-
-              
 
 
-             
+
+
+
+
+
 
 
             </div>
@@ -129,7 +129,7 @@
 @section('footerInclude')
     <script type="text/javascript">
 
-     
+
 
         $("#checkAll").click(function () {
             $('input:checkbox').not(this).prop('checked', this.checked);
@@ -189,8 +189,8 @@
         });
 
     </script>
- 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});
@@ -228,7 +228,7 @@
             if ($(this).val() != "") {
                 $("#url_in_engines_ar").text("<?php echo url(''); ?>/" + slugify($(this).val()));
             } else {
-               
+
             }
         });
         @endif
@@ -251,7 +251,7 @@
             if ($(this).val() != "") {
                 $("#url_in_engines_en").text("<?php echo url(''); ?>/" + slugify($(this).val()));
             } else {
-                
+
             }
         });
         @endif

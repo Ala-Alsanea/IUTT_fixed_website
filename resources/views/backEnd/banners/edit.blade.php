@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -138,19 +138,19 @@
                            <img
                                     src="{{Helper::FilterImage($Banners->file_ar) }}"
                                     class="img-responsive  file_ar groupMediaPhoto" id="img-file_ar">
-                                                
+
                                             </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         @else
-                                       
+
                             <a target="_blank"
                                href="{{ Helper::FilterImage($Banners->file_ar) }}">{!!  $Banners->file_ar !!}</a>
                                         @endif
                                     @endif
-                                   
-                                  
+
+
                                 </div>
                             </div>
                         @endif
@@ -184,9 +184,9 @@
                                         @endif
                                     @endif
 
-                                  
-                                    
-                                    
+
+
+
                                 </div>
                             </div>
                         @endif
@@ -314,7 +314,7 @@
 
 @section('footerInclude')
 
-    <script src="{{ URL::to("plugins/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});
