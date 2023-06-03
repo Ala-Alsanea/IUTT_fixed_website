@@ -26,7 +26,7 @@
         <div class="col-sm-12">
             <div class="col-sm-12 box p-a-xs text-center">
                 <img
-                        src="{{ asset('uploads/settings/nologo.png') }}"
+                        src="{{ secure_asset('uploads/settings/nologo.png') }}"
                         class="img-responsive logo groupMediaPhoto" id="logo_prv"
                         style="width: auto;max-width: 260px;max-height: 60px">
                 <br>
@@ -71,7 +71,7 @@
             <div class="col-sm-12">
                 <div class="col-sm-12 box p-a-xs text-center">
                     <img
-                            src="{{ asset('uploads/settings/nologo.png') }}"
+                            src="{{ secure_asset('uploads/settings/nologo.png') }}"
                             class="img-responsive logo2 groupMediaPhoto" id="logo2_prv"
                             style="width: auto;max-width: 260px;max-height: 60px">
                     <br>

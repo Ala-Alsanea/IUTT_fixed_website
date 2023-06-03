@@ -19,7 +19,7 @@ $BannerMenu="Banner_menu_about";
 
 
       @else
-      <img alt="" src="{{ asset('uploads/settings/nologo.png') }}" srcset="{{ asset('uploads/settings/nologo.png') }}" >
+      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" >
       @endif
 
 

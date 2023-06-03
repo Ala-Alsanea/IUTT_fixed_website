@@ -260,7 +260,7 @@
 
         <script type="text/javascript">
             // var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
-            var iconURLPrefix = "{{ asset('plugins/backEnd/assets/images/')."/" }}";
+            var iconURLPrefix = "{{ secure_asset('plugins/backEnd/assets/images/')."/" }}";
             var icons = [
                 iconURLPrefix + 'marker_0.png',
                 iconURLPrefix + 'marker_1.png',

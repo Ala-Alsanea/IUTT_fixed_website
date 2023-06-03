@@ -1,5 +1,5 @@
 
-   <script type="text/javascript" src="{{asset('plugins/js/Functions.js') }}"></script>
+   <script type="text/javascript" src="{{secure_asset('plugins/js/Functions.js') }}"></script>
     <script type="text/javascript">
 
           function ReturnMessageAlert(Message,Type) {

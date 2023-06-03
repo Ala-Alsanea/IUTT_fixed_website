@@ -37,7 +37,7 @@ textarea#files {
 @endsection
 
 @section('footerInclude')
-<script type="text/javascript" src="{{asset('plugins/vendors/tinymce/js/tinymce/tinymce.min.js') }}"></script>
+<script type="text/javascript" src="{{secure_asset('plugins/vendors/tinymce/js/tinymce/tinymce.min.js') }}"></script>
 
 <script type="text/javascript">
     $(document).ready(function(e) {

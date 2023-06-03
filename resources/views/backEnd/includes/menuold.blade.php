@@ -12,7 +12,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand" href="{{ route('adminHome') }}">
-                <img src="{{ asset('backEnd/assets/images/logo.png') }}" alt="Control">
+                <img src="{{ secure_asset('backEnd/assets/images/logo.png') }}" alt="Control">
                 <span class="hidden-folded inline">{{ trans('backLang.control') }}</span>
             </a>
             <!-- / brand -->
