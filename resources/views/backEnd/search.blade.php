@@ -94,7 +94,7 @@ $DetailPage=(object)config('Page.DetailPage');
                                 <li class="list-item">
                                     @if($Topic->photo_file !="")
                                         <div class="pull-left pull-none-xs m-r m-b w p-a-xs b-a">
-                                            <img src="{{ asset('uploads/topics/'.$Topic->photo_file) }}"
+                                            <img src="{{ secure_asset('uploads/topics/'.$Topic->photo_file) }}"
                                                  style="height: 40px" alt="{{ $title }}" class="w-full">
                                         </div>
                                     @endif
@@ -152,10 +152,10 @@ $DetailPage=(object)config('Page.DetailPage');
                                         <a href="{{ route("contactsEdit",["id"=>$Contact->id]) }}" class="list-left">
                                             <span class="w-40 avatar">
                                             @if($Contact->photo!="")
-                                                    <img src="{{ asset('uploads/contacts/'.$Contact->photo) }}"
+                                                    <img src="{{ secure_asset('uploads/contacts/'.$Contact->photo) }}"
                                                          class="on b-white bottom">
                                                 @else
-                                                    <img src="{{ asset('uploads/contacts/profile.jpg') }}"
+                                                    <img src="{{ secure_asset('uploads/contacts/profile.jpg') }}"
                                                          class="on b-white bottom"
                                                          style="opacity: 0.5">
                                                 @endif

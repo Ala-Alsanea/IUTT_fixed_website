@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link href="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
+    <link href="{{ secure_asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.min.css") }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -201,7 +201,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 // var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
-                var iconURLPrefix = "{{ asset('plugins/backEnd/assets/images/')."/" }}";
+                var iconURLPrefix = "{{ secure_asset('plugins/backEnd/assets/images/')."/" }}";
                 var icons = [
                     iconURLPrefix + 'marker_0.png',
                     iconURLPrefix + 'marker_1.png',
@@ -295,7 +295,7 @@
             });
         </script>
     @endif
-    <script src="{{ asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
+    <script src="{{ secure_asset("/backEnd/libs/js/iconpicker/fontawesome-iconpicker.js") }}"></script>
     <script>
         $(function () {
             $('.icp-auto').iconpicker({placement: '{{ (trans('backLang.direction')=="rtl")?"topLeft":"topRight" }}'});

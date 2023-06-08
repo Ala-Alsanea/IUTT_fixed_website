@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link rel="stylesheet" type="text/css" href="{{ asset("/backEnd/assets/styles/flags.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset("/backEnd/assets/styles/flags.css") }}"/>
 @endsection
 @section('content')
     <div class="padding p-b-0">
@@ -586,10 +586,10 @@
                                                class="list-left">
 	                	<span class="w-40 avatar">
                             @if($Contact->photo!="")
-                                <img src="{{ asset('uploads/contacts/'.$Contact->photo) }}"
+                                <img src="{{ secure_asset('uploads/contacts/'.$Contact->photo) }}"
                                      alt="{{ $Contact->first_name }} {{ $Contact->last_name }}">
                             @else
-                                <img src="{{ asset('uploads/contacts/profile.jpg') }}"
+                                <img src="{{ secure_asset('uploads/contacts/profile.jpg') }}"
                                      alt="{{ $Contact->first_name }} {{ $Contact->last_name }}" style="opacity: 0.5">
                             @endif
 	                    </span>

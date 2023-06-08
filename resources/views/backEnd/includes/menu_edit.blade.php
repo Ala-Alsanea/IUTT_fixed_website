@@ -17,7 +17,7 @@ $PagesList=Helper::GetPageIdListBy(@Auth::user()->permissions_id);
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand" href="{{ route('adminHome') }}">
-                <img src="{{ asset('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
+                <img src="{{ secure_asset('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
                 <span class="hidden-folded inline">{{ trans('backLang.control') }}</span>
             </a>
             <!-- / brand -->

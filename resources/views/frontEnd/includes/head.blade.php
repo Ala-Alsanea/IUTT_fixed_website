@@ -7,24 +7,24 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 {{--     <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
-<link rel="stylesheet" href="{{asset('plugins/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{secure_asset('plugins/css/font-awesome.min.css') }}">
 <!-- ALL CSS FILES -->
-{{--     <link href="{{asset('plugins/css/materialize.css') }}" rel="stylesheet"> --}}
-<link href="{{asset('plugins/css/bootstrap.css') }}" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="{{asset('plugins/vendors/owl-carousel/assets/owl.carousel.min.css') }}">
+{{--     <link href="{{secure_asset('plugins/css/materialize.css') }}" rel="stylesheet"> --}}
+<link href="{{secure_asset('plugins/css/bootstrap.css') }}" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/vendors/owl-carousel/assets/owl.carousel.min.css') }}">
 @yield('vendorInclude')
-<link href="{{asset('plugins/css/style.css') }}" rel="stylesheet" />
-<link href="{{asset('plugins/css/customfotter.css') }}" rel="stylesheet" />
+<link href="{{secure_asset('plugins/css/style.css') }}" rel="stylesheet" />
+<link href="{{secure_asset('plugins/css/customfotter.css') }}" rel="stylesheet" />
 <!--     <link href="plugins/css/custommenu.css" rel="stylesheet" /> -->
 <!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
-<link href="{{asset('plugins/css/style-mob.css') }}" rel="stylesheet" />
+<link href="{{secure_asset('plugins/css/style-mob.css') }}" rel="stylesheet" />
 
 
-<link href="{{asset('plugins/css/custom.css') }}" rel="stylesheet" />
+<link href="{{secure_asset('plugins/css/custom.css') }}" rel="stylesheet" />
 @yield('styleInclude')
 
 @if (trans('backLang.direction') == 'rtl')
-    <link rel="stylesheet" type="text/css" href="{{asset('plugins/css/rtl.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/rtl.css') }}">
 @endif
 
 
@@ -52,7 +52,7 @@
 {{-- @if (Helper::GeneralSiteSettings('style_fav') != '') --}}
 {{-- <link href="{{ Helper::FilterImage(Helper::GeneralSiteSettings('style_fav')) }}" rel="shortcut icon" type="image/png"> --}}
 {{-- @else --}}
-    <link href="{{ asset('uploads/fav.png') }}" rel="shortcut icon" type="image/png">
+    <link href="{{ secure_asset('uploads/fav.png') }}" rel="shortcut icon" type="image/png">
 {{-- @endif --}}
 @if (Helper::GeneralSiteSettings('style_apple') != '')
     <link href="{{ Helper::FilterImage(Helper::GeneralSiteSettings('style_apple')) }}" rel="apple-touch-icon">
@@ -63,8 +63,8 @@
     <link href="{{ Helper::FilterImage(Helper::GeneralSiteSettings('style_apple')) }}" rel="apple-touch-icon"
         sizes="144x144">
 @else
-    <link href="{{ asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon">
-    <link href="{{ asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="72x72">
-    <link href="{{ asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="114x114">
-    <link href="{{ asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="144x144">
+    <link href="{{ secure_asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon">
+    <link href="{{ secure_asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="72x72">
+    <link href="{{ secure_asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="114x114">
+    <link href="{{ secure_asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="144x144">
 @endif

@@ -1,6 +1,6 @@
 @extends('backEnd.layout')
 @section('headerInclude')
-    <link rel="stylesheet" type="text/css" href="{{ asset("/backEnd/assets/styles/flags.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset("/backEnd/assets/styles/flags.css") }}"/>
 @endsection
 @section('content')
  <?php

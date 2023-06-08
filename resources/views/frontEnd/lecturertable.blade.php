@@ -3,11 +3,11 @@
 
 @section('content')
 
- <link rel="stylesheet" type="text/css" href="{{asset('plugins/css/new-custom.css') }}">
- <link href="{{asset('plugins/css/graduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{asset('plugins/css/graduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{asset('plugins/css/about.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{asset('plugins/css/about-responsive.css') }}" type="text/css" rel="stylesheet"/>
+ <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+ <link href="{{secure_asset('plugins/css/graduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/graduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/about.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/about-responsive.css') }}" type="text/css" rel="stylesheet"/>
 
   <style>
  .highlighted-box {
