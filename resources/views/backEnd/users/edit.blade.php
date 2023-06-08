@@ -59,8 +59,8 @@
                                 <div class="col-sm-12">
                                     <div id="user_photo" class="col-sm-4 box p-a-xs">
                                         <a target="_blank"
-                                           href="{{ secure_asset('uploads/users/'.$Users->photo) }}"><img
-                                                    src="{{ secure_asset('uploads/users/'.$Users->photo) }}"
+                                           href="{{ asset('uploads/users/'.$Users->photo) }}"><img
+                                                    src="{{ asset('uploads/users/'.$Users->photo) }}"
                                                     class="img-responsive">
                                             {{ $Users->photo }}
                                         </a>

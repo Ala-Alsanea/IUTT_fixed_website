@@ -58,7 +58,7 @@
 
 
   <div class="com-sp  text-center">
-                <a href="{{secure_asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
+                <a href="{{asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
             </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
 ">
                 <!--<div class="ho-ex-title"><h4>Upcoming Event</h4></div>-->
                 <div class="ho-ev-latest ho-ev-latest-bg-2" style="
-    background: url({{secure_asset('uploads/banners/events-banner.jpg') }}) no-repeat;
+    background: url({{asset('uploads/banners/events-banner.jpg') }}) no-repeat;
     background-size: cover;
     padding: 51px;
 ">
@@ -147,7 +147,7 @@
 
         </div>
  <div class="com-sp  text-center">
-                <a href="{{secure_asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
+                <a href="{{asset('university/events') }}" class="btn-custom">{{ trans('frontLang.readMore') }}</a>
             </div>
     </div>
 </div>

@@ -460,15 +460,15 @@ if (Auth::user()->connect_email != "" && Auth::user()->connect_password) {
                                                     $ext = strtolower($ext);
                                                     if(!in_array($ext, $img_type)) {
                                                     ?>
-                                                    <a href="{{ secure_asset('uploads/inbox/'.$file->file) }}"
+                                                    <a href="{{ asset('uploads/inbox/'.$file->file) }}"
                                                        style="display: block;padding: 10px;border: 1px solid #eee"
                                                        target="_blank"><strong>{!! $file->file !!}</strong></a>
                                                     <?php
                                                     }else {
                                                     ?>
-                                                    <a href="{{ secure_asset('uploads/inbox/'.$file->file) }}"
+                                                    <a href="{{ asset('uploads/inbox/'.$file->file) }}"
                                                        target="_blank"><img
-                                                                src="{{ secure_asset('uploads/inbox/'.$file->file) }}"
+                                                                src="{{ asset('uploads/inbox/'.$file->file) }}"
                                                                 style="max-width: 100%" alt=""></a>
                                                     <?php
                                                     }

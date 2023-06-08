@@ -109,7 +109,7 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <img src="{{ secure_asset('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
+                                            <img src="{{ asset('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
                                             {!! Form::text('row_no_'.$subMenu->Cat_id,$subMenu->row_no, array('class' => 'form-control row_no','id'=>'row_no')) !!}
                                             {!! $title  !!}</td>
                                         <td class="text-center">

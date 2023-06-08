@@ -36,7 +36,7 @@
                     <div class="item  {{ $key == 0 ? 'active' : '' }}">
 
                         <div style=" position: relative; z-index: -10;">
-                            <img src="{{ secure_asset($SliderBanner->$file_var) }}" alt="{{ $SliderBanner->$title_var }}">
+                            <img src="{{ asset($SliderBanner->$file_var) }}" alt="{{ $SliderBanner->$title_var }}">
                         </div>
 
                         @if ($SliderBanner->$title_var != '')
