@@ -2,6 +2,9 @@
     'root' => array(
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
+
+        'reference' => '14442bfcd377f206037a30bcdf2a59e752940a64',
+
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -382,6 +385,9 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
+
+            'reference' => '14442bfcd377f206037a30bcdf2a59e752940a64',
+
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -458,6 +464,15 @@
             'install_path' => __DIR__ . '/../laraveldaily/laravel-charts',
             'aliases' => array(),
             'reference' => '42b6236115675c56f029f4daac7a8a529d04766d',
+            'dev_requirement' => false,
+        ),
+        'laraveldaily/laravel-charts' => array(
+            'pretty_version' => '0.2.0',
+            'version' => '0.2.0.0',
+            'reference' => '42b6236115675c56f029f4daac7a8a529d04766d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laraveldaily/laravel-charts',
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(
