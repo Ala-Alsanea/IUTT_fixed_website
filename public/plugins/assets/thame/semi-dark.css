@@ -1,0 +1,57 @@
+/* Semi Dark Layout */
+/* ---------------- */
+
+body.grey  {
+  background-color : #1A233A !important;
+}
+body.grey .navside  {
+  background-color : #1A233A !important;
+  background-color: #272E48;
+    box-shadow: 8px 12px 20px 0 rgba(11, 26, 51, 0.63) !important;
+}
+
+.grey .box, .grey .white {
+     background-color: #272E48;
+    box-shadow: 8px 12px 20px 0 rgba(11, 26, 51, 0.63) !important;
+}
+
+body.grey .main-menu .shadow-bottom {
+  background : -webkit-linear-gradient(top, #1A233AF0 44%, #1A233ABF 73%, #2C303C00);
+  background :         linear-gradient(-180deg, #1A233AF0 44%, #1A233ABF 73%, #2C303C00);
+}
+
+body.grey .main-menu .navbar-header {
+  z-index : 3;
+}
+
+body.grey .main-menu .navbar-header .modern-nav-toggle {
+  background-color : transparent !important;
+}
+
+body.grey .main-menu-content .navigation-main {
+  background-color : transparent;
+}
+
+body.grey .main-menu-content .navigation-main .nav-item i {
+  color : #8A99B5;
+}
+
+body.grey .main-menu-content .navigation-main .nav-item a:after {
+  color : #8A99B5;
+}
+
+body.grey .main-menu-content .navigation-main .nav-item .menu-content .active .menu-item {
+  color : #5A8DEE !important;
+}
+
+body.grey .main-menu-content .navigation-main .active .menu-title, body.grey .main-menu-content .navigation-main .active i {
+  color : #5A8DEE;
+}
+
+body.grey .main-menu-content .navigation-main .sidebar-group-active {
+  background : #272E48 !important;
+}
+
+body.grey .main-menu-content .navigation-main .sidebar-group-active .menu-content .active {
+  background-color : #343B53;
+}
