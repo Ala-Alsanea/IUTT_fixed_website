@@ -5,8 +5,8 @@
 
 
 
-   <link rel="stylesheet" type="text/css" href="{{asset('plugins/css/custm-people.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{asset('plugins/css/new-custom.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/custm-people.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
 @if(count((array)$Topics)==0)
 <section class="process_area bg_color sec_pad about">
     <br><br>

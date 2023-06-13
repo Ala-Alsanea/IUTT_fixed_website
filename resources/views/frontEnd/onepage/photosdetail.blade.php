@@ -1,7 +1,7 @@
 
 @extends('frontEnd.onepage.layout')
 @section('styleInclude')
-    <link href="{{asset('plugins/css/materialize.css') }}" rel="stylesheet">
+    <link href="{{secure_asset('plugins/css/materialize.css') }}" rel="stylesheet">
    <style type="text/css">
      nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
     display: unset;
@@ -209,7 +209,7 @@ $details='';
 
 @endsection
 @section('footerInclude')
- <script src="{{asset('plugins/js/materialize.min.js') }}"></script>
+ <script src="{{secure_asset('plugins/js/materialize.min.js') }}"></script>
 
 
    @endsection

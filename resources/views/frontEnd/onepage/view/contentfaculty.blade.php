@@ -4,12 +4,12 @@
 
 @section('styleInclude')
 
-    <link rel="stylesheet" type="text/css" href="{{asset('plugins/css/new-custom.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{asset('plugins/css/custm-people.css') }}">
-   <link href="{{asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
-   <link href="{{asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
-<link href="{{asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/new-custom.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{secure_asset('plugins/css/custm-people.css') }}">
+   <link href="{{secure_asset('plugins/css/undergraduate-admissions.css') }}" type="text/css" rel="stylesheet"/>
+   <link href="{{secure_asset('plugins/css/college-of-health.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/college-of-health-responsive.css') }}" type="text/css" rel="stylesheet"/>
+<link href="{{secure_asset('plugins/css/undergraduate-admissions-responsive.css') }}" type="text/css" rel="stylesheet"/>
  @endsection
  <style>
 table tr td {

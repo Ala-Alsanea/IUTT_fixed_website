@@ -82,43 +82,43 @@
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','0',true, array('id' => 'status1','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_0.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_0.png')}}"
                                          style="width: 25px;">
                                 </label>
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','1',(Session::get('Map')->icon==1) ? true : false, array('id' => 'status2','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_1.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_1.png')}}"
                                          style="width: 25px;">
                                 </label>
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','2',(Session::get('Map')->icon==2) ? true : false, array('id' => 'status2','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_2.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_2.png')}}"
                                          style="width: 25px;">
                                 </label>
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','3',(Session::get('Map')->icon==3) ? true : false, array('id' => 'status2','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_3.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_3.png')}}"
                                          style="width: 25px;">
                                 </label>
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','4',(Session::get('Map')->icon==4) ? true : false, array('id' => 'status2','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_4.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_4.png')}}"
                                          style="width: 25px;">
                                 </label>
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','5',(Session::get('Map')->icon==5) ? true : false, array('id' => 'status2','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_5.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_5.png')}}"
                                          style="width: 25px;">
                                 </label>
                                 <label class="ui-check ui-check-md">
                                     {!! Form::radio('icon','6',(Session::get('Map')->icon==6) ? true : false, array('id' => 'status2','class'=>'has-value')) !!}
                                     <i class="dark-white"></i>
-                                    <img src="{{ asset('backEnd/assets/images/marker_6.png')}}"
+                                    <img src="{{ secure_asset('backEnd/assets/images/marker_6.png')}}"
                                          style="width: 25px;">
                                 </label>
                             </div>
@@ -241,43 +241,43 @@
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','0',true, array('id' => 'status1','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_0.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_0.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','1',false, array('id' => 'status2','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_1.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_1.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','2',false, array('id' => 'status2','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_2.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_2.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','3',false, array('id' => 'status2','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_3.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_3.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','4',false, array('id' => 'status2','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_4.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_4.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','5',false, array('id' => 'status2','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_5.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_5.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                                 <label class="ui-check ui-check-md">
                                                     {!! Form::radio('icon','6',false, array('id' => 'status2','class'=>'has-value')) !!}
                                                     <i class="dark-white"></i>
-                                                    <img src="{{ asset('backEnd/assets/images/marker_6.png')}}"
+                                                    <img src="{{ secure_asset('backEnd/assets/images/marker_6.png')}}"
                                                          style="width: 25px;">
                                                 </label>
                                             </div>
@@ -366,7 +366,7 @@
                         </td>
                         <td>
                             {!! Form::text('row_no_'.$map->id,$map->row_no, array('class' => 'pull-left form-control row_no','id'=>'row_no3')) !!}
-                            <img src="{{ asset('backEnd/assets/images/marker_').$map->icon.".png" }}"
+                            <img src="{{ secure_asset('backEnd/assets/images/marker_').$map->icon.".png" }}"
                                  style="width: 20px;">
                             @if($title !="")
                                 <small>{!! $title !!}</small>

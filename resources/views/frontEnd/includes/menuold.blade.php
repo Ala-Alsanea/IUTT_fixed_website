@@ -24,7 +24,7 @@ $slug_var2 = "seo_url_slug_" . trans('backbackLang.boxCodeOther');
 
 
 @else
-<img alt="" src="{{ asset('uploads/settings/nologo.png') }}" srcset="{{ asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
+<img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
 @endif
 
 </div>

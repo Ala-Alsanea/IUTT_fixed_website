@@ -1,7 +1,7 @@
 @extends('backEnd.layout')
 @section('headerInclude')
     <link rel="stylesheet"
-          href="{{ asset('plugins/backEnd/libs/jquery/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}"
+          href="{{ secure_asset('plugins/backEnd/libs/jquery/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}"
           type="text/css"/>
 @endsection
 @section('content')
@@ -350,7 +350,7 @@ $DetailPage=(object)config('Page.DetailPage');
         <div class="col-sm-12">
             <div class="col-sm-12 box p-a-xs text-center">
                 <img
-                        src="{{ asset('uploads/settings/nologo.png') }}"
+                        src="{{ secure_asset('uploads/settings/nologo.png') }}"
                         class="img-responsive style_logo_ar groupMediaPhoto" id="style_logo_ar_prv"
                         style="width: auto;max-width: 260px;max-height: 60px">
                 <br>
@@ -395,7 +395,7 @@ $DetailPage=(object)config('Page.DetailPage');
             <div class="col-sm-12">
                 <div class="col-sm-12 box p-a-xs text-center">
                     <img
-                            src="{{ asset('uploads/settings/nologo.png') }}"
+                            src="{{ secure_asset('uploads/settings/nologo.png') }}"
                             class="img-responsive style_logo_en groupMediaPhoto" id="style_logo_en_prv"
                             style="width: auto;max-width: 260px;max-height: 60px">
                     <br>
@@ -446,7 +446,7 @@ $DetailPage=(object)config('Page.DetailPage');
         <div class="col-sm-12">
             <div class="col-sm-12 box p-a-xs text-center">
                 <img
-                        src="{{ asset('uploads/settings/nologo.png') }}"
+                        src="{{ secure_asset('uploads/settings/nologo.png') }}"
                         class="img-responsive style_logo_w_ar groupMediaPhoto" id="style_logo_w_ar_prv"
                         style="width: auto;max-width: 260px;max-height: 60px">
                 <br>
@@ -492,7 +492,7 @@ $DetailPage=(object)config('Page.DetailPage');
             <div class="col-sm-12">
                 <div class="col-sm-12 box p-a-xs text-center">
                     <img
-                            src="{{ asset('uploads/settings/nologo.png') }}"
+                            src="{{ secure_asset('uploads/settings/nologo.png') }}"
                             class="img-responsive style_logo_w_en groupMediaPhoto" id="style_logo_w_en_prv"
                             style="width: auto;max-width: 260px;max-height: 60px">
                     <br>
@@ -541,8 +541,8 @@ $DetailPage=(object)config('Page.DetailPage');
         <div class="col-sm-12">
             <div class="col-sm-12 box p-a-xs text-center">
                 <a target="_blank"
-                   href="{{ asset('uploads/settings/nofav.png') }}"><img
-                            src="{{ asset('uploads/settings/nofav.png') }}"
+                   href="{{ secure_asset('uploads/settings/nofav.png') }}"><img
+                            src="{{ secure_asset('uploads/settings/nofav.png') }}"
                             class="img-responsive style_fav groupMediaPhoto" id="style_fav_prv"
                             style="max-width: 60px;height: 60px">
                     <br>
@@ -583,8 +583,8 @@ $DetailPage=(object)config('Page.DetailPage');
         <div class="col-sm-12">
             <div class="col-sm-12 box p-a-xs text-center">
                 <a target="_blank"
-                   href="{{ asset('uploads/settings/nofav.png') }}"><img
-                            src="{{ asset('uploads/settings/nofav.png') }}"
+                   href="{{ secure_asset('uploads/settings/nofav.png') }}"><img
+                            src="{{ secure_asset('uploads/settings/nofav.png') }}"
                             class="img-responsive style_apple groupMediaPhoto" id="style_apple_prv"
                             style="max-width: 60px;height: 60px">
                     <br>
@@ -695,7 +695,7 @@ $DetailPage=(object)config('Page.DetailPage');
                     <label class="ui-check ui-check-md">
                         {!! Form::radio('style_bg_pattern',$img_name,($Setting->style_bg_pattern==$img_name) ? true : false , array('id' => 'style_bg_pattern'.$i,'class'=>'has-value')) !!}
                         <i class="dark-white"></i>
-                        <img src="{{ asset('uploads/pattern/'.$img_name) }}"
+                        <img src="{{ secure_asset('uploads/pattern/'.$img_name) }}"
                              style="width: 40px;height: 40px;border: 2px solid #fff"
                              alt="">
                     </label>
@@ -878,7 +878,7 @@ $DetailPage=(object)config('Page.DetailPage');
         });
 
     </script>
-    <script src="{{ asset('plugins/backEnd/libs/jquery/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js') }}"></script>
+    <script src="{{ secure_asset('plugins/backEnd/libs/jquery/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js') }}"></script>
     <script>
         $(function () {
             $('#cp1').colorpicker({
