@@ -22,6 +22,7 @@ use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FrontendHomeController;
 use App\Http\Controllers\FacultiesHomeController;
+use App\Http\Controllers\FacultiesNewsController;
 use App\Http\Controllers\SliderFacultyController;
 use App\Http\Controllers\PermissionsPageController;
 use App\Http\Controllers\CategorieSectionController;
