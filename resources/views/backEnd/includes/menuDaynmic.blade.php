@@ -17,7 +17,7 @@ $LangCode=trans('backLang.boxCode');
         <div class="navbar navbar-md no-radius">
             <!-- brand -->
             <a class="navbar-brand" href="{{ route('adminHome') }}">
-                <img src="{{ secure_asset('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
+                <img src="{{ asset('plugins/backEnd/assets/images/logo.png') }}" alt="Control">
                 <span class="hidden-folded inline">{{ trans('backLang.control') }}</span>
             </a>
             <!-- / brand -->

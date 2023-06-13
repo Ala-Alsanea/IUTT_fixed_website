@@ -78,7 +78,7 @@ right:0;
 
 
       @else
-      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
+      <img alt="" src="{{ asset('uploads/settings/nologo.png') }}" srcset="{{ asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
       @endif
 
         @endif
@@ -96,7 +96,7 @@ right:0;
 
 
       @else
-      <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}" srcset="{{ secure_asset('uploads/settings/nologo.png') }}" >
+      <img alt="" src="{{ asset('uploads/settings/nologo.png') }}" srcset="{{ asset('uploads/settings/nologo.png') }}" >
       @endif
 
        @endif

@@ -44,10 +44,10 @@ if (Auth::user()->connect_email != "" && Auth::user()->connect_password) {
                 <a class="nav-link clear" href data-toggle="dropdown">
                   <span class="avatar w-32">
                       @if(Auth::user()->photo !="")
-                          <img src="{{ secure_asset('uploads/users/'.Auth::user()->photo) }}" alt="{{ Auth::user()->name }}"
+                          <img src="{{ asset('uploads/users/'.Auth::user()->photo) }}" alt="{{ Auth::user()->name }}"
                                title="{{ Auth::user()->name }}">
                       @else
-                          <img src="{{ secure_asset('plugins/backEnd/assets/images/profile.jpg') }}" alt="{{ Auth::user()->name }}"
+                          <img src="{{ asset('plugins/backEnd/assets/images/profile.jpg') }}" alt="{{ Auth::user()->name }}"
                                title="{{ Auth::user()->name }}">
                       @endif
                       <i class="on b-white bottom"></i>

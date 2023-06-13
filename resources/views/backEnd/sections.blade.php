@@ -167,11 +167,11 @@ $DetailPage=(object)config('Page.DetailPage');
                                     <td>
                                         @if($subSection->photo !="")
                                             <div class="pull-right">
-                                                <img src="{{ secure_asset('uploads/sections/'.$subSection->photo) }}"
+                                                <img src="{{ asset('uploads/sections/'.$subSection->photo) }}"
                                                      style="height: 30px" alt="{{ $title }}">
                                             </div>
                                         @endif
-                                        <img src="{{ secure_asset('backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}"
+                                        <img src="{{ asset('backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}"
                                              class="submenu_tree">
                                         {!! Form::text('row_no_'.$subSection->id,$subSection->row_no, array('class' => 'form-control row_no','id'=>'row_no')) !!}
                                         @if($subSection->icon !="")

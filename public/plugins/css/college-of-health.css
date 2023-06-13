@@ -1,0 +1,88 @@
+
+.banner {
+    background: url(../../uploads/newimage/college-engineering.jpg) no-repeat center center;
+    background-size: cover !important;
+}
+.main-image-tab-2 .option.option-1 {
+    background: url(../../uploads/newimage/health/main-tab-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-2 {
+    background: url(../../uploads/newimage/health/main-tab-2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-3 {
+    background: url(../../uploads/newimage/health/main-tab-3.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-4 {
+    background: url(../../uploads/newimage/health/main-tab-4.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-5 {
+    background: url(../../uploads/newimage/health/main-tab-5.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-6 {
+    background: url(../../uploads/newimage/health/main-tab-6.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .main-detail #second-tab .tabs .tab {
+    width: calc(100% / 3);
+}
+.main-image-tab-2-details .mobile-option.option-1 {
+    background: url(../../uploads/newimage/health/main-tab-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-2 {
+    background: url(../../uploads/newimage/health/main-tab-2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-3 {
+    background: url(../../uploads/newimage/health/main-tab-3.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-4 {
+    background: url(../../uploads/newimage/health/main-tab-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-5 {
+    background: url(../../uploads/newimage/health/main-tab-2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-6 {
+    background: url(../../uploads/newimage/health/main-tab-3.jpg) no-repeat center center;
+    background-size: cover;
+}
+/*# sourceMappingURL=college-of-health.css.map */
+
+.breadcrumb {
+    float: none;
+    margin: 0px;
+}
+
+.second-blk .blk.blk-1 p {
+    background: none !important;
+    margin: 0;
+    padding-top: 0 !important;
+}
+
+.common-table-1 table {
+    min-width: 100%;
+}
+
+.main-detail .double-blks {
+    margin-left: 0;
+}
+
+.common-images-block.by-2.clear img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    object-fit: cover;
+}
+
+.common-images-block.by-1.clear img {
+    height: 300px;
+    object-fit: cover;
+}

@@ -98,12 +98,12 @@
                             ?>
                             <div id="{{$file_name_id}}" class="col-sm-4 box p-a-xs">
                                 <video width="380" height="230" controls>
-                                    <source src="{{ secure_asset('uploads/topics/'.$cf_saved_val) }}"
+                                    <source src="{{ asset('uploads/topics/'.$cf_saved_val) }}"
                                             type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <a target="_blank"
-                                   href="{{ secure_asset('uploads/topics/'.$cf_saved_val) }}">
+                                   href="{{ asset('uploads/topics/'.$cf_saved_val) }}">
                                     {{ $cf_saved_val }}
                                 </a>
                                 <br>

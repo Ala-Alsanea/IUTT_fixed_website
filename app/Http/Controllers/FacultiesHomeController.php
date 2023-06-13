@@ -1275,7 +1275,7 @@ class FacultiesHomeController extends Controller
                 "HeaderMenuOnePageLinks",
                 "HeaderMenuLinks",
                 "FooterMenuLinks",
-                "Topic",
+                // "Topic",
                 "FooterMenuLinks_name_ar",
                 "FooterMenuLinks_name_en",
                 "PageTitle",

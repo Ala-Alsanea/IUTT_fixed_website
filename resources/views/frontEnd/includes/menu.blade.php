@@ -30,14 +30,14 @@
                    <div class="wed-logo1" dir="{{ trans('backLang.direction') }}">
                        <a class="logo" href="{{ route('Home') }}">
                            @if (Helper::GeneralSiteSettings('style_logo_' . trans('backLang.boxCode')) != '')
-                               {{--  <img src="{{secure_asset('uploads/logo11.png') }}"> --}}
+                               {{--  <img src="{{asset('uploads/logo11.png') }}"> --}}
                                <img alt=""
                                    src="{{ Helper::FilterImage(Helper::GeneralSiteSettings('style_logo_' . trans('backLang.boxCode'))) }}"
                                    srcset="{{ Helper::FilterImage(Helper::GeneralSiteSettings('style_logo_' . trans('backLang.boxCode'))) }}"
                                    class="wed-logo-section">
                            @else
-                               <img alt="" src="{{ secure_asset('uploads/settings/nologo.png') }}"
-                                   srcset="{{ secure_asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
+                               <img alt="" src="{{ asset('uploads/settings/nologo.png') }}"
+                                   srcset="{{ asset('uploads/settings/nologo.png') }}" class="wed-logo-section">
                            @endif
                        </a>
 

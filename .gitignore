@@ -2,9 +2,6 @@
 /node_modules
 /public/build
 /public/hot
-/public/uploads
-/public/plugins
-/public/storage
 /storage/*.key
 # /vendor
 .env
@@ -19,8 +16,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-uploads
-plugins
 pro.txt
 iuttedu_techdbweb.sql
 

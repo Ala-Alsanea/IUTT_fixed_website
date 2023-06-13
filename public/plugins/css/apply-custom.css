@@ -1,0 +1,66 @@
+/*! CSS Used from: https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/scss/reset_css.css?ver=316 */
+div,span,h5,p,a,img,sup{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+img{border:0;border-style:none;border-width:0px;outline:none;}
+div{display:block;}
+a{outline:0;text-decoration:none;}
+h5{margin:0;font-family:inherit;}
+p{margin:0;display:block;margin:10px 0;}
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+a{color:inherit;cursor:pointer;}
+/*! CSS Used from: https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/scss/style.css?ver=984 */
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background-color:#ccc;border-left:1px solid #fff;}
+::-webkit-scrollbar-thumb{background-color:#2059a8;}
+::-webkit-scrollbar-thumb:hover{background-color:#fff;}
+p{line-height:25px;}
+.clear:after{clear:both;display:block;content:' ';}
+.wrapper{width:1141px;margin:0 auto;position:relative;}
+.margin-top-zero{margin-top:0!important;}
+.container{overflow:unset!important;}
+/*! CSS Used from: https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/scss/responsive/style-responsive.css?ver=995 */
+@media screen and (max-width: 1141px){
+.wrapper{width:100%;padding:0 20px;}
+}
+@media screen and (max-width: 500px){
+.double-blks{margin-left:0px!important;}
+}
+@media screen and (max-width: 400px){
+.double-blks{margin-left:0px!important;}
+}
+@media screen and (max-width: 320px){
+.double-blks{margin-left:0px!important;}
+}
+/*! CSS Used from: https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/scss/inside.css?ver=647 */
+.double-blks{margin-left:-20px;}
+.double-blks .blk{margin-left:20px;width:calc(50% - 20px);float:left;}
+.double-blks .blk:nth-child(1){padding-right:20px;}
+.double-blks .blk:nth-child(2){padding-left:20px;}
+/*! CSS Used from: https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/scss/master-apply.css?ver=247 */
+.container .blk{margin-bottom:50px;}
+.container .blk img{width:100%;margin-bottom:5px;}
+.container .blk .dtls{background:#e0ecfc;padding:20px;}
+.container .blk .dtls h5{font-weight:bold;font-size:22px;line-height:22px;text-transform:uppercase;}
+.container .blk .apply{display:block;width:100%;height:50px;background:#001b48;position:relative;text-transform:uppercase;font-weight:bold;line-height:15px;}
+.container .blk .apply span{color:#fff;padding:10px;padding-left:70px;background:url(https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/img/icons/master-apply.png) no-repeat 20px center;background-size:33px;position:absolute;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);}
+.container .double-blks .blk .img{width:100%;height:300px;overflow:hidden;}
+.container .double-blks .blk .img img{width:100%;min-height:100%;}
+.container .double-blks .blk.blk-3 .apply{background:#2059a8;}
+/*! CSS Used from: https://www.ku.ac.ae/wp-content/themes/khalifauniversity/assets/scss/responsive/master-apply-responsive.css?ver=890 */
+@media screen and (max-width: 900px){
+.container .double-blks .blk .img{position:relative;overflow:hidden;}
+.container .double-blks .blk .img img{position:absolute;width:auto;height:100%;top:0;left:50%;transform:translateX(-50%);}
+}
+@media screen and (max-width: 800px){
+.container .blk p{line-height:21px;}
+}
+@media screen and (max-width: 700px){
+.container .double-blks .blk{width:calc(100% - 20px);}
+.container .double-blks .blk .img img{min-width:100%;}
+.container .double-blks .blk:nth-child(1){padding-right:0px;}
+.container .double-blks .blk:nth-child(2){padding-left:0px;}
+}
+@media screen and (max-width: 600px){
+.double-blks .blk{margin-left:20px;width:100%;float:left;}
+.double-blks .blk:nth-child(1){padding:0;margin:0;}
+.double-blks .blk:nth-child(2){padding-left:0;margin:0;}
+}

@@ -22,6 +22,7 @@ use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FrontendHomeController;
 use App\Http\Controllers\FacultiesHomeController;
+use App\Http\Controllers\FacultiesNewsController;
 use App\Http\Controllers\SliderFacultyController;
 use App\Http\Controllers\PermissionsPageController;
 use App\Http\Controllers\CategorieSectionController;
@@ -697,55 +698,55 @@ Route::group(['middleware' => ['XSS']], function () {
 
 
     Route::get('/faculties/{faclutyname}/home',[FacultiesHomeController::class,'HomePageFaculty'])->name('FacultyPage');
-    Route::get('/{lang?}/faculties/{faclutyname}/home', [FacultiesHomeController::class,'@HomePageFacultyByLang'])->name('FacultyPagePageBylang');
-    Route::get('/faculty/about/{id}', [FacultiesHomeController::class,'@facultyAboutUs']);
-    Route::get('/{lang?}/faculty/about/{id}', [FacultiesHomeController::class,'@facultyAboutUsByLang']);
+    Route::get('/{lang?}/faculties/{faclutyname}/home', [FacultiesHomeController::class,'HomePageFacultyByLang'])->name('FacultyPagePageBylang');
+    Route::get('/faculty/about/{id}', [FacultiesHomeController::class,'facultyAboutUs']);
+    Route::get('/{lang?}/faculty/about/{id}', [FacultiesHomeController::class,'facultyAboutUsByLang']);
 
-    Route::get('{faculty}/deanship', [FacultiesHomeController::class,'@facultydeanship']);
-    Route::get('/{lang?}/{faculty}/deanship', [FacultiesHomeController::class,'@facultydeanshipByLang']);
+    Route::get('{faculty}/deanship', [FacultiesHomeController::class,'facultydeanship']);
+    Route::get('/{lang?}/{faculty}/deanship', [FacultiesHomeController::class,'facultydeanshipByLang']);
 
-    Route::get('/faculty/profile/staff/{id}', [FacultiesHomeController::class,'@GetstafffacultyDetail']);
-    Route::get('/{lang?}/faculty/profile/staff/{id}', [FacultiesHomeController::class,'@GetstafffacultyDetailByLang']);
+    Route::get('/faculty/profile/staff/{id}', [FacultiesHomeController::class,'GetstafffacultyDetail']);
+    Route::get('/{lang?}/faculty/profile/staff/{id}', [FacultiesHomeController::class,'GetstafffacultyDetailByLang']);
 
-    Route::get('/faculty/programs/{id}', [FacultiesHomeController::class,'@GetPrograms']);
-    Route::get('/{lang?}/faculty/programs/{id}', [FacultiesHomeController::class,'@GetProgramsByLang']);
+    Route::get('/faculty/programs/{id}', [FacultiesHomeController::class,'GetPrograms']);
+    Route::get('/{lang?}/faculty/programs/{id}', [FacultiesHomeController::class,'GetProgramsByLang']);
 
 
 
-    Route::get('{faculty}/departments/{id}', [FacultiesHomeController::class,'@GetDepartments']);
-    Route::get('/{lang?}/{faculty}/departments/{id}', [FacultiesHomeController::class,'@GetDepartmentsByLang']);
+    Route::get('{faculty}/departments/{id}', [FacultiesHomeController::class,'GetDepartments']);
+    Route::get('/{lang?}/{faculty}/departments/{id}', [FacultiesHomeController::class,'GetDepartmentsByLang']);
 
     //============
-    Route::get('/{faculty}/news/faculty/{id}', [FacultiesNewsController::class,'@topicfaculty'])->name('FrontendTopicfaculty');
-    Route::get('/{lang?}/{faculty}/news/faculty/{id}', [FacultiesNewsController::class,'@topicfacultyByLang'])->name('FrontendTopicfacultyByLang');
+    Route::get('/{faculty}/news/faculty/{id}', [FacultiesNewsController::class,'topicfaculty'])->name('FrontendTopicfaculty');
+    Route::get('/{lang?}/{faculty}/news/faculty/{id}', [FacultiesNewsController::class,'topicfacultyByLang'])->name('FrontendTopicfacultyByLang');
 
-    Route::get('/{faculty}/news/faculty/{cat}', [FacultiesNewsController::class,'@topicsfaculty'])->name('FrontendTopicsfacultyByCat');
-    Route::get('/{lang?}/{faculty}/news/faculty/cat/{cat}', [FacultiesNewsController::class,'@topicsfacultyByLang'])->name('FrontendTopicsfacultyByCatWithLang');
+    Route::get('/{faculty}/news/faculty/{cat}', [FacultiesNewsController::class,'topicsfaculty'])->name('FrontendTopicsfacultyByCat');
+    Route::get('/{lang?}/{faculty}/news/faculty/cat/{cat}', [FacultiesNewsController::class,'topicsfacultyByLang'])->name('FrontendTopicsfacultyByCatWithLang');
 
-    Route::get('/{faculty}/news/faculty', [FacultiesNewsController::class,'@topicsfaculty'])->name('FrontendTopicsfaculty');
-    Route::get('/{lang?}/{faculty}/news/faculty', [FacultiesNewsController::class,'@topicsfacultyByLang'])->name('FrontendTopicsfacultyByLang');
-    Route::post('/{faculty}/search/faculty', [FacultiesNewsController::class,'@searchTopicsfaculty'])->name('searchTopicsFaculty');
+    Route::get('/{faculty}/news/faculty', [FacultiesNewsController::class,'topicsfaculty'])->name('FrontendTopicsfaculty');
+    Route::get('/{lang?}/{faculty}/news/faculty', [FacultiesNewsController::class,'topicsfacultyByLang'])->name('FrontendTopicsfacultyByLang');
+    Route::post('/{faculty}/search/faculty', [FacultiesNewsController::class,'searchTopicsfaculty'])->name('searchTopicsFaculty');
 
     //==================
-    Route::get('{faculty}/events', [FacultiesHomeController::class,'@facultyevents']);
-    Route::get('/{lang?}/{faculty}/events', [FacultiesHomeController::class,'@facultyeventsByLang']);
+    Route::get('{faculty}/events', [FacultiesHomeController::class,'facultyevents']);
+    Route::get('/{lang?}/{faculty}/events', [FacultiesHomeController::class,'facultyeventsByLang']);
 
-    Route::get('{faculty}/announcements', [FacultiesHomeController::class,'@facultyannouncements']);
-    Route::get('/{lang?}/{faculty}/announcements', [FacultiesHomeController::class,'@facultyannouncementsByLang']);
+    Route::get('{faculty}/announcements', [FacultiesHomeController::class,'facultyannouncements']);
+    Route::get('/{lang?}/{faculty}/announcements', [FacultiesHomeController::class,'facultyannouncementsByLang']);
 
-    Route::get('{faculty}/ourGallery', [FacultiesHomeController::class,'@facultyourGallery']);
-    Route::get('/{lang?}/{faculty}/ourGallery', [FacultiesHomeController::class,'@facultyourGalleryByLang']);
-    Route::get('{faculty}/ourGallery/details/{id}', [FacultiesHomeController::class,'@facultyourGalleryDetail']);
-    Route::get('/{lang?}/{faculty}/ourGallery/details/{id}', [FacultiesHomeController::class,'@facultyourGalleryDetailByLang']);
+    Route::get('{faculty}/ourGallery', [FacultiesHomeController::class,'facultyourGallery']);
+    Route::get('/{lang?}/{faculty}/ourGallery', [FacultiesHomeController::class,'facultyourGalleryByLang']);
+    Route::get('{faculty}/ourGallery/details/{id}', [FacultiesHomeController::class,'facultyourGalleryDetail']);
+    Route::get('/{lang?}/{faculty}/ourGallery/details/{id}', [FacultiesHomeController::class,'facultyourGalleryDetailByLang']);
 
-    Route::get('{faculty}/lecturertable', [FacultiesHomeController::class,'@facultylecturerstable']);
-    Route::get('/{lang?}/{faculty}/lecturertable', [FacultiesHomeController::class,'@facultylecturerstableByLang']);
-
-
+    Route::get('{faculty}/lecturertable', [FacultiesHomeController::class,'facultylecturerstable']);
+    Route::get('/{lang?}/{faculty}/lecturertable', [FacultiesHomeController::class,'facultylecturerstableByLang']);
 
 
-    Route::get('{faculty}/faculty/about/', [FacultiesHomeController::class,'@facultyAboutUsPage']);
-    Route::get('/{lang?}/{faculty}/faculty/about/', [FacultiesHomeController::class,'@facultyAboutUsPageByLang']);
+
+
+    Route::get('{faculty}/faculty/about/', [FacultiesHomeController::class,'facultyAboutUsPage']);
+    Route::get('/{lang?}/{faculty}/faculty/about/', [FacultiesHomeController::class,'facultyAboutUsPageByLang']);
 
     //=============
 });

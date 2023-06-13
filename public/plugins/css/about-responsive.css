@@ -1,0 +1,94 @@
+@media screen and (max-width: 780px){
+	.main .blk.text{width:calc(100% - 220px)}
+	.main .blk.video{padding-left:0;width:calc(200px - 20px);height:auto}
+	.main .blk.video .video{height:auto}
+	
+	}
+	@media screen and (max-width: 550px){ .double-blks.main .blk.text{float:right;width:100%;padding-right:0}
+	.double-blks.main .blk.video {
+    margin-top: 10px;
+    width: 100%;
+    margin: 0;
+}
+.double-blks.main .blk.video .common-video {
+    height: 240px;
+    margin: 0;
+}
+.main-image-tab-1 .mobile-tab {
+display: block!important;}
+.double-blks {
+    margin-left: -20px!important;
+}
+.main-image-tab-1 .post-dtls {
+    margin-bottom: 0;
+}
+.page-id-1901 .double-blks {
+    margin-left: 0px!important;
+}
+.page-id-1901 .blk {
+    margin-left: 20px;
+    width: 100%;
+    float: left;
+}
+.page-id-1901 .double-blks .blk:nth-child(2) {
+    padding-left: 0px;
+}
+.page-template-page-bachelor-chemistry .dtl ul li {
+    width: 90%;
+    margin: 0 0 13px 30px;
+    list-style: disc;
+    line-height: 22px;
+}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.double-blks {
+	margin-left: 0px !important;
+}
+
+.about-bottom .blk {
+	width: calc(100% - 20px);
+	margin-left: 0px !important;
+}
+}
+	
+@media only screen and (max-width: 1023px) {
+	.double-blks {
+	margin-left: 0px !important;
+}
+
+.about-bottom .blk {
+	width: calc(100% - 20px);
+	margin-left: 0px !important;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.page-id-3472 .highlighted-box {
+	width: 47%;
+	margin: 30px 10px 0px;
+	height: 120px;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.page-id-3472 .highlighted-box {
+	width: 100%;
+	height: auto;
+}
+}
+@media only screen and (max-width: 479px) {
+
+.page-id-3472 .highlighted-box {
+	width: 100%;
+}
+    .sami-box {
+    float: left;
+    width: 100%;
+    }
+    
+   .page-template-page-sessions-php .blk-full a.common-btn {
+    margin: 9px 0;
+       width:100%;
+}
+    
+	}
+/*# sourceMappingURL=about-responsive.css.map */

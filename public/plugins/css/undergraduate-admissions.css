@@ -1,0 +1,190 @@
+
+.banner {
+    background: url(../../uploads/newimage/undergraduate.jpg) no-repeat center top;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-1 {
+    background: url(../../uploads/newimage/main-tab-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-2 {
+    background: url(../../uploads/newimage/main-tab-2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-3 {
+    background: url(../../uploads/newimage/main-tab-3.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-4 {
+    background: url(../../uploads/newimage/main-tab-4.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2 .option.option-5 {
+    background: url(../../uploads/newimage/main-tab-6.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-1 {
+    background: url(../../uploads/newimage/main-tab-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-2 {
+    background: url(../../uploads/newimage/main-tab-2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-3 {
+    background: url(../../uploads/newimage/main-tab-3.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-4 {
+    background: url(../../uploads/newimage/main-tab-4.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .mobile-option.option-5 {
+    background: url(../../uploads/newimage/main-tab-6.jpg) no-repeat center center;
+    background-size: cover;
+}
+.main-image-tab-2-details .btn-img-text-blk {
+    margin: 20px 0;
+}
+.main-image-tab-2-details .btn-img-text-blk span {
+    background: url(../../uploads/newimage/icons/apply-now.png) no-repeat center top;
+}
+ 
+/*# sourceMappingURL=undergraduate-admissions.css.map */
+
+.quick-links .link {
+    float: left;
+    width: calc((130% / 4) - 20px);
+}
+
+.common-table-2 table {
+    min-width: 600px;
+    width: 100%;
+}
+.common-table-2 table tr th {
+    text-align: left;
+    font-weight: bold;
+    color: #fff;
+    background: #2059a8;
+    text-transform: uppercase;
+}
+.common-table-2 table tr th,
+.common-table-2 table tr td {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+}
+.quick-links .link i {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #2059a8;
+}
+
+.quick-links .link i:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.quick-links .link span {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px 0 70px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+}
+.quick-links .link.admission i:after {
+    background: url(../../uploads/newimage/icons/admission.png) no-repeat center center;
+    background-size: 28px;
+}
+.quick-links .link.required i:after {
+    background: url(../../uploads/newimage/icons/required.png) no-repeat center center;
+    background-size: 26px;
+}
+
+.quick-links .link.publication i:after {
+    background: url(../../uploads/newimage/icons/publication.png) no-repeat center center;
+    background-size: 28px;
+}
+.quick-links .link.modes-of-study i:after {
+    background: url(../../uploads/newimage/icons/modes-of-study.png) no-repeat center center;
+    background-size: 28px;
+}
+
+.quick-links .link.tution i:after {
+    background: url(../../uploads/newimage/icons/tution-fee.png) no-repeat center center;
+    background-size: 28px;
+}
+
+.quick-links .link.faq i:after {
+    background: url(../../uploads/newimage/icons/faq.png) no-repeat center center;
+    background-size: 28px;
+}
+
+.quick-links .link:nth-child(even) i {
+    background: #001b48;
+}
+
+.common-title-2 {
+    margin: 10px 0 10px;
+
+    width: 100%;
+}
+.title-b {
+    display: block;
+    margin: 10px 0 8px;
+}
+.ltr .tab-type-2 .tab2-dtl {
+ 
+    border-top: 1px dotted #4172b5;
+    padding: 20px;
+ 
+    background: #f2f2f2;
+}
+
+.rtl .tab-type-2 .tab2-dtl {
+ 
+    border-top: 1px dotted #4172b5;
+    padding: 20px;
+ 
+    background: #f2f2f2;
+}
+.tab-type-2 .tab2-dtl {
+    line-height: 24px;
+}
+
+.common-table-2 {
+    width: 100%;
+    background: #fff;
+    margin: 15px 0 5px;
+}
+
+.common-ul li {
+    padding: 3px;
+    padding-left: 18px;
+    margin-bottom: 6px;
+}
+
+.main-image-tab-2-details .main-detail {
+    line-height: 26px;
+}
+.btn-img-text-blk .btn,
+.btn-img-text-blk .img,
+.btn-img-text-blk .text {
+    float: left;
+    height: 265px;
+}
+
+.rtl .btn-img-text-blk .btn,
+.rtl .btn-img-text-blk .img,
+.rtl .btn-img-text-blk .text {
+    float: right;
+    
+}

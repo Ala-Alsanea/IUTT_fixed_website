@@ -66,7 +66,7 @@
                                     class="dark-white"></i>
                             {!! Form::hidden('row_ids[]',$photo->id, array('class' => 'form-control row_no')) !!}
                         </label>
-                        <img src="{{ secure_asset('uploads/topics/'.$photo->file) }}"
+                        <img src="{{ asset('uploads/topics/'.$photo->file) }}"
                              alt="{{ $photo->title  }}" title="{{ $photo->title  }}"
                              style="height: 150px"
                              class="img-responsive">
@@ -84,7 +84,7 @@
                                     </button>
                                 @endif
                                 <a style="display: block;overflow: hidden;"
-                                   href="{{ secure_asset('uploads/topics/'.$photo->file) }}"
+                                   href="{{ asset('uploads/topics/'.$photo->file) }}"
                                    target="_blank">
                                     <small>{{ ($photo->title !="") ? $photo->title:$photo->file  }}</small>
                                 </a>

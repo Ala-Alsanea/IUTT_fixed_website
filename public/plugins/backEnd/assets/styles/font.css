@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900");
+body{
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body:lang(ar){
+  font-family: "times new roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@font-face {
+    font-family: 'smart4dsTitles';
+    src: url('../fonts/ar-fonts/smart4ds2.eot');
+    src: url('../fonts/ar-fonts/smart4ds2.eot?#iefix') format('embedded-opentype'), url('../fonts/ar-fonts/smart4ds2.woff') format('woff'), url('../fonts/ar-fonts/smart4ds2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body:lang(ar){
+  font-family: "smart4dsTitles" !important;
+}
+/*custom*/
+/*@import url("../fonts/sanfranciscotext/font.css");*/
+.news-blk .post-2 .text p, li, a, span, table, tr, td, th, label,div{
+	font-family: "smart4dsTitles" !important;
+}
+body:lang(ar) div,body:lang(ar) span,body:lang(ar) h3,body:lang(ar) p,body:lang(ar) a{
+	font-family: "smart4dsTitles" !important;
+
+    text-transform:unset;
+    letter-spacing:unset !important;
+}
+body:lang(ar) h1,
+body:lang(ar) h2,
+body:lang(ar) h3,
+body:lang(ar) h4,
+body:lang(ar) h5,
+body:lang(ar) h6,
+body:lang(ar) .h1,
+body:lang(ar) .h2,
+body:lang(ar) .h3,
+body:lang(ar) .h4,
+body:lang(ar) .h5,
+body:lang(ar) .h6{
+	font-family: "smart4dsTitles" !important;
+	 text-transform:unset;
+    letter-spacing:unset !important;
+}

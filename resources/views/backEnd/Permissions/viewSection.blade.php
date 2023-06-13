@@ -116,7 +116,7 @@
                                         </label>
                                         </td>
                                           <td>
-                                            <img src="{{ secure_asset('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
+                                            <img src="{{ asset('plugins/backEnd/assets/images/treepart_'.trans('backLang.direction').'.png') }}" class="submenu_tree">
 
                                             {!! $Sections->$CatTitle  !!}</td>
 

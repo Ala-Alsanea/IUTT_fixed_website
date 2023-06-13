@@ -1,0 +1,410 @@
+@font-face {
+    font-family: 'smart4dsTitles';
+    src: url('../fonts/ar-fonts/smart4ds2.eot');
+    src: url('../fonts/ar-fonts/smart4ds2.eot?#iefix') format('embedded-opentype'), url('../fonts/ar-fonts/smart4ds2.woff') format('woff'), url('../fonts/ar-fonts/smart4ds2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body:lang(ar){
+  font-family: "smart4dsTitles" !important;
+  text-align:right; 
+}
+/*custom*/
+/*@import url("../fonts/sanfranciscotext/font.css");*/
+.news-blk .post-2 .text p, li, a, span, table, tr, td, th, label,div{
+    font-family: "smart4dsTitles" !important;
+}
+body:lang(ar) div,
+body:lang(ar) span,
+body:lang(ar) h3,
+body:lang(ar) p,
+body:lang(ar) b,
+body:lang(ar)  strong,
+body:lang(ar) a{
+    font-family: "smart4dsTitles" !important;
+    /* text-align: right; */
+    text-transform:unset;
+    letter-spacing:unset !important;
+    direction: rtl;
+}
+body:lang(ar) h1,
+body:lang(ar) h2,
+body:lang(ar) h3,
+body:lang(ar) h4,
+body:lang(ar) h5,
+body:lang(ar) h6,
+body:lang(ar) .h1,
+body:lang(ar) .h2,
+body:lang(ar) .h3,
+body:lang(ar) .h4,
+body:lang(ar) .h5,
+body:lang(ar) .h6{
+    font-family: "smart4dsTitles" !important;
+     text-transform:unset;
+    letter-spacing:unset !important;
+}
+* {
+    font-family: "smart4dsTitles";
+    word-break: unset;
+}
+.main-menu {
+    float: left; 
+        width: 80%;
+}
+
+.main-menu ul li {
+    float: right;
+    display: inline-block;
+}
+
+.ed-com-t1-left {
+    float: right;
+}
+
+.ed-com-t1-social { 
+    float: left; 
+}
+
+.wed-logo {
+    float: right; 
+}
+
+
+
+@media (min-width:600px) {
+   .ed-ad-dec{
+   height: 152px;
+} 
+}
+.wed-hom-footer .address p, .wed-hom-footer ul li a {
+  
+    padding-left:unset;
+    padding-right:5px;
+   
+}
+
+.wed-hom-footer ul{
+        margin-right:50px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: right;
+}
+@media (min-width: 1200px){
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: right;
+}
+}
+
+@media (min-width: 992px){
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: right;
+}
+}
+
+
+@media (min-width: 768px){
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: right;
+}
+}
+
+
+.news-blk .post-1{
+        float: right;
+            margin-left:unset;
+                margin-right: 20px;
+}
+
+.news-blk .post-3 {
+    float: left;
+        margin-left: unset;
+            margin-right: 20px;
+}
+.news-blk .post-2 {
+    float: right;
+      margin-left: unset;
+            margin-right: 20px;
+}
+.news-blk .posts {
+    margin-left:unset;
+    margin-right: -20px;
+}
+
+.news-blk .post-1 .text{
+        height: 198px;
+    position: relative;
+    background: #393e46;
+     width:unset; 
+     bottom:unset; 
+     right:unset; 
+     left:unset; 
+    margin-right: 15px;
+    color: #ffffff;
+    padding: 45px 30px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+}
+
+.news-blk .post-1:hover .text {
+    bottom:unset;
+}
+.news-blk .post a{
+        float: left;
+}
+.ed-ad-img{
+        float: right;
+}
+
+.ed-ad-dec {
+    float: left;
+    width: 80%;
+    padding-right: 25px;
+}
+
+.news-blk .post a{
+    font-family:inherit !important; 
+}
+
+.page-title h1{
+        padding-left:unset;
+        padding-right: 50px; 
+    text-align: right;
+}
+
+.page-title .bread-crumb{
+        position: relative;
+    padding-top: 18px;
+    text-align: right;
+    margin-left: unset;
+     padding-right: 30px; 
+}
+
+
+
+.page-title .bread-crumb li {
+    position: relative;
+    display: inline-block;
+    line-height: 30px;
+    margin-left:unset;
+    margin-right: 25px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.page-title .bread-crumb li:first-child {
+    margin-right:unset;
+    margin-left: 0px;
+}
+
+.page-title .bread-crumb li::before {
+    width: 15px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    content: "\f104";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fff;
+    font-size: 16px;
+   /* padding-right:unset;
+    padding-left: 0.5em;*/
+
+    position: absolute;
+    top: 0px;
+    left:unset;
+    right: 70px;
+    color: #ffffff;
+    line-height: 30px;
+}
+.page-title .bread-crumb li+li::before {
+    right: 100%;
+    
+}
+
+.article-left .captioned-image, .welcome .welcome-image {
+    float: right;
+    margin-right:unset;
+    margin-left: 10px;
+}
+
+.s18-age-event:before {
+    content: '';
+    background: #ececec;
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    height: 97%;
+    right: 28px;
+}
+
+.s18-age-event::after {
+    content: '';
+    background:transparent;
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    height: 97%;
+    left: 28px;
+}
+
+.s17-eve-time-tim {
+    float: right; 
+    box-sizing: border-box;
+    margin-right:70px;
+}
+.ed-mm-left {
+    float: right; 
+}
+.age-eve-com img {
+ 
+    margin-right: 10px;
+  
+}
+.ed-mm-right {
+    left: 12px; 
+        right: unset !important;
+    width: 20% !important;
+}
+@media (max-width: 500px){
+    .wed-logo {
+    
+}
+.wed-logo a img {
+    max-width: 85%;
+    padding: 0;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+}
+ @media screen and (max-width: 767px){
+    .wed-logo a img {
+    width: 164px !important;
+    
+}
+ }
+.ed-mm-inn ul li a:before {
+   /* content: "\f105";*/
+      content: "\f104";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    margin-left: unset !important;
+    margin-right: -25px;
+}
+.ed-mi-close {
+    position: absolute;
+    z-index: 99;
+    margin: -50px -30px 8px 8px;
+  /*  margin-top: -50px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: -30px;*/
+}
+.blog-sidebar .widget.widget_recent_post .post_item .media-body {
+    padding-left:unset;
+    padding-right: 20px;
+    align-self: center;
+}
+.ui-newslist .i >.ct p.p3 label{
+      font-size: 12px;
+}
+
+.blog-sidebar .widget.widget_search .search-form .form-control {
+      padding-left:unset;
+        padding-right: 30px;
+}
+.blog_content .post_date{
+        right:unset;
+            left: 50px;
+}
+
+
+
+.blog_content{
+    line-height:30px; 
+}
+
+.blog_content h5{
+    margin-bottom:10px; 
+}
+
+.post_share .flex {
+    flex: 1;
+    text-align: left;
+}
+
+.rtl .eventpage .ho-ev-date{
+    float:right; 
+}
+.rtl .eventpage .ho-ev-link{
+
+}
+
+.accordion .panel--heading .accordion-toggle:after {
+   
+    left:unset;
+    right:0;
+    
+}
+
+.accordion .panel .panel--heading a {
+   
+    padding-left:unset;
+    padding-right: 40px;
+   
+}
+.event_about_content{
+     padding-right:unset;
+}
+/*.rtl .event_about_content{
+        padding-right:unset;
+            padding-left: 120px;
+}*/
+
+.quick-links .link i{
+    left:unset;
+        right: 0; 
+}
+.quick-links .link{
+    float:right;
+        margin-left:unset;
+            margin-right: 20px; 
+}
+
+.quick-links .link span{
+        padding-top: 0px;
+    padding-right:70px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+        text-align: center;
+}
+
+
+.age-dwarr-btn{
+    right:unset;
+        left: 0px;
+}
+.contentsection div {
+   /* padding-left:12%;*/
+}
+
+
+@media (max-width: 500px){
+  .article-left .captioned-image, .welcome .welcome-image {
+    float: none;
+    margin-right: unset;
+    margin-left: 10px;
+    display: block;
+    text-align: center;
+}  
+}
+

@@ -14,7 +14,7 @@
          <div class="box-body">
 
 
-                  <iframe src="{{secure_asset('filemanager/dialog.php?type=0')}}" style="zoom:0.60" frameborder="0" height="700px" width="99.6%"></iframe>
+                  <iframe src="{{asset('filemanager/dialog.php?type=0')}}" style="zoom:0.60" frameborder="0" height="700px" width="99.6%"></iframe>
 
     </div>
 
