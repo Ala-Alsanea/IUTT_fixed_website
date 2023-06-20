@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="{{asset('plugins/css/font-awesome.min.css') }}">
 <!-- ALL CSS FILES -->
 {{--     <link href="{{asset('plugins/css/materialize.css') }}" rel="stylesheet"> --}}
-<link href="{{asset('plugins/css/bootstrap.css') }}" rel="stylesheet" />
+{{-- <link href="{{asset('plugins/css/bootstrap.css') }}" rel="stylesheet" /> --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.css" >
 <link rel="stylesheet" type="text/css" href="{{asset('plugins/vendors/owl-carousel/assets/owl.carousel.min.css') }}">
 @yield('vendorInclude')
 <link href="{{asset('plugins/css/style.css') }}" rel="stylesheet" />

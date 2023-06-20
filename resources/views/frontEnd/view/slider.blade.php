@@ -29,18 +29,19 @@
 </style> --}}
     <!-- Wrapper for slides -->
     <section>
-        <div id="fixed_Carousel" class="carousel slide " data-ride="carousel">
+        <div id="fixed_Carousel" class="carousel  " data-ride="carousel">
 
             <div style=" position: relative; z-index: -10;" class="carousel-inner">
+
                 @foreach ($SliderBanners as $key => $SliderBanner)
-                    <div class="item  {{ $key == 0 ? 'active' : '' }}">
+                    <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
 
                         <div style=" position: relative; z-index: -10;">
                             <img src="{{ asset($SliderBanner->$file_var) }}" alt="{{ $SliderBanner->$title_var }}">
                         </div>
 
                         @if ($SliderBanner->$title_var != '')
-                            <div class="carousel-caption slider-con bg-dark">
+                            <div class="carousel-caption slider-con ">
 
                                 <h2>{{ $SliderBanner->$title_var }}</h2>
                                 @if ($SliderBanner->$details_var != '')
@@ -61,14 +62,14 @@
 
             <!-- Left and right controls -->
             <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <button  class="carousel-control-prev" href="#fixed_Carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            </button>
+            <button  class="carousel-control-next" href="#fixed_Carousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-            </a>
+            </button>
         </div>
 
 

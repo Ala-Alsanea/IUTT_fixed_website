@@ -44,50 +44,31 @@ if (App::environment('production')) {
 | contains the "web" middleware group. Now create something great!
 |
 */
-// test
 
-Route::get('/test', function () {
-    #$exitCode = Artisan::call('key:generate');
-    return 'hi';
-});
-
-
-
-Route::get('/route-clear', function () {
-    #  $exitCode = Artisan::call('config:clear');
-    #   $exitCode = Artisan::call('cache:clear');
-    #  $exitCode = Artisan::call('config:clear');
-    #  $exitCode = Artisan::call('view:clear');
-
-
-    return 'Routes cache cleared';
-});
-
-// Clear config cache:
-Route::get('/config-cache', function () {
-    # $exitCode = Artisan::call('config:cache');
-    return 'Config cache cleared';
-});
 
 // Clear application cache:
-Route::get('/clear-cache', function () {
+Route::get('/clear', function () {
 
-    #  $exitCode = Artisan::call('cache:clear');
-    # $exitCode = Artisan::call('config:clear');
-    #  $exitCode = Artisan::call('route:clear');
-    #   $exitCode = Artisan::call('view:clear');
-    //  $exitCode = Artisan::call('optimize');
-    //   $exitCode = Artisan::call('dump-autoload');
+    $exitCode = Artisan::call('cache:clear');
+   $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('route:clear');
+     $exitCode = Artisan::call('view:clear');
+    $exitCode = Artisan::call('optimize:clear');
 
 
-    return 'Application cache cleared';
+
+  return redirect('/');
 });
 
-// Clear view cache:
-Route::get('/view-clear', function () {
-    #  $exitCode = Artisan::call('view:clear');
-    # return 'View cache cleared';
+
+Route::get('/cache', function () {
+     $exitCode = Artisan::call('route:cache');
+     $exitCode = Artisan::call('config:cache');
+     $exitCode = Artisan::call('view:cache');
+    return redirect('/');
 });
+
+
 
 // Language Route
 Route::post('/lang', array(
@@ -107,12 +88,13 @@ Route::middleware(['web'])->group(function () {
 });
 
 
+
 // default path after login
 Route::get('/admin', function () {
     return redirect()->route('adminHome');
 });
 
-Route::Group(['prefix' => env('BACKEND_PATH')], function () {
+Route::Group(['prefix' => 'admin'], function () {
 
 
 
@@ -578,6 +560,7 @@ Route::Group(['prefix' => env('BACKEND_PATH')], function () {
 
 
 
+
 // Frontend Routes
 // ../site map
 Route::group(['middleware' => ['XSS']], function () {
@@ -607,13 +590,13 @@ Route::group(['middleware' => ['XSS']], function () {
     Route::get('/admission/{page}/{id}',[FrontendHomeController::class,'GetAdmitionStudeiswithid']);
     Route::get('/{lang?}/admission/{page}/{id}',[FrontendHomeController::class,'GetAdmitionStudeiswithidbylang']);
 
-    Route::get('university/academicstaff/{id}',[FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySection');
-    Route::get('/{lang?}/university/academicstaff/{id}', [FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySectionByLang');
+    Route::get('university/academicstaff/{id}',[FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySection1');
+    Route::get('/{lang?}/university/academicstaff/{id}', [FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySectionByLang1');
 
 
 
-    Route::get('university/boardtrustees/{id}', [FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySection');
-    Route::get('/{lang?}/university/boardtrustees/{id}', [FrontendHomeController::class,'getacademicstaffBySectionByLang'])->name('getacademicstaffBySectionByLang');
+    Route::get('university/boardtrustees/{id}', [FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySection2');
+    Route::get('/{lang?}/university/boardtrustees/{id}', [FrontendHomeController::class,'getacademicstaffBySectionByLang'])->name('getacademicstaffBySectionByLang2');
 
 
     Route::get('university/boardtrustees/previous/{id}', [FrontendHomeController::class,'getacademicstaffPreviousBySection'])->name('getacademicstaffPreviousBySection');
@@ -621,8 +604,8 @@ Route::group(['middleware' => ['XSS']], function () {
 
 
 
-    Route::get('university/employees/{id}', [FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySection');
-    Route::get('/{lang?}/university/employees/{id}', [FrontendHomeController::class,'getacademicstaffBySectionByLang'])->name('getacademicstaffBySectionByLang');
+    Route::get('university/employees/{id}', [FrontendHomeController::class,'getacademicstaffBySection'])->name('getacademicstaffBySection3');
+    Route::get('/{lang?}/university/employees/{id}', [FrontendHomeController::class,'getacademicstaffBySectionByLang'])->name('getacademicstaffBySectionByLang3');
 
 
     Route::get('university/iutt/profile/{id}', [FrontendHomeController::class,'GetAcademicstaffDetail']);
